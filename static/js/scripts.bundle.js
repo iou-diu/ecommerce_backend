@@ -9110,7 +9110,7 @@ $.extend(true, $.fn.KTDatatable.defaults, defaults);
 // Initialization
 KTUtil.ready(function() {
     ////////////////////////////////////////////////////
-    // Layout Base Partials(mandatory for core layout)//
+    // Layout Base Partials(mandatory for ecommerce_backend layout)//
     ////////////////////////////////////////////////////
 
     // Init Desktop & Mobile Headers
