@@ -426,19 +426,15 @@ class ProductForm(forms.ModelForm):
         exclude = ['slug']
         widgets = {
             'description': SummernoteWidget(),
-            # 'category': CategoryWidget(attrs={
-            #     'data-minimum-input-length': 0,
-            #     'class': 'form-control select2-widget'
-            # }),
             'key_features': SummernoteWidget(),
-            # 'category': CategoryWidget(attrs={
-            #     'data-minimum-input-length': 0,
-            #     'class': 'form-control select2-widget'
-            # }),
-            # 'brand': BrandWidget(attrs={
-            #     'data-minimum-input-length': 0,
-            #     'class': 'form-control select2-widget'
-            # }),
+            'category': CategoryWidget(attrs={
+                'data-minimum-input-length': 0,
+                'class': 'form-control select2-widget'
+            }),
+            'brand': BrandWidget(attrs={
+                'data-minimum-input-length': 0,
+                'class': 'form-control select2-widget'
+            }),
             'tags': TagMultipleSelect2Widget(attrs={
                 'data-minimum-input-length': 0,
                 'class': 'form-control select2-widget'
