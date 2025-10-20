@@ -1,0 +1,1001 @@
+category,name,brand,price,stock_quantity,attributes,image_url,description
+RAM,RAM Model 331 Rev-86,Kingston,337.5,87,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_331_rev-86.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 362 Rev-21,Intel,72.28,22,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_362_rev-21.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 694 Rev-24,NVIDIA,551.19,15,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_694_rev-24.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 447 Rev-36,NVIDIA,717.18,75,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_447_rev-36.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 903 Rev-76,Gigabyte,667.8,85,{'speed': '3200MHz'},https://example.com/cpu_model_903_rev-76.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 607 Rev-98,Patriot,695.48,48,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_607_rev-98.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 203 Rev-86,Patriot,752.58,72,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_203_rev-86.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 819 Rev-86,AMD,447.75,50,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_819_rev-86.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 253 Rev-37,Kingston,828.86,42,{'speed': '3200MHz'},https://example.com/ssd_model_253_rev-37.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 294 Rev-43,Gigabyte,710.52,98,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_294_rev-43.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 184 Rev-57,NVIDIA,477.81,46,{'speed': '3200MHz'},https://example.com/psu_model_184_rev-57.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 831 Rev-66,Kingston,475.53,59,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_831_rev-66.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 845 Rev-16,Kingston,90.18,18,{'speed': '3200MHz'},https://example.com/psu_model_845_rev-16.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 570 Rev-94,Patriot,551.89,96,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_570_rev-94.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 778 Rev-18,Gigabyte,759.18,62,{'speed': '3200MHz'},https://example.com/ssd_model_778_rev-18.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 166 Rev-83,NVIDIA,701.37,26,{'socket': 'LGA1700'},https://example.com/hdd_model_166_rev-83.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 445 Rev-92,NVIDIA,514.93,57,{'speed': '3200MHz'},https://example.com/psu_model_445_rev-92.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 914 Rev-90,Gigabyte,269.8,75,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_914_rev-90.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 762 Rev-15,Patriot,759.29,73,{'socket': 'LGA1700'},https://example.com/ram_model_762_rev-15.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 999 Rev-52,Patriot,67.16,92,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_999_rev-52.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 439 Rev-8,Intel,810.87,36,{'speed': '3200MHz'},https://example.com/hdd_model_439_rev-8.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 944 Rev-13,Seagate,669.18,86,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_944_rev-13.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 590 Rev-90,Corsair,458.56,33,{'socket': 'LGA1700'},https://example.com/ssd_model_590_rev-90.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 231 Rev-47,Kingston,335.33,47,{'socket': 'LGA1700'},https://example.com/hdd_model_231_rev-47.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 930 Rev-9,NVIDIA,472.85,33,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_930_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 639 Rev-40,Intel,877.94,30,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_639_rev-40.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 744 Rev-8,Patriot,691.51,11,{'socket': 'LGA1700'},https://example.com/psu_model_744_rev-8.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 761 Rev-32,Gigabyte,992.79,56,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_761_rev-32.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 203 Rev-81,Kingston,313.1,95,{'speed': '3200MHz'},https://example.com/motherboard_model_203_rev-81.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 652 Rev-71,Corsair,349.05,89,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_652_rev-71.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 334 Rev-85,Patriot,616.82,90,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_334_rev-85.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 771 Rev-62,Intel,597.37,71,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_771_rev-62.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 435 Rev-58,Intel,353.28,15,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_435_rev-58.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 489 Rev-83,Intel,834.89,75,{'socket': 'LGA1700'},https://example.com/hdd_model_489_rev-83.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 371 Rev-79,Patriot,959.64,41,{'speed': '3200MHz'},https://example.com/ssd_model_371_rev-79.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 981 Rev-14,Gigabyte,780.11,44,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_981_rev-14.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 330 Rev-97,AMD,80.97,72,{'speed': '3200MHz'},https://example.com/motherboard_model_330_rev-97.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 830 Rev-73,Intel,943.92,83,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_830_rev-73.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 201 Rev-47,Intel,426.12,67,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_201_rev-47.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 613 Rev-73,Seagate,353.79,53,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_613_rev-73.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 191 Rev-78,Patriot,286.69,92,{'socket': 'LGA1700'},https://example.com/hdd_model_191_rev-78.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 209 Rev-6,Kingston,254.01,11,{'socket': 'LGA1700'},https://example.com/motherboard_model_209_rev-6.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 753 Rev-5,Corsair,824.74,100,{'socket': 'LGA1700'},https://example.com/hdd_model_753_rev-5.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 115 Rev-93,Seagate,642.63,30,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_115_rev-93.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 824 Rev-64,Kingston,852.28,50,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_824_rev-64.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 705 Rev-70,AMD,943.12,56,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_705_rev-70.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 495 Rev-33,Gigabyte,428.88,52,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_495_rev-33.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 361 Rev-56,Corsair,569.32,92,{'speed': '3200MHz'},https://example.com/ram_model_361_rev-56.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 144 Rev-95,Corsair,369.87,94,{'socket': 'LGA1700'},https://example.com/ssd_model_144_rev-95.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 385 Rev-76,Intel,993.09,11,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_385_rev-76.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 494 Rev-22,Kingston,735.91,51,{'speed': '3200MHz'},https://example.com/psu_model_494_rev-22.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 687 Rev-43,Seagate,975.98,60,{'socket': 'LGA1700'},https://example.com/gpu_model_687_rev-43.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 226 Rev-5,Intel,832.03,38,{'speed': '3200MHz'},https://example.com/case_model_226_rev-5.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 837 Rev-57,NVIDIA,596.0,32,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_837_rev-57.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 341 Rev-16,Gigabyte,414.63,46,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_341_rev-16.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 421 Rev-70,AMD,720.2,10,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_421_rev-70.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 968 Rev-95,Kingston,291.81,83,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_968_rev-95.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 551 Rev-31,Corsair,827.19,94,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_551_rev-31.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 424 Rev-6,AMD,889.08,65,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_424_rev-6.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 233 Rev-97,Seagate,771.34,76,{'speed': '3200MHz'},https://example.com/ssd_model_233_rev-97.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 887 Rev-91,Gigabyte,288.57,82,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_887_rev-91.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 357 Rev-48,Gigabyte,339.64,73,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_357_rev-48.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 436 Rev-53,AMD,994.26,52,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_436_rev-53.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 812 Rev-50,AMD,296.68,22,{'speed': '3200MHz'},https://example.com/ssd_model_812_rev-50.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 169 Rev-43,Gigabyte,85.11,73,{'socket': 'LGA1700'},https://example.com/motherboard_model_169_rev-43.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 959 Rev-61,Kingston,128.16,12,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_959_rev-61.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 383 Rev-57,Kingston,267.59,13,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_383_rev-57.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 280 Rev-80,Patriot,705.24,61,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_280_rev-80.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 430 Rev-24,Intel,290.94,54,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_430_rev-24.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 996 Rev-78,Intel,999.92,11,{'speed': '3200MHz'},https://example.com/cpu_model_996_rev-78.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 343 Rev-51,Corsair,530.71,68,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_343_rev-51.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 537 Rev-74,Kingston,357.61,41,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_537_rev-74.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 233 Rev-32,Patriot,216.82,37,{'socket': 'LGA1700'},https://example.com/ram_model_233_rev-32.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 645 Rev-59,Seagate,98.93,64,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_645_rev-59.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 278 Rev-61,Corsair,100.29,54,{'speed': '3200MHz'},https://example.com/motherboard_model_278_rev-61.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 242 Rev-58,NVIDIA,249.49,66,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_242_rev-58.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 250 Rev-73,Corsair,960.37,66,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_250_rev-73.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 217 Rev-15,Corsair,244.55,93,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_217_rev-15.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 282 Rev-88,Seagate,261.13,34,{'socket': 'LGA1700'},https://example.com/psu_model_282_rev-88.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 671 Rev-36,Intel,831.37,18,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_671_rev-36.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 345 Rev-83,AMD,730.64,82,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_345_rev-83.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 763 Rev-2,Intel,990.74,25,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_763_rev-2.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 406 Rev-84,NVIDIA,615.37,86,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_406_rev-84.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 653 Rev-95,Intel,462.72,84,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_653_rev-95.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 449 Rev-10,Kingston,783.98,96,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_449_rev-10.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 829 Rev-68,Gigabyte,112.79,57,{'speed': '3200MHz'},https://example.com/case_model_829_rev-68.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 516 Rev-87,Corsair,867.33,67,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_516_rev-87.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 844 Rev-90,Seagate,985.04,31,{'socket': 'LGA1700'},https://example.com/hdd_model_844_rev-90.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 127 Rev-69,Seagate,775.52,27,{'speed': '3200MHz'},https://example.com/case_model_127_rev-69.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 575 Rev-36,Gigabyte,317.67,94,{'speed': '3200MHz'},https://example.com/psu_model_575_rev-36.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 726 Rev-71,AMD,924.72,27,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_726_rev-71.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 144 Rev-57,Seagate,718.2,54,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_144_rev-57.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 385 Rev-74,NVIDIA,109.75,36,{'speed': '3200MHz'},https://example.com/cpu_model_385_rev-74.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 542 Rev-52,Kingston,313.27,26,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_542_rev-52.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 642 Rev-27,NVIDIA,808.85,70,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_642_rev-27.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 850 Rev-29,Patriot,71.08,16,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_850_rev-29.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 195 Rev-57,Gigabyte,203.16,82,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_195_rev-57.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 450 Rev-55,NVIDIA,524.87,40,{'socket': 'LGA1700'},https://example.com/ssd_model_450_rev-55.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 253 Rev-16,Patriot,683.94,99,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_253_rev-16.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 404 Rev-46,Gigabyte,150.1,88,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_404_rev-46.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 808 Rev-70,Seagate,789.85,65,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_808_rev-70.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 735 Rev-59,Intel,658.69,64,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_735_rev-59.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 403 Rev-11,Kingston,575.4,22,{'socket': 'LGA1700'},https://example.com/hdd_model_403_rev-11.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 394 Rev-48,Kingston,388.72,84,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_394_rev-48.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 813 Rev-15,Kingston,803.2,37,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_813_rev-15.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 387 Rev-4,Gigabyte,576.41,28,{'speed': '3200MHz'},https://example.com/case_model_387_rev-4.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 800 Rev-69,Kingston,780.43,31,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_800_rev-69.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 792 Rev-83,NVIDIA,632.2,48,{'socket': 'LGA1700'},https://example.com/hdd_model_792_rev-83.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 414 Rev-13,NVIDIA,810.13,79,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_414_rev-13.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 691 Rev-39,Gigabyte,954.91,75,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_691_rev-39.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 750 Rev-3,Corsair,476.86,96,{'socket': 'LGA1700'},https://example.com/psu_model_750_rev-3.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 480 Rev-84,Kingston,172.96,76,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_480_rev-84.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 937 Rev-10,Patriot,409.22,50,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_937_rev-10.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 669 Rev-50,Seagate,68.99,21,{'speed': '3200MHz'},https://example.com/motherboard_model_669_rev-50.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 744 Rev-97,Seagate,455.78,55,{'socket': 'LGA1700'},https://example.com/hdd_model_744_rev-97.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 886 Rev-46,Intel,476.03,50,{'socket': 'LGA1700'},https://example.com/cpu_model_886_rev-46.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 100 Rev-35,Seagate,291.25,38,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_100_rev-35.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 638 Rev-33,Intel,670.87,43,{'speed': '3200MHz'},https://example.com/ram_model_638_rev-33.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 129 Rev-94,Patriot,739.1,85,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_129_rev-94.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 869 Rev-10,Seagate,751.31,78,{'speed': '3200MHz'},https://example.com/ssd_model_869_rev-10.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 205 Rev-12,AMD,972.67,36,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_205_rev-12.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 876 Rev-90,Seagate,306.43,92,{'speed': '3200MHz'},https://example.com/case_model_876_rev-90.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 119 Rev-38,Patriot,479.37,13,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_119_rev-38.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 106 Rev-4,Patriot,691.35,93,{'speed': '3200MHz'},https://example.com/ssd_model_106_rev-4.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 545 Rev-21,Corsair,896.58,66,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_545_rev-21.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 276 Rev-54,NVIDIA,953.78,73,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_276_rev-54.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 848 Rev-48,Corsair,457.02,14,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_848_rev-48.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 845 Rev-40,Seagate,318.66,97,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_845_rev-40.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 152 Rev-30,Gigabyte,504.47,69,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_152_rev-30.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 655 Rev-18,Kingston,507.76,34,{'speed': '3200MHz'},https://example.com/case_model_655_rev-18.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 258 Rev-22,Intel,689.95,98,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_258_rev-22.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 241 Rev-98,AMD,819.53,82,{'socket': 'LGA1700'},https://example.com/psu_model_241_rev-98.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 250 Rev-41,Seagate,282.97,66,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_250_rev-41.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 314 Rev-92,Gigabyte,323.38,21,{'speed': '3200MHz'},https://example.com/psu_model_314_rev-92.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 596 Rev-5,AMD,945.07,70,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_596_rev-5.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 495 Rev-85,Patriot,997.46,64,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_495_rev-85.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 838 Rev-75,Seagate,382.51,75,{'speed': '3200MHz'},https://example.com/hdd_model_838_rev-75.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 228 Rev-13,NVIDIA,127.53,97,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_228_rev-13.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 139 Rev-43,Seagate,167.69,52,{'socket': 'LGA1700'},https://example.com/ssd_model_139_rev-43.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 912 Rev-1,NVIDIA,421.9,79,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_912_rev-1.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 208 Rev-99,Seagate,270.75,38,{'socket': 'LGA1700'},https://example.com/cpu_model_208_rev-99.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 373 Rev-25,Intel,713.24,43,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_373_rev-25.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 635 Rev-81,Gigabyte,504.26,16,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_635_rev-81.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 952 Rev-15,Corsair,751.98,35,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_952_rev-15.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 407 Rev-84,NVIDIA,952.92,71,{'speed': '3200MHz'},https://example.com/cpu_model_407_rev-84.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 812 Rev-35,Gigabyte,396.24,66,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_812_rev-35.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 393 Rev-71,Kingston,932.99,95,{'socket': 'LGA1700'},https://example.com/gpu_model_393_rev-71.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 212 Rev-8,Patriot,354.48,20,{'socket': 'LGA1700'},https://example.com/motherboard_model_212_rev-8.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 450 Rev-67,Gigabyte,581.67,55,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_450_rev-67.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 569 Rev-37,AMD,737.62,30,{'socket': 'LGA1700'},https://example.com/ssd_model_569_rev-37.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 107 Rev-69,Kingston,573.51,36,{'socket': 'LGA1700'},https://example.com/motherboard_model_107_rev-69.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 820 Rev-2,Seagate,664.62,61,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_820_rev-2.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 612 Rev-1,AMD,112.65,77,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_612_rev-1.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 334 Rev-47,AMD,767.34,18,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_334_rev-47.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 960 Rev-97,Seagate,586.34,85,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_960_rev-97.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 530 Rev-29,Intel,119.14,57,{'speed': '3200MHz'},https://example.com/hdd_model_530_rev-29.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 686 Rev-63,AMD,485.16,72,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_686_rev-63.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 234 Rev-18,Seagate,220.12,94,{'speed': '3200MHz'},https://example.com/case_model_234_rev-18.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 422 Rev-61,Patriot,604.39,61,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_422_rev-61.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 484 Rev-4,NVIDIA,650.02,67,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_484_rev-4.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 254 Rev-36,AMD,222.72,93,{'socket': 'LGA1700'},https://example.com/ram_model_254_rev-36.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 379 Rev-27,AMD,799.04,54,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_379_rev-27.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 631 Rev-6,AMD,284.38,51,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_631_rev-6.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 851 Rev-54,Corsair,979.33,13,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_851_rev-54.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 753 Rev-47,Patriot,725.25,46,{'socket': 'LGA1700'},https://example.com/hdd_model_753_rev-47.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 331 Rev-19,Corsair,398.71,86,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_331_rev-19.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 439 Rev-55,Corsair,170.65,96,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_439_rev-55.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 392 Rev-84,Kingston,914.33,21,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_392_rev-84.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 776 Rev-69,Corsair,116.05,87,{'speed': '3200MHz'},https://example.com/gpu_model_776_rev-69.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 928 Rev-39,Seagate,608.1,49,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_928_rev-39.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 794 Rev-67,Patriot,589.46,25,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_794_rev-67.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 776 Rev-8,Corsair,658.66,54,{'socket': 'LGA1700'},https://example.com/psu_model_776_rev-8.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 582 Rev-33,Corsair,483.76,45,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_582_rev-33.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 654 Rev-35,Seagate,733.44,99,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_654_rev-35.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 488 Rev-8,AMD,835.45,36,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_488_rev-8.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 628 Rev-39,Kingston,665.97,56,{'socket': 'LGA1700'},https://example.com/cpu_model_628_rev-39.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 125 Rev-46,Intel,98.79,55,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_125_rev-46.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 319 Rev-53,Intel,794.1,32,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_319_rev-53.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 655 Rev-31,Seagate,663.07,12,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_655_rev-31.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 701 Rev-23,Seagate,352.86,28,{'speed': '3200MHz'},https://example.com/psu_model_701_rev-23.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 902 Rev-47,Corsair,613.99,46,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_902_rev-47.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 301 Rev-28,Seagate,696.1,34,{'socket': 'LGA1700'},https://example.com/ssd_model_301_rev-28.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 714 Rev-56,Kingston,688.06,40,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_714_rev-56.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 727 Rev-34,Intel,99.88,63,{'speed': '3200MHz'},https://example.com/ssd_model_727_rev-34.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 589 Rev-76,Gigabyte,98.61,84,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_589_rev-76.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 103 Rev-37,Patriot,251.56,86,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_103_rev-37.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 475 Rev-75,NVIDIA,84.63,26,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_475_rev-75.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 714 Rev-58,NVIDIA,457.65,62,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_714_rev-58.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 424 Rev-8,Kingston,445.21,86,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_424_rev-8.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 648 Rev-52,NVIDIA,222.79,69,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_648_rev-52.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 850 Rev-1,Corsair,625.87,38,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_850_rev-1.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 699 Rev-47,Kingston,623.1,44,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_699_rev-47.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 792 Rev-42,Corsair,834.73,78,{'speed': '3200MHz'},https://example.com/ram_model_792_rev-42.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 235 Rev-83,Kingston,643.27,69,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_235_rev-83.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 869 Rev-40,Gigabyte,999.53,58,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_869_rev-40.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 890 Rev-34,Kingston,330.48,18,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_890_rev-34.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 898 Rev-96,Intel,681.38,54,{'socket': 'LGA1700'},https://example.com/case_model_898_rev-96.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 764 Rev-25,Intel,941.27,77,{'socket': 'LGA1700'},https://example.com/psu_model_764_rev-25.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 755 Rev-76,Intel,358.29,20,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_755_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 592 Rev-23,Corsair,245.32,16,{'socket': 'LGA1700'},https://example.com/case_model_592_rev-23.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 572 Rev-50,Kingston,926.87,47,{'socket': 'LGA1700'},https://example.com/gpu_model_572_rev-50.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 608 Rev-9,Kingston,867.04,12,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_608_rev-9.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 812 Rev-47,Patriot,275.71,77,{'speed': '3200MHz'},https://example.com/cpu_model_812_rev-47.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 283 Rev-7,Corsair,914.43,23,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_283_rev-7.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 179 Rev-27,Patriot,486.99,42,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_179_rev-27.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 118 Rev-36,Corsair,316.77,49,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_118_rev-36.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 953 Rev-85,Patriot,894.36,15,{'socket': 'LGA1700'},https://example.com/gpu_model_953_rev-85.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 755 Rev-85,Patriot,143.25,37,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_755_rev-85.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 745 Rev-30,Corsair,376.73,25,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_745_rev-30.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 602 Rev-60,Gigabyte,932.16,50,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_602_rev-60.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 324 Rev-69,Gigabyte,260.16,78,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_324_rev-69.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 481 Rev-61,Gigabyte,525.61,57,{'speed': '3200MHz'},https://example.com/ram_model_481_rev-61.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 883 Rev-49,Seagate,130.93,49,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_883_rev-49.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 419 Rev-2,Intel,974.33,12,{'socket': 'LGA1700'},https://example.com/cpu_model_419_rev-2.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 806 Rev-93,AMD,394.58,38,{'speed': '3200MHz'},https://example.com/gpu_model_806_rev-93.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 448 Rev-9,AMD,364.57,49,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_448_rev-9.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 598 Rev-62,Patriot,587.22,69,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_598_rev-62.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 735 Rev-3,NVIDIA,648.24,68,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_735_rev-3.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 650 Rev-70,AMD,112.44,23,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_650_rev-70.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 851 Rev-7,Corsair,804.77,31,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_851_rev-7.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 472 Rev-81,Patriot,653.9,45,{'socket': 'LGA1700'},https://example.com/psu_model_472_rev-81.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 276 Rev-26,Seagate,728.71,43,{'socket': 'LGA1700'},https://example.com/ssd_model_276_rev-26.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 359 Rev-57,Gigabyte,195.31,56,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_359_rev-57.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 775 Rev-3,Kingston,278.35,64,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_775_rev-3.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 717 Rev-5,Corsair,971.52,53,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_717_rev-5.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 182 Rev-8,Patriot,66.93,81,{'speed': '3200MHz'},https://example.com/psu_model_182_rev-8.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 427 Rev-14,Intel,656.9,85,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_427_rev-14.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 895 Rev-97,AMD,479.18,47,{'socket': 'LGA1700'},https://example.com/hdd_model_895_rev-97.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 898 Rev-50,Patriot,535.15,82,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_898_rev-50.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 553 Rev-97,Corsair,625.18,98,{'speed': '3200MHz'},https://example.com/motherboard_model_553_rev-97.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 167 Rev-97,Kingston,904.1,40,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_167_rev-97.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 391 Rev-33,Seagate,110.89,35,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_391_rev-33.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 685 Rev-79,Gigabyte,484.44,75,{'speed': '3200MHz'},https://example.com/gpu_model_685_rev-79.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 325 Rev-58,AMD,474.04,98,{'speed': '3200MHz'},https://example.com/ram_model_325_rev-58.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 323 Rev-36,NVIDIA,336.3,24,{'socket': 'LGA1700'},https://example.com/hdd_model_323_rev-36.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 797 Rev-81,Patriot,921.02,93,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_797_rev-81.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 281 Rev-80,NVIDIA,973.93,34,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_281_rev-80.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 476 Rev-55,Corsair,554.87,65,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_476_rev-55.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 753 Rev-54,Corsair,984.35,21,{'socket': 'LGA1700'},https://example.com/gpu_model_753_rev-54.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 491 Rev-42,Patriot,897.71,25,{'speed': '3200MHz'},https://example.com/psu_model_491_rev-42.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 921 Rev-14,NVIDIA,551.55,83,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_921_rev-14.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 708 Rev-2,Seagate,737.86,49,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_708_rev-2.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 113 Rev-14,Gigabyte,61.48,41,{'speed': '3200MHz'},https://example.com/gpu_model_113_rev-14.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 392 Rev-24,Intel,809.42,82,{'speed': '3200MHz'},https://example.com/ram_model_392_rev-24.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 674 Rev-72,Intel,541.06,74,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_674_rev-72.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 965 Rev-9,Intel,968.52,18,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_965_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 596 Rev-82,Gigabyte,890.5,86,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_596_rev-82.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 183 Rev-89,Patriot,267.85,89,{'socket': 'LGA1700'},https://example.com/hdd_model_183_rev-89.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 245 Rev-25,Seagate,67.4,12,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_245_rev-25.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 413 Rev-14,Seagate,280.7,10,{'socket': 'LGA1700'},https://example.com/ram_model_413_rev-14.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 214 Rev-77,Corsair,662.45,23,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_214_rev-77.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 692 Rev-7,Corsair,745.97,23,{'speed': '3200MHz'},https://example.com/motherboard_model_692_rev-7.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 457 Rev-28,Seagate,307.7,20,{'socket': 'LGA1700'},https://example.com/ram_model_457_rev-28.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 870 Rev-33,Intel,77.2,99,{'speed': '3200MHz'},https://example.com/gpu_model_870_rev-33.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 529 Rev-79,AMD,126.97,36,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_529_rev-79.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 951 Rev-48,Corsair,574.44,43,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_951_rev-48.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 478 Rev-89,AMD,671.02,72,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_478_rev-89.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 722 Rev-3,Corsair,731.86,85,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_722_rev-3.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 949 Rev-69,Gigabyte,892.69,63,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_949_rev-69.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 408 Rev-68,Seagate,303.59,34,{'speed': '3200MHz'},https://example.com/gpu_model_408_rev-68.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 918 Rev-64,Corsair,486.85,19,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_918_rev-64.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 750 Rev-91,Intel,429.74,100,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_750_rev-91.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 506 Rev-5,Corsair,164.28,43,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_506_rev-5.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 265 Rev-47,Seagate,534.2,30,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_265_rev-47.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 976 Rev-75,Seagate,909.47,28,{'speed': '3200MHz'},https://example.com/case_model_976_rev-75.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 252 Rev-11,Seagate,612.67,27,{'socket': 'LGA1700'},https://example.com/ram_model_252_rev-11.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 116 Rev-91,Seagate,742.55,79,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_116_rev-91.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 641 Rev-6,Patriot,113.66,21,{'socket': 'LGA1700'},https://example.com/gpu_model_641_rev-6.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 987 Rev-72,Seagate,373.61,63,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_987_rev-72.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 897 Rev-31,Seagate,409.55,36,{'socket': 'LGA1700'},https://example.com/motherboard_model_897_rev-31.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 535 Rev-63,Gigabyte,722.11,24,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_535_rev-63.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 177 Rev-29,Kingston,891.0,33,{'speed': '3200MHz'},https://example.com/hdd_model_177_rev-29.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 746 Rev-27,Gigabyte,288.64,40,{'speed': '3200MHz'},https://example.com/ssd_model_746_rev-27.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 790 Rev-80,Kingston,486.49,80,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_790_rev-80.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 491 Rev-56,Kingston,857.98,44,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_491_rev-56.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 207 Rev-56,AMD,142.35,73,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_207_rev-56.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 495 Rev-25,AMD,808.61,20,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_495_rev-25.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 629 Rev-25,Patriot,211.52,90,{'socket': 'LGA1700'},https://example.com/cpu_model_629_rev-25.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 673 Rev-64,NVIDIA,752.17,10,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_673_rev-64.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 255 Rev-95,Intel,596.27,76,{'socket': 'LGA1700'},https://example.com/case_model_255_rev-95.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 864 Rev-20,NVIDIA,620.36,50,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_864_rev-20.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 158 Rev-43,Seagate,87.33,14,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_158_rev-43.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 498 Rev-17,Kingston,149.52,83,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_498_rev-17.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 831 Rev-51,AMD,260.82,56,{'speed': '3200MHz'},https://example.com/ssd_model_831_rev-51.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 216 Rev-57,Gigabyte,796.71,46,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_216_rev-57.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 749 Rev-8,Corsair,762.61,33,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_749_rev-8.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 315 Rev-18,AMD,257.1,62,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_315_rev-18.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 498 Rev-67,Seagate,109.99,29,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_498_rev-67.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 655 Rev-68,AMD,651.99,31,{'socket': 'LGA1700'},https://example.com/ram_model_655_rev-68.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 479 Rev-38,Patriot,159.34,13,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_479_rev-38.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 200 Rev-89,Corsair,677.4,20,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_200_rev-89.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 632 Rev-84,Corsair,995.92,28,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_632_rev-84.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 970 Rev-66,Gigabyte,825.5,70,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_970_rev-66.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 190 Rev-31,Gigabyte,612.67,41,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_190_rev-31.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 500 Rev-43,Gigabyte,362.08,60,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_500_rev-43.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 800 Rev-27,Corsair,234.71,41,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_800_rev-27.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 962 Rev-30,Gigabyte,199.38,67,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_962_rev-30.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 139 Rev-26,Intel,394.7,85,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_139_rev-26.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 802 Rev-21,Seagate,155.32,85,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_802_rev-21.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 793 Rev-41,Kingston,285.47,41,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_793_rev-41.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 316 Rev-39,Corsair,656.94,91,{'socket': 'LGA1700'},https://example.com/hdd_model_316_rev-39.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 505 Rev-93,AMD,914.93,31,{'socket': 'LGA1700'},https://example.com/ram_model_505_rev-93.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 542 Rev-94,Patriot,208.94,55,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_542_rev-94.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 424 Rev-96,Intel,605.99,74,{'socket': 'LGA1700'},https://example.com/motherboard_model_424_rev-96.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 341 Rev-11,Seagate,577.72,76,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_341_rev-11.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 573 Rev-82,Kingston,858.76,73,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_573_rev-82.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 282 Rev-32,Kingston,972.65,80,{'speed': '3200MHz'},https://example.com/ssd_model_282_rev-32.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 307 Rev-39,AMD,215.79,29,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_307_rev-39.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 704 Rev-54,Corsair,583.42,45,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_704_rev-54.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 893 Rev-60,Intel,694.88,76,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_893_rev-60.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 696 Rev-48,Gigabyte,206.83,25,{'speed': '3200MHz'},https://example.com/motherboard_model_696_rev-48.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 763 Rev-27,Seagate,558.28,58,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_763_rev-27.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 313 Rev-33,AMD,410.95,15,{'speed': '3200MHz'},https://example.com/ram_model_313_rev-33.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 156 Rev-34,NVIDIA,597.18,43,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_156_rev-34.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 418 Rev-10,Kingston,266.14,23,{'speed': '3200MHz'},https://example.com/psu_model_418_rev-10.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 652 Rev-67,Gigabyte,553.92,59,{'socket': 'LGA1700'},https://example.com/motherboard_model_652_rev-67.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 695 Rev-27,Intel,768.55,50,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_695_rev-27.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 362 Rev-81,Intel,247.28,82,{'socket': 'LGA1700'},https://example.com/hdd_model_362_rev-81.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 360 Rev-62,Seagate,725.11,85,{'socket': 'LGA1700'},https://example.com/psu_model_360_rev-62.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 441 Rev-61,Intel,940.51,93,{'speed': '3200MHz'},https://example.com/case_model_441_rev-61.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 529 Rev-12,Kingston,859.77,88,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_529_rev-12.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 710 Rev-55,Kingston,950.45,92,{'socket': 'LGA1700'},https://example.com/gpu_model_710_rev-55.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 776 Rev-85,Patriot,988.06,40,{'speed': '3200MHz'},https://example.com/hdd_model_776_rev-85.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 594 Rev-62,Corsair,822.68,26,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_594_rev-62.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 703 Rev-13,Corsair,410.23,85,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_703_rev-13.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 548 Rev-38,Kingston,278.76,35,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_548_rev-38.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 319 Rev-35,NVIDIA,348.3,34,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_319_rev-35.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 960 Rev-47,Patriot,868.26,66,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_960_rev-47.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 364 Rev-31,Corsair,99.21,36,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_364_rev-31.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 253 Rev-39,Gigabyte,101.93,96,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_253_rev-39.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 668 Rev-65,Corsair,333.25,66,{'speed': '3200MHz'},https://example.com/ram_model_668_rev-65.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 387 Rev-28,Seagate,394.8,34,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_387_rev-28.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 148 Rev-17,NVIDIA,484.37,44,{'socket': 'LGA1700'},https://example.com/case_model_148_rev-17.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 643 Rev-37,Patriot,592.43,40,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_643_rev-37.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 674 Rev-73,Kingston,294.42,33,{'speed': '3200MHz'},https://example.com/psu_model_674_rev-73.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 362 Rev-31,AMD,327.85,29,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_362_rev-31.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 622 Rev-97,Gigabyte,597.82,92,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_622_rev-97.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 493 Rev-92,Intel,419.61,82,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_493_rev-92.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 829 Rev-91,Patriot,251.44,100,{'speed': '3200MHz'},https://example.com/gpu_model_829_rev-91.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 807 Rev-25,Seagate,712.74,11,{'speed': '3200MHz'},https://example.com/motherboard_model_807_rev-25.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 589 Rev-38,Corsair,275.46,30,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_589_rev-38.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 824 Rev-38,NVIDIA,740.53,68,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_824_rev-38.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 944 Rev-50,Gigabyte,779.24,23,{'speed': '3200MHz'},https://example.com/ssd_model_944_rev-50.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 215 Rev-82,AMD,156.72,13,{'socket': 'LGA1700'},https://example.com/ram_model_215_rev-82.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 839 Rev-31,Seagate,96.79,89,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_839_rev-31.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 421 Rev-75,Kingston,922.09,73,{'speed': '3200MHz'},https://example.com/psu_model_421_rev-75.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 972 Rev-57,Kingston,891.9,22,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_972_rev-57.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 795 Rev-35,Corsair,852.04,57,{'speed': '3200MHz'},https://example.com/ssd_model_795_rev-35.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 978 Rev-85,Intel,148.25,60,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_978_rev-85.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 332 Rev-82,NVIDIA,592.27,86,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_332_rev-82.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 111 Rev-34,Corsair,699.71,65,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_111_rev-34.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 511 Rev-80,AMD,382.56,47,{'socket': 'LGA1700'},https://example.com/gpu_model_511_rev-80.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 262 Rev-32,Kingston,768.17,78,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_262_rev-32.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 608 Rev-4,Intel,945.13,45,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_608_rev-4.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 181 Rev-14,Patriot,901.33,16,{'speed': '3200MHz'},https://example.com/ssd_model_181_rev-14.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 320 Rev-76,AMD,752.23,63,{'socket': 'LGA1700'},https://example.com/psu_model_320_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 538 Rev-47,Kingston,262.43,56,{'socket': 'LGA1700'},https://example.com/case_model_538_rev-47.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 777 Rev-97,NVIDIA,604.52,75,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_777_rev-97.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 109 Rev-10,NVIDIA,577.55,59,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_109_rev-10.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 844 Rev-53,Gigabyte,830.13,67,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_844_rev-53.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 431 Rev-49,Corsair,180.0,71,{'socket': 'LGA1700'},https://example.com/cpu_model_431_rev-49.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 590 Rev-58,Seagate,803.98,97,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_590_rev-58.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 968 Rev-83,Seagate,806.86,11,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_968_rev-83.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 227 Rev-50,Intel,378.89,30,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_227_rev-50.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 757 Rev-16,Seagate,627.48,43,{'speed': '3200MHz'},https://example.com/ram_model_757_rev-16.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 363 Rev-59,Intel,70.18,87,{'speed': '3200MHz'},https://example.com/hdd_model_363_rev-59.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 674 Rev-19,Kingston,719.81,13,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_674_rev-19.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 177 Rev-7,Intel,217.67,63,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_177_rev-7.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 611 Rev-14,Corsair,986.63,93,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_611_rev-14.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 774 Rev-10,Kingston,497.16,94,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_774_rev-10.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 281 Rev-82,Patriot,963.77,94,{'speed': '3200MHz'},https://example.com/cpu_model_281_rev-82.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 640 Rev-89,AMD,486.9,53,{'speed': '3200MHz'},https://example.com/motherboard_model_640_rev-89.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 486 Rev-4,Gigabyte,322.78,70,{'speed': '3200MHz'},https://example.com/motherboard_model_486_rev-4.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 455 Rev-29,AMD,807.86,100,{'socket': 'LGA1700'},https://example.com/cpu_model_455_rev-29.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 612 Rev-76,AMD,295.5,42,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_612_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 159 Rev-85,Corsair,430.42,25,{'socket': 'LGA1700'},https://example.com/ssd_model_159_rev-85.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 255 Rev-5,NVIDIA,87.56,51,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_255_rev-5.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 727 Rev-30,NVIDIA,372.59,13,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_727_rev-30.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 408 Rev-83,Patriot,316.9,39,{'speed': '3200MHz'},https://example.com/ram_model_408_rev-83.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 512 Rev-51,Corsair,477.86,82,{'speed': '3200MHz'},https://example.com/cpu_model_512_rev-51.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 711 Rev-98,Corsair,816.97,78,{'socket': 'LGA1700'},https://example.com/motherboard_model_711_rev-98.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 471 Rev-41,Kingston,951.16,77,{'socket': 'LGA1700'},https://example.com/gpu_model_471_rev-41.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 374 Rev-39,Seagate,338.86,100,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_374_rev-39.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 626 Rev-37,Gigabyte,101.25,26,{'socket': 'LGA1700'},https://example.com/motherboard_model_626_rev-37.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 244 Rev-42,Gigabyte,455.82,14,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_244_rev-42.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 450 Rev-90,Gigabyte,89.92,29,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_450_rev-90.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 619 Rev-9,AMD,427.45,32,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_619_rev-9.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 457 Rev-71,AMD,161.17,36,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_457_rev-71.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 811 Rev-32,NVIDIA,332.54,82,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_811_rev-32.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 969 Rev-59,Kingston,602.12,90,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_969_rev-59.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 946 Rev-65,AMD,822.08,57,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_946_rev-65.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 329 Rev-1,Corsair,675.55,74,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_329_rev-1.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 288 Rev-60,Seagate,908.1,28,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_288_rev-60.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 870 Rev-87,Corsair,929.16,38,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_870_rev-87.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 311 Rev-50,Corsair,585.56,76,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_311_rev-50.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 895 Rev-83,Gigabyte,842.82,48,{'socket': 'LGA1700'},https://example.com/psu_model_895_rev-83.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 368 Rev-21,Seagate,605.49,26,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_368_rev-21.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 941 Rev-27,AMD,155.92,74,{'socket': 'LGA1700'},https://example.com/cpu_model_941_rev-27.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 698 Rev-67,AMD,435.1,54,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_698_rev-67.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 650 Rev-2,Gigabyte,982.76,35,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_650_rev-2.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 524 Rev-74,Corsair,768.64,52,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_524_rev-74.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 575 Rev-41,Patriot,226.85,81,{'speed': '3200MHz'},https://example.com/motherboard_model_575_rev-41.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 664 Rev-56,Kingston,787.37,19,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_664_rev-56.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 574 Rev-19,Corsair,102.54,35,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_574_rev-19.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 851 Rev-69,NVIDIA,972.39,88,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_851_rev-69.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 810 Rev-52,Intel,682.03,29,{'speed': '3200MHz'},https://example.com/ssd_model_810_rev-52.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 517 Rev-41,Corsair,670.48,50,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_517_rev-41.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 615 Rev-44,Intel,172.18,98,{'speed': '3200MHz'},https://example.com/case_model_615_rev-44.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 823 Rev-89,Intel,195.8,91,{'socket': 'LGA1700'},https://example.com/case_model_823_rev-89.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 338 Rev-19,Seagate,119.78,13,{'socket': 'LGA1700'},https://example.com/hdd_model_338_rev-19.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 957 Rev-3,Corsair,411.74,79,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_957_rev-3.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 957 Rev-90,Corsair,108.84,17,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_957_rev-90.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 435 Rev-93,Gigabyte,113.83,19,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_435_rev-93.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 329 Rev-33,Seagate,640.37,98,{'speed': '3200MHz'},https://example.com/case_model_329_rev-33.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 829 Rev-98,NVIDIA,455.44,37,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_829_rev-98.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 387 Rev-45,NVIDIA,130.63,27,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_387_rev-45.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 542 Rev-7,Intel,475.01,51,{'socket': 'LGA1700'},https://example.com/motherboard_model_542_rev-7.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 365 Rev-41,Corsair,147.75,74,{'socket': 'LGA1700'},https://example.com/gpu_model_365_rev-41.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 199 Rev-49,Patriot,402.77,44,{'socket': 'LGA1700'},https://example.com/hdd_model_199_rev-49.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 659 Rev-74,Corsair,80.8,33,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_659_rev-74.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 985 Rev-90,Kingston,171.08,72,{'socket': 'LGA1700'},https://example.com/ram_model_985_rev-90.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 943 Rev-3,Kingston,289.96,44,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_943_rev-3.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 196 Rev-14,Corsair,841.61,77,{'speed': '3200MHz'},https://example.com/psu_model_196_rev-14.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 835 Rev-96,Corsair,973.6,92,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_835_rev-96.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 910 Rev-45,Seagate,567.93,40,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_910_rev-45.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 821 Rev-7,AMD,966.85,73,{'socket': 'LGA1700'},https://example.com/case_model_821_rev-7.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 143 Rev-10,Patriot,331.92,44,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_143_rev-10.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 166 Rev-88,Intel,391.48,96,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_166_rev-88.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 639 Rev-69,Seagate,534.25,10,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_639_rev-69.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 890 Rev-62,Corsair,459.26,77,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_890_rev-62.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 936 Rev-43,NVIDIA,435.85,95,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_936_rev-43.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 522 Rev-69,Seagate,631.74,64,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_522_rev-69.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 367 Rev-47,Patriot,877.39,44,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_367_rev-47.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 782 Rev-84,Patriot,538.32,96,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_782_rev-84.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 711 Rev-81,Seagate,95.87,56,{'speed': '3200MHz'},https://example.com/motherboard_model_711_rev-81.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 767 Rev-11,Corsair,916.35,47,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_767_rev-11.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 468 Rev-61,NVIDIA,756.17,46,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_468_rev-61.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 748 Rev-98,Seagate,398.51,63,{'socket': 'LGA1700'},https://example.com/ssd_model_748_rev-98.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 393 Rev-48,Patriot,912.04,45,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_393_rev-48.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 775 Rev-68,AMD,139.44,42,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_775_rev-68.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 402 Rev-9,Kingston,812.4,13,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_402_rev-9.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 434 Rev-96,NVIDIA,603.15,85,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_434_rev-96.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 345 Rev-68,NVIDIA,743.02,41,{'speed': '3200MHz'},https://example.com/ram_model_345_rev-68.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 675 Rev-18,NVIDIA,369.16,38,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_675_rev-18.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 554 Rev-36,Kingston,800.92,77,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_554_rev-36.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 609 Rev-46,Corsair,204.19,91,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_609_rev-46.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 480 Rev-36,Intel,604.66,90,{'socket': 'LGA1700'},https://example.com/motherboard_model_480_rev-36.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 489 Rev-57,Seagate,504.95,45,{'speed': '3200MHz'},https://example.com/motherboard_model_489_rev-57.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 296 Rev-46,Intel,663.86,54,{'socket': 'LGA1700'},https://example.com/ssd_model_296_rev-46.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 121 Rev-61,AMD,472.56,76,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_121_rev-61.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 995 Rev-95,Seagate,626.77,39,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_995_rev-95.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 931 Rev-98,Intel,261.39,48,{'socket': 'LGA1700'},https://example.com/ssd_model_931_rev-98.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 341 Rev-50,Gigabyte,975.43,65,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_341_rev-50.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 462 Rev-66,Seagate,76.6,67,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_462_rev-66.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 948 Rev-61,Patriot,391.75,15,{'speed': '3200MHz'},https://example.com/cpu_model_948_rev-61.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 729 Rev-57,Intel,244.14,38,{'speed': '3200MHz'},https://example.com/gpu_model_729_rev-57.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 386 Rev-42,AMD,797.9,61,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_386_rev-42.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 111 Rev-84,Seagate,652.08,53,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_111_rev-84.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 459 Rev-15,Corsair,732.68,26,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_459_rev-15.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 829 Rev-29,Seagate,719.51,70,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_829_rev-29.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 888 Rev-59,NVIDIA,729.21,84,{'speed': '3200MHz'},https://example.com/motherboard_model_888_rev-59.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 127 Rev-11,Intel,354.4,91,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_127_rev-11.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 663 Rev-85,Intel,523.86,57,{'socket': 'LGA1700'},https://example.com/ssd_model_663_rev-85.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 391 Rev-23,Intel,656.87,15,{'speed': '3200MHz'},https://example.com/case_model_391_rev-23.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 133 Rev-71,Corsair,578.02,41,{'socket': 'LGA1700'},https://example.com/ssd_model_133_rev-71.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 959 Rev-63,AMD,693.86,40,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_959_rev-63.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 645 Rev-70,AMD,231.05,82,{'socket': 'LGA1700'},https://example.com/motherboard_model_645_rev-70.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 693 Rev-49,Seagate,914.01,82,{'socket': 'LGA1700'},https://example.com/ssd_model_693_rev-49.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 242 Rev-64,Seagate,68.42,77,{'speed': '3200MHz'},https://example.com/ram_model_242_rev-64.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 585 Rev-26,Patriot,318.12,76,{'socket': 'LGA1700'},https://example.com/gpu_model_585_rev-26.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 445 Rev-37,AMD,283.82,12,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_445_rev-37.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 158 Rev-46,Kingston,187.71,38,{'socket': 'LGA1700'},https://example.com/cpu_model_158_rev-46.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 181 Rev-57,Patriot,232.34,44,{'speed': '3200MHz'},https://example.com/case_model_181_rev-57.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 696 Rev-70,Intel,833.94,33,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_696_rev-70.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 488 Rev-15,AMD,308.58,15,{'speed': '3200MHz'},https://example.com/psu_model_488_rev-15.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 863 Rev-76,Corsair,77.02,27,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_863_rev-76.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 224 Rev-65,Corsair,264.23,40,{'speed': '3200MHz'},https://example.com/ram_model_224_rev-65.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 727 Rev-2,Seagate,778.58,64,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_727_rev-2.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 889 Rev-30,Intel,861.37,99,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_889_rev-30.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 304 Rev-81,Gigabyte,327.68,75,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_304_rev-81.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 697 Rev-48,NVIDIA,532.2,74,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_697_rev-48.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 317 Rev-61,Corsair,819.47,36,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_317_rev-61.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 424 Rev-23,Gigabyte,679.47,77,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_424_rev-23.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 390 Rev-83,AMD,706.36,23,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_390_rev-83.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 824 Rev-31,AMD,208.84,72,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_824_rev-31.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 376 Rev-88,Corsair,367.77,48,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_376_rev-88.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 130 Rev-74,Kingston,994.25,10,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_130_rev-74.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 736 Rev-18,Gigabyte,538.9,14,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_736_rev-18.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 931 Rev-12,Kingston,922.09,11,{'socket': 'LGA1700'},https://example.com/psu_model_931_rev-12.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 681 Rev-37,AMD,701.95,13,{'socket': 'LGA1700'},https://example.com/ssd_model_681_rev-37.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 403 Rev-60,Kingston,967.91,48,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_403_rev-60.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 948 Rev-52,AMD,702.09,79,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_948_rev-52.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 663 Rev-96,Seagate,996.65,59,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_663_rev-96.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 316 Rev-13,AMD,382.91,16,{'speed': '3200MHz'},https://example.com/cpu_model_316_rev-13.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 499 Rev-48,Intel,914.97,95,{'socket': 'LGA1700'},https://example.com/cpu_model_499_rev-48.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 642 Rev-49,AMD,819.28,11,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_642_rev-49.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 562 Rev-90,AMD,359.96,35,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_562_rev-90.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 809 Rev-6,Patriot,183.03,18,{'socket': 'LGA1700'},https://example.com/cpu_model_809_rev-6.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 702 Rev-78,Corsair,332.43,16,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_702_rev-78.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 600 Rev-20,Gigabyte,875.02,28,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_600_rev-20.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 930 Rev-39,Patriot,444.36,58,{'speed': '3200MHz'},https://example.com/ssd_model_930_rev-39.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 360 Rev-83,NVIDIA,956.59,86,{'speed': '3200MHz'},https://example.com/psu_model_360_rev-83.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 862 Rev-48,Seagate,196.71,26,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_862_rev-48.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 242 Rev-55,AMD,993.57,35,{'speed': '3200MHz'},https://example.com/psu_model_242_rev-55.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 679 Rev-91,Corsair,529.61,77,{'speed': '3200MHz'},https://example.com/ssd_model_679_rev-91.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 639 Rev-22,Corsair,841.63,48,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_639_rev-22.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 370 Rev-51,Patriot,882.52,98,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_370_rev-51.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 166 Rev-52,Gigabyte,911.04,48,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_166_rev-52.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 115 Rev-77,Seagate,809.77,57,{'socket': 'LGA1700'},https://example.com/psu_model_115_rev-77.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 860 Rev-11,Intel,51.79,56,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_860_rev-11.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 210 Rev-79,NVIDIA,522.87,30,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_210_rev-79.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 213 Rev-8,Patriot,120.39,62,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_213_rev-8.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 130 Rev-32,Intel,70.27,83,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_130_rev-32.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 845 Rev-54,NVIDIA,483.12,55,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_845_rev-54.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 385 Rev-89,Kingston,308.98,71,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_385_rev-89.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 888 Rev-19,Gigabyte,469.21,19,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_888_rev-19.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 907 Rev-97,Intel,212.57,20,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_907_rev-97.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 606 Rev-52,Seagate,818.66,60,{'socket': 'LGA1700'},https://example.com/ssd_model_606_rev-52.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 508 Rev-21,Gigabyte,861.94,52,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_508_rev-21.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 300 Rev-91,AMD,286.14,82,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_300_rev-91.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 612 Rev-13,Gigabyte,644.95,49,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_612_rev-13.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 471 Rev-65,NVIDIA,842.0,29,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_471_rev-65.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 652 Rev-94,Kingston,130.48,70,{'speed': '3200MHz'},https://example.com/cpu_model_652_rev-94.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 464 Rev-79,Patriot,144.87,35,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_464_rev-79.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 930 Rev-8,Seagate,169.99,81,{'speed': '3200MHz'},https://example.com/cpu_model_930_rev-8.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 727 Rev-6,Kingston,348.76,69,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_727_rev-6.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 686 Rev-99,Kingston,231.69,56,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_686_rev-99.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 779 Rev-5,Gigabyte,914.86,70,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_779_rev-5.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 629 Rev-8,Gigabyte,118.35,81,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_629_rev-8.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 755 Rev-36,NVIDIA,100.16,27,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_755_rev-36.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 317 Rev-38,NVIDIA,159.46,86,{'socket': 'LGA1700'},https://example.com/motherboard_model_317_rev-38.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 816 Rev-23,Corsair,983.03,22,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_816_rev-23.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 693 Rev-98,AMD,994.76,90,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_693_rev-98.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 672 Rev-72,AMD,266.67,34,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_672_rev-72.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 279 Rev-87,Kingston,328.51,58,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_279_rev-87.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 769 Rev-97,Seagate,223.83,51,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_769_rev-97.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 280 Rev-40,NVIDIA,855.22,51,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_280_rev-40.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 994 Rev-38,Kingston,303.68,22,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_994_rev-38.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 726 Rev-27,Patriot,658.76,93,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_726_rev-27.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 595 Rev-23,Intel,556.19,10,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_595_rev-23.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 254 Rev-45,Patriot,805.18,89,{'speed': '3200MHz'},https://example.com/motherboard_model_254_rev-45.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 337 Rev-75,Corsair,523.44,84,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_337_rev-75.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 158 Rev-93,Seagate,751.75,16,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_158_rev-93.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 149 Rev-84,AMD,795.86,86,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_149_rev-84.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 866 Rev-71,Seagate,843.09,72,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_866_rev-71.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 286 Rev-12,AMD,458.31,83,{'speed': '3200MHz'},https://example.com/ram_model_286_rev-12.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 809 Rev-55,Intel,544.01,78,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_809_rev-55.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 360 Rev-50,Corsair,109.67,95,{'socket': 'LGA1700'},https://example.com/cpu_model_360_rev-50.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 408 Rev-91,Patriot,275.84,22,{'speed': '3200MHz'},https://example.com/cpu_model_408_rev-91.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 190 Rev-9,NVIDIA,423.18,71,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_190_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 208 Rev-41,AMD,558.64,91,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_208_rev-41.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 523 Rev-89,AMD,364.81,25,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_523_rev-89.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 204 Rev-7,Corsair,289.85,22,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_204_rev-7.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 992 Rev-72,Intel,221.11,50,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_992_rev-72.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 252 Rev-31,Seagate,259.04,90,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_252_rev-31.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 751 Rev-75,AMD,366.4,48,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_751_rev-75.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 863 Rev-42,NVIDIA,356.76,96,{'socket': 'LGA1700'},https://example.com/case_model_863_rev-42.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 127 Rev-99,Corsair,728.89,91,{'socket': 'LGA1700'},https://example.com/hdd_model_127_rev-99.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 525 Rev-22,NVIDIA,687.92,50,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_525_rev-22.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 586 Rev-41,NVIDIA,685.63,88,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_586_rev-41.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 993 Rev-24,Seagate,578.59,13,{'speed': '3200MHz'},https://example.com/gpu_model_993_rev-24.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 198 Rev-54,Corsair,537.91,35,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_198_rev-54.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 304 Rev-45,Patriot,956.32,98,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_304_rev-45.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 987 Rev-56,Patriot,213.05,68,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_987_rev-56.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 731 Rev-28,Corsair,161.07,98,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_731_rev-28.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 331 Rev-97,Kingston,713.46,57,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_331_rev-97.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 500 Rev-86,Kingston,699.11,26,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_500_rev-86.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 200 Rev-26,Patriot,684.99,52,{'socket': 'LGA1700'},https://example.com/case_model_200_rev-26.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 346 Rev-14,Gigabyte,161.68,45,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_346_rev-14.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 752 Rev-85,NVIDIA,857.3,76,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_752_rev-85.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 691 Rev-53,Gigabyte,334.49,62,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_691_rev-53.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 836 Rev-68,AMD,271.37,12,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_836_rev-68.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 399 Rev-67,Gigabyte,775.91,58,{'speed': '3200MHz'},https://example.com/ssd_model_399_rev-67.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 314 Rev-78,Gigabyte,470.18,31,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_314_rev-78.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 122 Rev-30,Kingston,967.49,52,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_122_rev-30.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 384 Rev-2,AMD,597.52,19,{'speed': '3200MHz'},https://example.com/motherboard_model_384_rev-2.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 934 Rev-33,NVIDIA,945.98,54,{'speed': '3200MHz'},https://example.com/ram_model_934_rev-33.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 138 Rev-82,Patriot,778.77,45,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_138_rev-82.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 641 Rev-56,Kingston,738.63,93,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_641_rev-56.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 224 Rev-87,AMD,697.0,53,{'speed': '3200MHz'},https://example.com/hdd_model_224_rev-87.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 659 Rev-36,Intel,272.32,85,{'socket': 'LGA1700'},https://example.com/hdd_model_659_rev-36.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 966 Rev-34,Corsair,559.28,39,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_966_rev-34.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 910 Rev-37,NVIDIA,986.11,100,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_910_rev-37.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 112 Rev-12,Intel,485.55,45,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_112_rev-12.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 232 Rev-10,Kingston,922.13,68,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_232_rev-10.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 529 Rev-56,Kingston,474.87,66,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_529_rev-56.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 912 Rev-85,Seagate,847.15,39,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_912_rev-85.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 715 Rev-97,Intel,281.33,11,{'speed': '3200MHz'},https://example.com/psu_model_715_rev-97.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 811 Rev-46,Patriot,342.13,33,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_811_rev-46.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 507 Rev-8,Kingston,960.99,69,{'socket': 'LGA1700'},https://example.com/psu_model_507_rev-8.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 863 Rev-12,AMD,285.94,90,{'socket': 'LGA1700'},https://example.com/gpu_model_863_rev-12.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 486 Rev-4,Seagate,300.68,75,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_486_rev-4.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 371 Rev-89,Patriot,931.71,100,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_371_rev-89.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 608 Rev-65,Seagate,989.25,33,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_608_rev-65.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 357 Rev-96,AMD,620.97,88,{'speed': '3200MHz'},https://example.com/cpu_model_357_rev-96.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 473 Rev-49,Patriot,417.76,88,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_473_rev-49.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 848 Rev-90,Patriot,618.41,51,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_848_rev-90.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 153 Rev-61,Intel,974.87,100,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_153_rev-61.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 396 Rev-26,Intel,993.68,73,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_396_rev-26.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 192 Rev-43,Intel,328.72,64,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_192_rev-43.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 333 Rev-63,Seagate,660.68,67,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_333_rev-63.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 918 Rev-24,Corsair,333.67,32,{'speed': '3200MHz'},https://example.com/motherboard_model_918_rev-24.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 182 Rev-79,Kingston,778.22,44,{'speed': '3200MHz'},https://example.com/hdd_model_182_rev-79.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 630 Rev-92,Intel,328.44,95,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_630_rev-92.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 990 Rev-11,AMD,192.05,27,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_990_rev-11.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 982 Rev-63,AMD,532.02,75,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_982_rev-63.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 120 Rev-77,Patriot,491.53,31,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_120_rev-77.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 203 Rev-63,AMD,833.31,15,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_203_rev-63.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 277 Rev-33,NVIDIA,261.4,30,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_277_rev-33.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 176 Rev-94,Corsair,204.92,97,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_176_rev-94.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 576 Rev-16,Gigabyte,143.48,77,{'speed': '3200MHz'},https://example.com/motherboard_model_576_rev-16.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 290 Rev-20,Corsair,113.55,61,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_290_rev-20.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 892 Rev-35,Gigabyte,368.22,63,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_892_rev-35.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 136 Rev-49,AMD,628.83,17,{'speed': '3200MHz'},https://example.com/gpu_model_136_rev-49.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 428 Rev-17,Gigabyte,522.84,36,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_428_rev-17.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 253 Rev-21,Kingston,135.23,14,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_253_rev-21.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 886 Rev-87,NVIDIA,140.19,86,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_886_rev-87.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 311 Rev-33,Kingston,786.65,88,{'speed': '3200MHz'},https://example.com/ram_model_311_rev-33.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 469 Rev-32,AMD,314.04,75,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_469_rev-32.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 180 Rev-84,Gigabyte,840.81,49,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_180_rev-84.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 525 Rev-50,Intel,768.52,14,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_525_rev-50.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 669 Rev-99,NVIDIA,589.03,67,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_669_rev-99.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 713 Rev-57,AMD,577.93,49,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_713_rev-57.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 766 Rev-29,Gigabyte,223.2,61,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_766_rev-29.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 274 Rev-19,Patriot,286.94,44,{'speed': '3200MHz'},https://example.com/gpu_model_274_rev-19.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 922 Rev-9,Seagate,562.46,33,{'speed': '3200MHz'},https://example.com/psu_model_922_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 395 Rev-56,NVIDIA,194.28,76,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_395_rev-56.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 227 Rev-5,Kingston,391.56,90,{'speed': '3200MHz'},https://example.com/gpu_model_227_rev-5.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 839 Rev-55,Kingston,317.81,94,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_839_rev-55.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 488 Rev-15,AMD,83.16,87,{'socket': 'LGA1700'},https://example.com/ram_model_488_rev-15.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 558 Rev-86,Intel,758.61,61,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_558_rev-86.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 607 Rev-81,Patriot,194.86,45,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_607_rev-81.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 371 Rev-11,Patriot,418.67,62,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_371_rev-11.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 111 Rev-86,Gigabyte,932.44,25,{'socket': 'LGA1700'},https://example.com/hdd_model_111_rev-86.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 345 Rev-76,Seagate,183.71,53,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_345_rev-76.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 469 Rev-9,Kingston,173.2,31,{'socket': 'LGA1700'},https://example.com/motherboard_model_469_rev-9.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 254 Rev-77,NVIDIA,218.49,47,{'speed': '3200MHz'},https://example.com/ram_model_254_rev-77.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 519 Rev-24,Corsair,952.0,24,{'socket': 'LGA1700'},https://example.com/ram_model_519_rev-24.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 581 Rev-28,Corsair,335.64,15,{'speed': '3200MHz'},https://example.com/ssd_model_581_rev-28.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 218 Rev-87,Patriot,472.68,63,{'socket': 'LGA1700'},https://example.com/ram_model_218_rev-87.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 914 Rev-2,Patriot,368.62,96,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_914_rev-2.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 743 Rev-35,Seagate,443.64,23,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_743_rev-35.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 126 Rev-39,Gigabyte,92.97,12,{'speed': '3200MHz'},https://example.com/motherboard_model_126_rev-39.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 110 Rev-10,AMD,233.61,15,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_110_rev-10.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 417 Rev-9,Gigabyte,379.19,78,{'speed': '3200MHz'},https://example.com/ram_model_417_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 110 Rev-77,Seagate,357.66,87,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_110_rev-77.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 573 Rev-19,AMD,701.26,99,{'speed': '3200MHz'},https://example.com/ssd_model_573_rev-19.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 221 Rev-67,Corsair,793.49,36,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_221_rev-67.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 212 Rev-21,NVIDIA,389.1,92,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_212_rev-21.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 737 Rev-7,NVIDIA,813.78,92,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_737_rev-7.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 226 Rev-36,Seagate,524.75,43,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_226_rev-36.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 608 Rev-79,Kingston,325.07,46,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_608_rev-79.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 376 Rev-55,Patriot,889.25,51,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_376_rev-55.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 600 Rev-31,Patriot,850.71,98,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_600_rev-31.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 449 Rev-35,Patriot,669.98,94,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_449_rev-35.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 843 Rev-1,NVIDIA,432.84,19,{'socket': 'LGA1700'},https://example.com/cpu_model_843_rev-1.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 106 Rev-80,Patriot,383.91,55,{'speed': '3200MHz'},https://example.com/cpu_model_106_rev-80.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 537 Rev-11,Gigabyte,405.51,24,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_537_rev-11.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 974 Rev-78,NVIDIA,357.37,33,{'socket': 'LGA1700'},https://example.com/motherboard_model_974_rev-78.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 916 Rev-24,AMD,890.34,50,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_916_rev-24.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 690 Rev-17,Intel,910.74,62,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_690_rev-17.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 320 Rev-72,AMD,326.54,43,{'socket': 'LGA1700'},https://example.com/hdd_model_320_rev-72.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 196 Rev-7,Corsair,568.79,90,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_196_rev-7.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 351 Rev-48,Intel,139.83,89,{'speed': '3200MHz'},https://example.com/gpu_model_351_rev-48.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 356 Rev-20,Gigabyte,123.11,90,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_356_rev-20.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 714 Rev-67,NVIDIA,938.02,97,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_714_rev-67.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 596 Rev-76,Patriot,600.95,73,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_596_rev-76.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 365 Rev-15,NVIDIA,652.79,57,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_365_rev-15.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 942 Rev-29,Seagate,585.72,74,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_942_rev-29.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 372 Rev-40,Corsair,863.78,47,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_372_rev-40.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 667 Rev-25,Corsair,128.26,60,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_667_rev-25.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 194 Rev-83,Intel,357.17,73,{'socket': 'LGA1700'},https://example.com/psu_model_194_rev-83.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 599 Rev-39,Patriot,485.22,44,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_599_rev-39.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 427 Rev-22,Patriot,543.26,62,{'speed': '3200MHz'},https://example.com/ram_model_427_rev-22.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 492 Rev-33,AMD,961.03,64,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_492_rev-33.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 155 Rev-38,Gigabyte,363.98,78,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_155_rev-38.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 170 Rev-22,Gigabyte,756.64,17,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_170_rev-22.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 659 Rev-98,Kingston,807.39,19,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_659_rev-98.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 220 Rev-5,Patriot,887.76,93,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_220_rev-5.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 907 Rev-60,Seagate,691.15,20,{'socket': 'LGA1700'},https://example.com/ssd_model_907_rev-60.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 533 Rev-64,AMD,676.06,53,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_533_rev-64.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 535 Rev-47,Patriot,235.88,57,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_535_rev-47.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 482 Rev-91,NVIDIA,764.64,11,{'speed': '3200MHz'},https://example.com/case_model_482_rev-91.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 765 Rev-75,Gigabyte,844.73,35,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_765_rev-75.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 121 Rev-56,Intel,480.9,71,{'socket': 'LGA1700'},https://example.com/case_model_121_rev-56.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 299 Rev-12,Intel,529.13,26,{'speed': '3200MHz'},https://example.com/ram_model_299_rev-12.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 207 Rev-52,Corsair,468.52,59,{'socket': 'LGA1700'},https://example.com/case_model_207_rev-52.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 224 Rev-85,NVIDIA,716.93,41,{'speed': '3200MHz'},https://example.com/case_model_224_rev-85.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 864 Rev-63,AMD,198.53,11,{'speed': '3200MHz'},https://example.com/gpu_model_864_rev-63.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 622 Rev-43,Corsair,504.36,93,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_622_rev-43.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 705 Rev-88,AMD,212.96,97,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_705_rev-88.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 283 Rev-9,Gigabyte,631.41,92,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_283_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 906 Rev-79,AMD,139.25,77,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_906_rev-79.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 916 Rev-46,Kingston,261.35,10,{'speed': '3200MHz'},https://example.com/gpu_model_916_rev-46.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 796 Rev-66,Kingston,718.43,20,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_796_rev-66.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 209 Rev-69,Kingston,555.68,87,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_209_rev-69.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 691 Rev-29,Kingston,640.07,45,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_691_rev-29.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 168 Rev-96,Kingston,751.88,95,{'speed': '3200MHz'},https://example.com/motherboard_model_168_rev-96.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 713 Rev-77,Seagate,762.38,87,{'speed': '3200MHz'},https://example.com/cpu_model_713_rev-77.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 441 Rev-70,Intel,848.93,39,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_441_rev-70.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 596 Rev-49,Corsair,319.36,26,{'socket': 'LGA1700'},https://example.com/psu_model_596_rev-49.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 461 Rev-11,Kingston,417.83,23,{'speed': '3200MHz'},https://example.com/cpu_model_461_rev-11.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 131 Rev-81,Gigabyte,903.76,55,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_131_rev-81.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 476 Rev-81,AMD,469.14,13,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_476_rev-81.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 763 Rev-26,Patriot,119.8,65,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_763_rev-26.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 574 Rev-11,Kingston,665.3,21,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_574_rev-11.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 900 Rev-47,Intel,765.5,52,{'socket': 'LGA1700'},https://example.com/case_model_900_rev-47.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 556 Rev-54,NVIDIA,338.64,26,{'speed': '3200MHz'},https://example.com/psu_model_556_rev-54.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 991 Rev-70,Kingston,237.08,82,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_991_rev-70.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 118 Rev-7,NVIDIA,361.38,100,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_118_rev-7.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 647 Rev-39,NVIDIA,388.21,27,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_647_rev-39.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 932 Rev-56,NVIDIA,285.27,39,{'socket': 'LGA1700'},https://example.com/ram_model_932_rev-56.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 202 Rev-86,Gigabyte,435.82,62,{'speed': '3200MHz'},https://example.com/ram_model_202_rev-86.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 784 Rev-47,AMD,95.68,10,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_784_rev-47.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 407 Rev-32,Patriot,286.42,31,{'speed': '3200MHz'},https://example.com/cpu_model_407_rev-32.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 276 Rev-46,Corsair,471.76,23,{'socket': 'LGA1700'},https://example.com/gpu_model_276_rev-46.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 929 Rev-6,Patriot,275.95,50,{'socket': 'LGA1700'},https://example.com/motherboard_model_929_rev-6.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 913 Rev-71,NVIDIA,619.06,60,{'speed': '3200MHz'},https://example.com/ram_model_913_rev-71.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 251 Rev-17,AMD,571.66,80,{'speed': '3200MHz'},https://example.com/motherboard_model_251_rev-17.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 598 Rev-81,NVIDIA,754.46,71,{'socket': 'LGA1700'},https://example.com/ram_model_598_rev-81.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 159 Rev-9,Intel,167.54,16,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_159_rev-9.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 621 Rev-15,Corsair,552.54,82,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_621_rev-15.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 270 Rev-49,Gigabyte,657.28,20,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_270_rev-49.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 326 Rev-41,Corsair,931.42,38,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_326_rev-41.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 299 Rev-2,AMD,456.62,80,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_299_rev-2.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 818 Rev-65,AMD,923.18,70,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/motherboard_model_818_rev-65.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 276 Rev-70,AMD,699.57,78,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_276_rev-70.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 662 Rev-13,Seagate,748.14,29,{'socket': 'LGA1700'},https://example.com/motherboard_model_662_rev-13.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 509 Rev-51,Gigabyte,83.75,24,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_509_rev-51.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 199 Rev-55,Intel,999.17,51,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_199_rev-55.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 471 Rev-56,Corsair,669.17,42,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_471_rev-56.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 758 Rev-93,Patriot,606.67,16,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_758_rev-93.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 405 Rev-96,NVIDIA,338.02,44,{'speed': '3200MHz'},https://example.com/hdd_model_405_rev-96.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 276 Rev-21,Patriot,893.4,97,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_276_rev-21.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 456 Rev-65,Kingston,120.33,27,{'speed': '3200MHz'},https://example.com/psu_model_456_rev-65.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 533 Rev-80,Intel,899.5,28,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_533_rev-80.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 749 Rev-67,Corsair,685.99,59,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_749_rev-67.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 675 Rev-48,Kingston,719.86,46,{'socket': 'LGA1700'},https://example.com/ram_model_675_rev-48.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 501 Rev-60,NVIDIA,376.06,68,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_501_rev-60.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 568 Rev-77,AMD,880.33,46,{'speed': '3200MHz'},https://example.com/hdd_model_568_rev-77.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 558 Rev-15,Kingston,930.75,98,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_558_rev-15.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 120 Rev-74,Gigabyte,249.64,43,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_120_rev-74.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 459 Rev-28,Seagate,534.59,26,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_459_rev-28.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 870 Rev-56,NVIDIA,705.47,78,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ssd_model_870_rev-56.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 277 Rev-3,Seagate,424.9,90,{'socket': 'LGA1700'},https://example.com/cpu_model_277_rev-3.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 818 Rev-8,Gigabyte,633.12,51,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_818_rev-8.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 289 Rev-82,Corsair,261.3,14,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_289_rev-82.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 745 Rev-22,Corsair,959.01,75,{'speed': '3200MHz'},https://example.com/cpu_model_745_rev-22.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 974 Rev-36,NVIDIA,681.33,12,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_974_rev-36.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 567 Rev-74,NVIDIA,284.69,100,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_567_rev-74.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 127 Rev-82,Corsair,364.13,43,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_127_rev-82.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 503 Rev-27,Kingston,755.98,62,{'speed': '3200MHz'},https://example.com/psu_model_503_rev-27.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 658 Rev-23,AMD,528.14,79,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_658_rev-23.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 335 Rev-24,Intel,258.94,86,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_335_rev-24.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 261 Rev-63,Patriot,273.3,93,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_261_rev-63.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 303 Rev-90,Gigabyte,574.38,100,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_303_rev-90.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 332 Rev-78,Patriot,305.89,47,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_332_rev-78.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 134 Rev-77,Patriot,78.47,97,{'speed': '3200MHz'},https://example.com/psu_model_134_rev-77.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 919 Rev-27,Gigabyte,289.18,63,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_919_rev-27.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 298 Rev-85,Gigabyte,589.99,80,{'speed': '3200MHz'},https://example.com/cpu_model_298_rev-85.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 535 Rev-65,Intel,281.58,42,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_535_rev-65.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 194 Rev-68,Gigabyte,305.84,100,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_194_rev-68.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 843 Rev-3,Seagate,460.77,19,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_843_rev-3.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 970 Rev-11,AMD,854.88,72,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_970_rev-11.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 352 Rev-58,Patriot,951.32,34,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_352_rev-58.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 683 Rev-6,Corsair,982.2,66,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_683_rev-6.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 489 Rev-50,AMD,301.96,62,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_489_rev-50.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 526 Rev-74,Intel,790.85,100,{'socket': 'LGA1700'},https://example.com/case_model_526_rev-74.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 243 Rev-34,Kingston,253.08,14,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_243_rev-34.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 848 Rev-11,Seagate,104.46,24,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_848_rev-11.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 943 Rev-37,Gigabyte,836.61,98,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_943_rev-37.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 625 Rev-56,Corsair,751.19,60,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_625_rev-56.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 905 Rev-9,Intel,732.99,88,{'socket': 'LGA1700'},https://example.com/gpu_model_905_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 548 Rev-30,NVIDIA,93.8,52,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_548_rev-30.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 741 Rev-74,Intel,619.08,63,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_741_rev-74.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 721 Rev-5,Gigabyte,875.97,26,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_721_rev-5.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 359 Rev-91,NVIDIA,400.35,26,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_359_rev-91.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 129 Rev-96,Corsair,121.72,49,{'socket': 'LGA1700'},https://example.com/cpu_model_129_rev-96.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 993 Rev-55,NVIDIA,535.93,44,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_993_rev-55.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 862 Rev-42,Intel,740.44,79,{'speed': '3200MHz'},https://example.com/ram_model_862_rev-42.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 216 Rev-95,Kingston,596.92,60,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_216_rev-95.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 116 Rev-89,Intel,895.13,25,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_116_rev-89.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 574 Rev-67,AMD,435.49,28,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_574_rev-67.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 903 Rev-44,AMD,444.38,38,{'speed': '3200MHz'},https://example.com/gpu_model_903_rev-44.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 616 Rev-22,Patriot,526.53,46,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_616_rev-22.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 712 Rev-97,Patriot,381.01,85,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_712_rev-97.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 140 Rev-9,Gigabyte,769.64,38,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_140_rev-9.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 534 Rev-44,Gigabyte,721.07,43,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_534_rev-44.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 927 Rev-79,Patriot,664.27,54,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_927_rev-79.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 304 Rev-35,AMD,880.72,57,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_304_rev-35.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 889 Rev-7,Patriot,873.49,76,{'speed': '3200MHz'},https://example.com/psu_model_889_rev-7.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 491 Rev-17,AMD,112.67,12,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_491_rev-17.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 379 Rev-46,Gigabyte,721.72,100,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_379_rev-46.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 736 Rev-72,Intel,501.34,76,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_736_rev-72.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 605 Rev-26,Kingston,864.62,40,{'speed': '3200MHz'},https://example.com/gpu_model_605_rev-26.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 394 Rev-41,Kingston,399.8,44,{'speed': '3200MHz'},https://example.com/gpu_model_394_rev-41.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 462 Rev-8,Gigabyte,118.18,37,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_462_rev-8.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 241 Rev-20,Seagate,498.37,51,{'socket': 'LGA1700'},https://example.com/psu_model_241_rev-20.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 432 Rev-56,Corsair,912.87,59,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_432_rev-56.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 280 Rev-11,Gigabyte,286.78,67,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/case_model_280_rev-11.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 384 Rev-95,Intel,384.59,10,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_384_rev-95.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 941 Rev-62,AMD,326.7,33,{'socket': 'LGA1700'},https://example.com/case_model_941_rev-62.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 770 Rev-93,Corsair,907.11,78,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_770_rev-93.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 383 Rev-94,Kingston,592.26,68,{'speed': '3200MHz'},https://example.com/psu_model_383_rev-94.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 428 Rev-77,Patriot,202.43,55,{'socket': 'LGA1700'},https://example.com/gpu_model_428_rev-77.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 670 Rev-65,Corsair,661.71,61,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_670_rev-65.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 260 Rev-75,Kingston,950.55,43,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_260_rev-75.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 370 Rev-25,Seagate,470.15,57,{'speed': '3200MHz'},https://example.com/ram_model_370_rev-25.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 946 Rev-35,Kingston,985.12,25,{'socket': 'LGA1700'},https://example.com/cpu_model_946_rev-35.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 675 Rev-80,NVIDIA,421.34,41,{'speed': '3200MHz'},https://example.com/psu_model_675_rev-80.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 546 Rev-39,NVIDIA,892.17,57,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_546_rev-39.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 888 Rev-73,AMD,65.6,96,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_888_rev-73.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 303 Rev-3,Gigabyte,354.7,51,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_303_rev-3.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 451 Rev-36,Gigabyte,605.65,77,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_451_rev-36.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 757 Rev-93,Corsair,169.8,72,{'speed': '3200MHz'},https://example.com/case_model_757_rev-93.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 653 Rev-59,AMD,133.22,56,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_653_rev-59.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 577 Rev-81,Corsair,992.34,67,{'socket': 'LGA1700'},https://example.com/motherboard_model_577_rev-81.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 276 Rev-51,AMD,598.22,40,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_276_rev-51.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 507 Rev-50,Patriot,323.67,30,{'speed': '3200MHz'},https://example.com/ram_model_507_rev-50.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 277 Rev-1,AMD,494.96,79,{'socket': 'LGA1700'},https://example.com/cpu_model_277_rev-1.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 116 Rev-76,Seagate,838.15,97,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_116_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 366 Rev-48,Kingston,876.59,25,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_366_rev-48.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 389 Rev-68,Kingston,201.93,38,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_389_rev-68.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 135 Rev-4,Corsair,457.85,30,{'socket': 'LGA1700'},https://example.com/gpu_model_135_rev-4.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 513 Rev-25,Seagate,325.79,54,{'socket': 'LGA1700'},https://example.com/case_model_513_rev-25.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 441 Rev-72,Corsair,794.5,97,{'speed': '3200MHz'},https://example.com/ram_model_441_rev-72.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 497 Rev-58,Corsair,191.55,42,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_497_rev-58.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 566 Rev-57,Gigabyte,53.59,74,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_566_rev-57.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 562 Rev-61,Patriot,893.72,94,{'socket': 'LGA1700'},https://example.com/motherboard_model_562_rev-61.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 793 Rev-80,Corsair,59.25,11,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_793_rev-80.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 488 Rev-58,Intel,686.38,68,{'speed': '3200MHz'},https://example.com/case_model_488_rev-58.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 985 Rev-57,Kingston,940.79,73,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_985_rev-57.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+PSU,PSU Model 188 Rev-35,Patriot,285.28,99,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_188_rev-35.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 432 Rev-87,Corsair,854.76,35,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_432_rev-87.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 268 Rev-46,Intel,460.72,53,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_268_rev-46.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 820 Rev-73,Seagate,749.81,84,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_820_rev-73.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 742 Rev-70,Gigabyte,722.11,22,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_742_rev-70.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 366 Rev-63,AMD,717.8,61,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_366_rev-63.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 168 Rev-4,Intel,627.96,43,{'speed': '3200MHz'},https://example.com/psu_model_168_rev-4.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 490 Rev-12,Seagate,210.57,88,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_490_rev-12.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 737 Rev-84,Kingston,854.98,83,{'speed': '3200MHz'},https://example.com/cpu_model_737_rev-84.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 940 Rev-76,NVIDIA,180.13,63,{'speed': '3200MHz'},https://example.com/ram_model_940_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 149 Rev-11,Kingston,104.21,28,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_149_rev-11.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 406 Rev-23,Corsair,262.86,58,{'speed': '3200MHz'},https://example.com/case_model_406_rev-23.jpg,An SSD offering fast read/write speeds and durable performance.
+CPU,CPU Model 959 Rev-48,Intel,282.16,52,{'socket': 'LGA1700'},https://example.com/cpu_model_959_rev-48.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 871 Rev-87,Gigabyte,585.3,51,{'speed': '3200MHz'},https://example.com/ssd_model_871_rev-87.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 684 Rev-91,AMD,775.96,99,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_684_rev-91.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 319 Rev-88,Gigabyte,656.01,58,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_319_rev-88.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 426 Rev-63,NVIDIA,326.13,39,{'speed': '3200MHz'},https://example.com/gpu_model_426_rev-63.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 864 Rev-25,Corsair,176.22,17,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_864_rev-25.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 893 Rev-1,Corsair,821.01,32,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_893_rev-1.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 592 Rev-81,Corsair,295.26,34,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_592_rev-81.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 411 Rev-21,Seagate,880.9,42,{'speed': '3200MHz'},https://example.com/psu_model_411_rev-21.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 178 Rev-82,Kingston,947.84,76,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_178_rev-82.jpg,An SSD offering fast read/write speeds and durable performance.
+SSD,SSD Model 191 Rev-97,Gigabyte,762.26,66,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_191_rev-97.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 156 Rev-41,Intel,697.34,35,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_156_rev-41.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 944 Rev-24,NVIDIA,397.91,20,{'socket': 'LGA1700'},https://example.com/case_model_944_rev-24.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 347 Rev-76,Corsair,455.39,45,{'speed': '3200MHz'},https://example.com/case_model_347_rev-76.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 403 Rev-9,Corsair,585.32,76,{'speed': '3200MHz'},https://example.com/ram_model_403_rev-9.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 520 Rev-45,NVIDIA,341.5,63,{'speed': '3200MHz'},https://example.com/motherboard_model_520_rev-45.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 413 Rev-49,Kingston,249.06,38,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_413_rev-49.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 360 Rev-66,Kingston,117.62,38,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_360_rev-66.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 617 Rev-82,Corsair,474.1,29,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_617_rev-82.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 109 Rev-38,AMD,79.19,82,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_109_rev-38.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 995 Rev-45,Kingston,630.12,81,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/psu_model_995_rev-45.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 159 Rev-54,NVIDIA,101.16,61,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_159_rev-54.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 825 Rev-70,Corsair,777.53,25,{'speed': '3200MHz'},https://example.com/ssd_model_825_rev-70.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 606 Rev-49,Intel,615.38,86,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_606_rev-49.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 164 Rev-13,Seagate,264.51,98,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_164_rev-13.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 722 Rev-45,NVIDIA,916.86,15,{'speed': '3200MHz'},https://example.com/cpu_model_722_rev-45.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 457 Rev-4,Gigabyte,477.53,39,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_457_rev-4.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 479 Rev-68,Kingston,850.43,42,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_479_rev-68.jpg,An SSD offering fast read/write speeds and durable performance.
+GPU,GPU Model 368 Rev-27,Patriot,621.75,66,{'speed': '3200MHz'},https://example.com/gpu_model_368_rev-27.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 459 Rev-6,Corsair,334.61,30,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_459_rev-6.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 903 Rev-21,AMD,256.67,77,{'speed': '3200MHz'},https://example.com/motherboard_model_903_rev-21.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 461 Rev-54,Gigabyte,857.76,94,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_461_rev-54.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 739 Rev-38,Kingston,491.24,26,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_739_rev-38.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 861 Rev-31,Seagate,764.02,78,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_861_rev-31.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 567 Rev-66,Corsair,712.73,74,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_567_rev-66.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 115 Rev-12,Gigabyte,443.71,42,{'speed': '3200MHz'},https://example.com/gpu_model_115_rev-12.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 866 Rev-6,Seagate,712.12,92,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_866_rev-6.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 221 Rev-93,Kingston,997.21,13,{'socket': 'LGA1700'},https://example.com/ssd_model_221_rev-93.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 541 Rev-45,Corsair,924.78,27,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_541_rev-45.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 114 Rev-19,Intel,872.14,13,{'socket': 'LGA1700'},https://example.com/cpu_model_114_rev-19.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 413 Rev-18,Corsair,773.32,57,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_413_rev-18.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 941 Rev-66,Kingston,814.47,58,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_941_rev-66.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 633 Rev-22,Seagate,308.48,10,{'speed': '3200MHz'},https://example.com/case_model_633_rev-22.jpg,A reliable motherboard designed for overclocking and heavy usage.
+HDD,HDD Model 785 Rev-75,Seagate,829.96,46,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_785_rev-75.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 171 Rev-85,Seagate,647.45,11,{'socket': 'LGA1700'},https://example.com/psu_model_171_rev-85.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 433 Rev-59,Gigabyte,523.09,66,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_433_rev-59.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 743 Rev-86,NVIDIA,138.07,34,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_743_rev-86.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 850 Rev-7,AMD,433.84,95,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_850_rev-7.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 371 Rev-70,Intel,95.03,72,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_371_rev-70.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 830 Rev-66,AMD,512.94,97,{'speed': '3200MHz'},https://example.com/psu_model_830_rev-66.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 951 Rev-6,AMD,750.03,68,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_951_rev-6.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 870 Rev-42,Kingston,972.16,15,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_870_rev-42.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 948 Rev-98,Seagate,188.1,46,{'socket': 'LGA1700'},https://example.com/psu_model_948_rev-98.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 920 Rev-81,Gigabyte,707.24,63,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_920_rev-81.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 709 Rev-3,Corsair,118.75,100,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_709_rev-3.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 903 Rev-71,Patriot,634.19,72,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_903_rev-71.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 145 Rev-40,Seagate,129.56,18,{'speed': '3200MHz'},https://example.com/ssd_model_145_rev-40.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 685 Rev-44,Patriot,442.9,43,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_685_rev-44.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 958 Rev-89,Patriot,876.52,12,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_958_rev-89.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 370 Rev-34,Kingston,140.65,83,{'speed': '3200MHz'},https://example.com/gpu_model_370_rev-34.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 706 Rev-19,NVIDIA,243.83,38,{'speed': '3200MHz'},https://example.com/ram_model_706_rev-19.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 257 Rev-25,Patriot,878.67,25,{'speed': '3200MHz'},https://example.com/psu_model_257_rev-25.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 220 Rev-67,Corsair,116.12,72,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_220_rev-67.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 642 Rev-48,NVIDIA,180.28,65,{'speed': '3200MHz'},https://example.com/ssd_model_642_rev-48.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 987 Rev-49,Kingston,711.54,98,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_987_rev-49.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 262 Rev-34,Kingston,554.87,33,{'socket': 'LGA1700'},https://example.com/gpu_model_262_rev-34.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 140 Rev-79,Kingston,231.23,56,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_140_rev-79.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Case,Case Model 126 Rev-40,AMD,298.24,26,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_126_rev-40.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 384 Rev-14,Gigabyte,716.3,99,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_384_rev-14.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 259 Rev-61,Corsair,601.71,59,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/gpu_model_259_rev-61.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 941 Rev-8,AMD,414.63,89,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_941_rev-8.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 247 Rev-60,NVIDIA,526.99,11,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_247_rev-60.jpg,A reliable motherboard designed for overclocking and heavy usage.
+PSU,PSU Model 676 Rev-94,Intel,589.41,88,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/psu_model_676_rev-94.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+GPU,GPU Model 611 Rev-24,Corsair,89.09,95,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/gpu_model_611_rev-24.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 820 Rev-45,Gigabyte,679.72,16,{'speed': '3200MHz'},https://example.com/ram_model_820_rev-45.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 636 Rev-26,NVIDIA,460.91,68,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_636_rev-26.jpg,An SSD offering fast read/write speeds and durable performance.
+Motherboard,Motherboard Model 698 Rev-20,Gigabyte,926.62,66,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_698_rev-20.jpg,A high-performance processor suitable for gaming and content creation.
+CPU,CPU Model 407 Rev-17,NVIDIA,614.58,72,{'socket': 'LGA1700'},https://example.com/cpu_model_407_rev-17.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 438 Rev-50,AMD,507.82,74,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_438_rev-50.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 530 Rev-45,Corsair,663.59,65,{'speed': '3200MHz'},https://example.com/ram_model_530_rev-45.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 197 Rev-67,Corsair,61.23,58,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_197_rev-67.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 432 Rev-51,NVIDIA,660.84,30,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_432_rev-51.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Case,Case Model 326 Rev-24,Patriot,408.26,47,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_326_rev-24.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+Motherboard,Motherboard Model 383 Rev-22,Patriot,603.3,93,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_383_rev-22.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 276 Rev-55,Kingston,998.98,73,{'socket': 'LGA1700'},https://example.com/gpu_model_276_rev-55.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 522 Rev-37,Intel,152.24,43,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_522_rev-37.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 361 Rev-57,NVIDIA,679.09,23,{'socket': 'LGA1700'},https://example.com/hdd_model_361_rev-57.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 904 Rev-57,NVIDIA,683.33,29,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_904_rev-57.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 492 Rev-76,Seagate,282.66,97,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_492_rev-76.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 739 Rev-74,Gigabyte,894.39,46,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_739_rev-74.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Motherboard,Motherboard Model 286 Rev-20,Seagate,174.31,21,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_286_rev-20.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 496 Rev-67,NVIDIA,544.17,87,{'speed': '3200MHz'},https://example.com/cpu_model_496_rev-67.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 692 Rev-47,Gigabyte,274.68,30,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_692_rev-47.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 177 Rev-39,Patriot,218.13,34,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/cpu_model_177_rev-39.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Motherboard,Motherboard Model 619 Rev-15,Intel,384.02,30,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_619_rev-15.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 759 Rev-34,Patriot,216.28,77,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_759_rev-34.jpg,A reliable motherboard designed for overclocking and heavy usage.
+CPU,CPU Model 118 Rev-4,Seagate,997.81,67,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_118_rev-4.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 367 Rev-21,Patriot,406.87,11,{'speed': '3200MHz'},https://example.com/cpu_model_367_rev-21.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+CPU,CPU Model 398 Rev-50,Gigabyte,184.58,84,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/cpu_model_398_rev-50.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 935 Rev-54,Gigabyte,377.67,52,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_935_rev-54.jpg,An SSD offering fast read/write speeds and durable performance.
+RAM,RAM Model 815 Rev-75,NVIDIA,854.73,26,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_815_rev-75.jpg,An SSD offering fast read/write speeds and durable performance.
+Case,Case Model 532 Rev-51,Gigabyte,921.83,37,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/case_model_532_rev-51.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 974 Rev-40,Seagate,849.51,70,{'socket': 'LGA1700'},https://example.com/hdd_model_974_rev-40.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 471 Rev-76,Gigabyte,864.79,56,{'speed': '3200MHz'},https://example.com/motherboard_model_471_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+PSU,PSU Model 996 Rev-95,AMD,492.64,20,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/psu_model_996_rev-95.jpg,A high-performance processor suitable for gaming and content creation.
+HDD,HDD Model 683 Rev-70,Corsair,433.78,21,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_683_rev-70.jpg,A reliable motherboard designed for overclocking and heavy usage.
+GPU,GPU Model 272 Rev-71,Kingston,312.45,97,{'speed': '3200MHz'},https://example.com/gpu_model_272_rev-71.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 287 Rev-76,Intel,363.11,21,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_287_rev-76.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 365 Rev-97,Kingston,815.47,73,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_365_rev-97.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+GPU,GPU Model 715 Rev-25,Seagate,706.38,55,{'speed': '3200MHz'},https://example.com/gpu_model_715_rev-25.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 780 Rev-97,Patriot,284.87,99,{'speed': '3200MHz'},https://example.com/gpu_model_780_rev-97.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 310 Rev-28,Kingston,869.94,38,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/motherboard_model_310_rev-28.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 753 Rev-95,NVIDIA,785.02,52,{'speed': '3200MHz'},https://example.com/ram_model_753_rev-95.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 335 Rev-21,Kingston,394.81,68,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_335_rev-21.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 630 Rev-43,Kingston,569.81,36,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ram_model_630_rev-43.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 223 Rev-3,Gigabyte,907.14,26,{'speed': '3200MHz'},https://example.com/ssd_model_223_rev-3.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+CPU,CPU Model 448 Rev-90,Patriot,676.28,37,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/cpu_model_448_rev-90.jpg,A reliable motherboard designed for overclocking and heavy usage.
+SSD,SSD Model 238 Rev-89,NVIDIA,850.93,79,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ssd_model_238_rev-89.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 664 Rev-63,NVIDIA,505.16,20,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_664_rev-63.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 241 Rev-27,Patriot,660.67,47,{'socket': 'LGA1700'},https://example.com/hdd_model_241_rev-27.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 227 Rev-13,AMD,172.98,83,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_227_rev-13.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 850 Rev-3,Kingston,262.18,81,{'socket': 'LGA1700'},https://example.com/ram_model_850_rev-3.jpg,A high-performance processor suitable for gaming and content creation.
+PSU,PSU Model 185 Rev-88,AMD,674.43,74,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_185_rev-88.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 604 Rev-91,Gigabyte,793.1,50,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_604_rev-91.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 888 Rev-23,Corsair,698.6,58,{'speed': '3200MHz'},https://example.com/psu_model_888_rev-23.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+SSD,SSD Model 394 Rev-53,Corsair,631.02,24,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ssd_model_394_rev-53.jpg,A high-performance processor suitable for gaming and content creation.
+Case,Case Model 826 Rev-9,Patriot,968.73,17,{'speed': '3200MHz'},https://example.com/case_model_826_rev-9.jpg,A high-capacity HDD ideal for storing large amounts of data.
+GPU,GPU Model 582 Rev-12,Kingston,296.82,31,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_582_rev-12.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+HDD,HDD Model 164 Rev-43,Corsair,108.36,59,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/hdd_model_164_rev-43.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 865 Rev-46,Corsair,395.18,98,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/case_model_865_rev-46.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+RAM,RAM Model 480 Rev-2,Seagate,991.85,80,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_480_rev-2.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 500 Rev-23,Corsair,589.59,23,{'socket': 'LGA1700'},https://example.com/ssd_model_500_rev-23.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 659 Rev-14,Gigabyte,634.04,56,{'speed': '3200MHz'},https://example.com/ssd_model_659_rev-14.jpg,A high-performance processor suitable for gaming and content creation.
+SSD,SSD Model 670 Rev-75,Corsair,660.0,17,{'socket': 'LGA1700'},https://example.com/ssd_model_670_rev-75.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 177 Rev-24,Corsair,195.14,14,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_177_rev-24.jpg,A high-capacity HDD ideal for storing large amounts of data.
+CPU,CPU Model 296 Rev-44,Patriot,627.93,13,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/cpu_model_296_rev-44.jpg,A high-performance processor suitable for gaming and content creation.
+RAM,RAM Model 171 Rev-63,Gigabyte,404.63,24,{'socket': 'LGA1700'},https://example.com/ram_model_171_rev-63.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+RAM,RAM Model 197 Rev-13,Seagate,627.89,42,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/ram_model_197_rev-13.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 147 Rev-2,Kingston,649.31,84,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/hdd_model_147_rev-2.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 481 Rev-54,Patriot,991.23,38,{'socket': 'LGA1700'},https://example.com/psu_model_481_rev-54.jpg,An SSD offering fast read/write speeds and durable performance.
+PSU,PSU Model 329 Rev-95,Corsair,384.04,62,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_329_rev-95.jpg,A reliable motherboard designed for overclocking and heavy usage.
+Case,Case Model 456 Rev-88,Intel,846.17,40,{'speed': '3200MHz'},https://example.com/case_model_456_rev-88.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 710 Rev-17,Seagate,912.81,61,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/ram_model_710_rev-17.jpg,A high-capacity HDD ideal for storing large amounts of data.
+PSU,PSU Model 390 Rev-86,Seagate,168.09,26,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/psu_model_390_rev-86.jpg,An SSD offering fast read/write speeds and durable performance.
+HDD,HDD Model 497 Rev-24,Kingston,744.22,48,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/hdd_model_497_rev-24.jpg,Fast and efficient RAM for smooth multitasking and gaming.
+Motherboard,Motherboard Model 207 Rev-74,Seagate,804.2,40,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/motherboard_model_207_rev-74.jpg,A high-capacity HDD ideal for storing large amounts of data.
+Case,Case Model 552 Rev-74,Seagate,951.93,72,"{'memory': '6GB', 'type': 'GDDR6'}",https://example.com/case_model_552_rev-74.jpg,A high-capacity HDD ideal for storing large amounts of data.
+RAM,RAM Model 959 Rev-8,Corsair,127.16,17,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/ram_model_959_rev-8.jpg,A high-performance processor suitable for gaming and content creation.
+Motherboard,Motherboard Model 945 Rev-45,NVIDIA,923.85,26,"{'cores': 6, 'threads': 12, 'base_clock': '3.2GHz'}",https://example.com/motherboard_model_945_rev-45.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 396 Rev-74,NVIDIA,256.47,82,"{'type': 'SSD', 'interface': 'NVMe'}",https://example.com/gpu_model_396_rev-74.jpg,A reliable motherboard designed for overclocking and heavy usage.
+RAM,RAM Model 136 Rev-96,Intel,711.58,38,{'socket': 'LGA1700'},https://example.com/ram_model_136_rev-96.jpg,A high-capacity HDD ideal for storing large amounts of data.
+HDD,HDD Model 849 Rev-12,Gigabyte,846.69,47,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/hdd_model_849_rev-12.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+SSD,SSD Model 955 Rev-81,Seagate,507.2,28,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_955_rev-81.jpg,A high-performance processor suitable for gaming and content creation.
+GPU,GPU Model 832 Rev-61,NVIDIA,141.38,10,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/gpu_model_832_rev-61.jpg,A high-capacity HDD ideal for storing large amounts of data.
+SSD,SSD Model 843 Rev-54,AMD,947.96,78,"{'type': 'HDD', 'interface': 'SATA'}",https://example.com/ssd_model_843_rev-54.jpg,A powerful GPU capable of handling demanding gaming and AI workloads.
+HDD,HDD Model 919 Rev-72,Seagate,172.21,76,{'speed': '3200MHz'},https://example.com/hdd_model_919_rev-72.jpg,A high-capacity HDD ideal for storing large amounts of data.
