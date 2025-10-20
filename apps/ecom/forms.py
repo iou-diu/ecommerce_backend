@@ -427,18 +427,18 @@ class ProductForm(forms.ModelForm):
         widgets = {
             'description': SummernoteWidget(),
             'key_features': SummernoteWidget(),
-            'category': CategoryWidget(attrs={
-                'data-minimum-input-length': 0,
-                'class': 'form-control select2-widget'
-            }),
-            'brand': BrandWidget(attrs={
-                'data-minimum-input-length': 0,
-                'class': 'form-control select2-widget'
-            }),
-            'tags': TagMultipleSelect2Widget(attrs={
-                'data-minimum-input-length': 0,
-                'class': 'form-control select2-widget'
-            }),
+            # 'category': CategoryWidget(attrs={
+            #     'data-minimum-input-length': 0,
+            #     'class': 'form-control select2-widget'
+            # }),
+            # 'brand': BrandWidget(attrs={
+            #     'data-minimum-input-length': 0,
+            #     'class': 'form-control select2-widget'
+            # }),
+            # 'tags': TagMultipleSelect2Widget(attrs={
+            #     'data-minimum-input-length': 0,
+            #     'class': 'form-control select2-widget'
+            # }),
         }
 
     def __init__(self, *args, **kwargs):
