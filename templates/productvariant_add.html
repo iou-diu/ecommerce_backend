@@ -1,0 +1,52 @@
+{% extends 'includes/main.html' %} {% load static %} {% block content %}
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card shadow-sm border-0">
+        <div
+          class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3"
+        >
+          <h4 class="card-title fw-bold m-0 px-4">
+            {% if object %}Update{% else %}Add{% endif %} {{ page_title }}
+          </h4>
+          <div class="card-toolbar">
+            {% if list_link %}
+            <a
+              href="{{ list_link }}"
+              class="btn btn-light btn-sm d-flex align-items-center"
+            >
+              <i class="fas fa-list me-1"></i> {{ page_title }} List
+            </a>
+            {% endif %}
+          </div>
+        </div>
+        <div class="card-body">{% include 'includes/form.html' %}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block js %}
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    const skuField = document.querySelector("#id_sku");
+
+    // Clear the SKU field if it is preloaded with a value
+    // if (skuField && skuField.value.trim()) {
+    //   skuField.value = "";
+    // }
+
+    // Add an event listener to allow user input to remain unchanged
+    skuField.addEventListener("input", function () {
+      // Let the user type and retain their input
+      this.dataset.userModified = "true"; // Mark that the user has modified the field
+    });
+
+    // Ensure that if the field is not modified by the user, it remains blank
+    skuField.addEventListener("focusout", function () {
+      if (!this.dataset.userModified) {
+        this.value = ""; // Clear if not modified
+      }
+    });
+  });
+</script>
+{% endblock %}

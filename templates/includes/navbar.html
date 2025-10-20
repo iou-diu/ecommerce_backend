@@ -1,0 +1,617 @@
+{% load static %} {% load menu_tags %} {% load url_group %}
+
+<div
+        class="aside aside-left aside-fixed d-flex flex-column flex-row-auto"
+        id="kt_aside"
+>
+    <!--begin::Brand-->
+    <div class="brand flex-column-auto" id="kt_brand">
+        <!--begin::Logo-->
+        <a href="/">
+            <img
+                    alt="Logo"
+                    width="100px"
+                    src="https://daffodil.family/dfamily/images/familylogo/dcl.png"
+            /></a>
+        <!--end::Logo-->
+    </div>
+    <!--end::Brand-->
+
+    <!--begin::Aside Menu-->
+    <div
+            class="aside-menu-wrapper flex-column-fluid adminsidebar"
+            id="kt_aside_menu_wrapper"
+    >
+        <!--begin::Menu Container-->
+        <div id="kt_aside_menu" class="aside-menu my-4 scroll">
+            <!--begin::Menu Nav-->
+            <ul class="menu-nav">
+                <!-- Dashboard -->
+                <!-- <li class="menu-item" aria-haspopup="true">
+                  <a href="#" class="menu-link">
+                    <i class="menu-icon fas fa-tachometer-alt"></i>
+                    <span class="menu-text">Dashboard</span>
+                  </a>
+                </li> -->
+
+                {% if user|has_group:"Admin" %}{% endif %}
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="{% url 'home' %}" class="menu-link">
+                        <i class="menu-icon fas fa-tachometer-alt"></i>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- AI Dashboard -->
+                <li class="menu-item" aria-haspopup="true">
+                    <a href="{% url 'ai_dashboard' %}" class="menu-link">
+                        <i class="menu-icon fas fa-robot"></i>
+                        <span class="menu-text">AI Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- Products -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_url_group:'products' or request.resolver_match.url_name|in_url_group:'categories' or request.resolver_match.url_name|in_url_group:'brands' or request.resolver_match.url_name|in_url_group:'tags' or request.resolver_match.url_name|in_url_group:'flash_deals' %} menu-item-open {% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-box-open"></i>
+                        <span class="menu-text">Products</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'products' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'product_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i>
+                                    <span class="menu-text">All Products</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'categories' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'category_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-tags"></i>
+                                    <span class="menu-text">Categories</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'brands' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'brand_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-industry"></i>
+                                    <span class="menu-text">Brands</span>
+                                </a>
+                            </li>
+
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'tags' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'tag_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-tag"></i>
+                                    <span class="menu-text">Tags</span>
+                                </a>
+                            </li>
+
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'flash_deals' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'flash_deals' %}" class="menu-link">
+                                    <i class="menu-icon fa fa-percent"></i>
+                                    <span class="menu-text">Flash Deals</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Stock Management -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_url_group:'stocks' or request.resolver_match.url_name|in_url_group:'productvariants' %} menu-item-open {% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon ki ki-menu-grid"></i>
+                        <span class="menu-text">Stocks & Variants</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'productvariants' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'productvariant_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-boxes"></i>
+                                    <!-- Use fa-boxes for product variants -->
+                                    <span class="menu-text">Stock</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'stocks' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'stockentry_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-warehouse"></i>
+                                    <!-- Use fa-warehouse for stock management -->
+                                    <span class="menu-text">Stock Management</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Inventory -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_url_group:'inventory' %} menu-item-open {% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fa fa-th-large"></i>
+                        <span class="menu-text">Inventory</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'requisition_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'requisition_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-boxes"></i>
+                                    <!-- Use fa-boxes for product variants -->
+                                    <span class="menu-text">Requisition</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'po_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'po_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i>
+                                    <!-- Use fa-warehouse for stock management -->
+                                    <span class="menu-text">Purchase Order</span>
+                                </a>
+                            </li>
+
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'purchase_order_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'purchase_order_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-warehouse"></i>
+                                    <!-- Use fa-warehouse for stock management -->
+                                    <span class="menu-text">List Purchase</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'purchase_order_add' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'purchase_order_add' %}" class="menu-link">
+                                    <i class="menu-icon fa fa-plus-circle"></i>
+                                    <!-- Use fa-warehouse for stock management -->
+                                    <span class="menu-text">Add Purchase</span>
+                                </a>
+                            </li>
+
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name|in_url_group:'supplier' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'supplier_list' %}" class="menu-link">
+                                    <i class="menu-icon"
+                                    ><img
+                                            class="menu-icon-image"
+                                            src="{% static 'images/users-alt-1.svg' %} "
+                                            width="24px"
+                                            alt=""
+                                    /></i>
+
+                                    <span class="menu-text">Supplier</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Orders -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name == 'order_list' %} menu-item-open {% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-shopping-cart"></i>
+                        <span class="menu-text">Orders</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li class="menu-item {% if request.resolver_match.url_name == 'order_list' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'order_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i>
+                                    <span class="menu-text">All Orders</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Customers -->
+                <li
+                        class="menu-item menu-item-submenu"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-users"></i>
+                        <span class="menu-text">Customers</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="#" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i>
+                                    <span class="menu-text">All Customers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Reports -->
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name == 'purchase_sale_report' %}menu-item-open{% endif %}"
+                    aria-haspopup="true"
+                    data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-chart-line"></i>
+                        <span class="menu-text">Reports</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li class="menu-item"
+                                aria-haspopup="true">
+                                <a href="{% url 'purchase_sale_report' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-chart-bar"></i>
+                                    <span class="menu-text">Purchase & Sales</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Accounting -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_list:'accounthead_list,account_list,transaction_list,transactionline_list,bill_list,payment_list' %}menu-item-open{% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-coins"></i>
+                        <span class="menu-text">Accounting</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'accounthead_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'accounthead_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i>
+                                    <span class="menu-text">Account Heads</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'account_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'account_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-file-invoice"></i>
+                                    <span class="menu-text">Account List</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'transaction_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'transaction_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-exchange-alt"></i>
+                                    <span class="menu-text">Transaction List</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'transactionline_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'transactionline_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-stream"></i>
+                                    <span class="menu-text">Transaction Lines</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'bill_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'bill_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-file-invoice"></i>
+                                    <span class="menu-text">Collection</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'payment_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'payment_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-credit-card"></i>
+                                    <span class="menu-text">Payments</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Expense Management -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_list:'expense_list,expensepayment_list,expensecategory_list' %}menu-item-open{% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-wallet"></i>
+                        <span class="menu-text">Expense Management</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <!-- Expense List -->
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'expense_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'expense_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-receipt"></i>
+                                    <span class="menu-text">Expenses</span>
+                                </a>
+                            </li>
+                            <!-- Expense Payment List -->
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'expensepayment_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'expensepayment_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-money-check-alt"></i>
+                                    <span class="menu-text">Expense Payments</span>
+                                </a>
+                            </li>
+                            <!-- Expense Category List -->
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'expensecategory_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'expensecategory_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-tags"></i>
+                                    <span class="menu-text">Expense Categories</span>
+                                </a>
+                            </li>
+                            <!-- Business Location List -->
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- Payment Management -->
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_list:'paymentaccount_list,fundtransfer_list,paymentaccountdeposit_list,paymentaccountdeposit_add' %}menu-item-open{% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-money-bill-wave"></i>
+                        <span class="menu-text">Payment Management</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            <!-- Payment Accounts -->
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'paymentaccount_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'paymentaccount_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-credit-card"></i>
+                                    <span class="menu-text">Payment Accounts</span>
+                                </a>
+                            </li>
+                            <!-- Fund Transfers -->
+                            <li class="menu-item {% if request.resolver_match.url_name == 'fundtransfer_list' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'fundtransfer_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-exchange-alt"></i>
+                                    <span class="menu-text">Fund Transfers</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item {% if request.resolver_match.url_name == 'paymentaccountdeposit_list' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'paymentaccountdeposit_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-credit-card"></i>
+                                    <span class="menu-text">Deposit Fund</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+
+                <!-- Settings -->
+
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name == 'mega-menu' or request.resolver_match.url_name|in_url_group:'attributes' or request.resolver_match.url_name|in_url_group:'attributesvalues' or request.resolver_match.url_name|in_url_group:'taxes' or request.resolver_match.url_name|in_url_group:'settings' %} menu-item-open {% endif %}"
+                    aria-haspopup="true"
+                    data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-cog"></i>
+                        <span class="menu-text">Settings</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+
+                            <li class="menu-item {% if request.resolver_match.url_name|in_url_group:'attributes' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'attribute_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list-alt"></i>
+                                    <span class="menu-text">Attributes</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name|in_url_group:'attributesvalues' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'attributevalue_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list-ol"></i>
+                                    <span class="menu-text">Attribute Values</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'businesslocation_list' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'businesslocation_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-map-marker-alt"></i>
+                                    <span class="menu-text">Business Locations</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name|in_url_group:'taxes' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'tax_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-percentage"></i>
+                                    <span class="menu-text">Tax</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item {% if request.resolver_match.url_name == 'mega-menu' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'mega-menu' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i>
+                                    <span class="menu-text"> Category settings</span>
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </li>
+
+                <!-- User Management -->
+
+                <li
+                        class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_url_group:'admin_menus' %} menu-item-open {% endif %}"
+                        aria-haspopup="true"
+                        data-menu-toggle="hover"
+                >
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fa fa-users"></i>
+                        <span class="menu-text">User Management</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'group_permission_view' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'group_permission_view' %}" class="menu-link">
+                                    <i class="menu-icon fa fa-user-secret"></i>
+                                    <span class="menu-text">Access Control</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'staffuser_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'staffuser_list' %}" class="menu-link">
+                                    <i class="menu-icon fa fa-user-plus"></i>
+                                    <span class="menu-text">Staff</span>
+                                </a>
+                            </li>
+                            <li
+                                    class="menu-item {% if request.resolver_match.url_name == 'customeruser_list' %}active_link{% endif %}"
+                                    aria-haspopup="true"
+                            >
+                                <a href="{% url 'customeruser_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-user-shield"></i>
+                                    <span class="menu-text">Customer</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu-item {% if request.resolver_match.url_name == 'solution_list' %}active_link{% endif %}"
+                        aria-haspopup="true">
+                    <a href="{% url 'solution_list' %}" class="menu-link">
+                        <i class="menu-icon fas fa-headset"></i>
+                        <span class="menu-text">Product Solutions</span>
+                    </a>
+                </li>
+
+                <li class="menu-item {% if request.resolver_match.url_name == 'support_ticket_list' %}active_link{% endif %}"
+                        aria-haspopup="true">
+                    <a href="{% url 'support_ticket_list' %}" class="menu-link">
+                        <i class="menu-icon fas fa-headset"></i>
+                        <span class="menu-text">Support Tickets</span>
+                    </a>
+                </li>
+
+
+                <!-- User Management -->
+
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name == 'home_slider' %} menu-item-open {% endif %}"
+                    aria-haspopup="true"
+                    data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fa fa-users"></i>
+                        <span class="menu-text">CMS</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <ul class="menu-subnav">
+
+                            <li class="menu-item {% if request.resolver_match.url_name == 'home_slider' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'home_slider' %}" class="menu-link">
+                                    <i class="menu-icon fa fa-user-secret"></i>
+                                    <span class="menu-text">Home Slider</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </li>
+
+
+            </ul>
+            <!--end::Menu Nav-->
+        </div>
+        <!--end::Menu Container-->
+    </div>
+    <!--end::Aside Menu-->
+</div>

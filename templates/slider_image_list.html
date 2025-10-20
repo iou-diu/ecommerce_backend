@@ -1,0 +1,26 @@
+{% extends "includes/main.html" %} {% load render_table from django_tables2 %}
+{% block content %}
+<div class="container mt-4">
+  <h2>Slider Images</h2>
+  <a href="{% url 'slider_image_create' %}" class="btn btn-success mb-3"
+    >Add New Slider Image</a
+  >
+  {% csrf_token %} {% render_table table %}
+</div>
+
+<script>
+  // JavaScript to add CSRF token to each form dynamically
+  document.addEventListener("DOMContentLoaded", function () {
+    const csrfToken = "{{ csrf_token }}";
+    const deleteForms = document.querySelectorAll(".delete-form");
+
+    deleteForms.forEach(function (form) {
+      const input = document.createElement("input");
+      input.type = "hidden";
+      input.name = "csrfmiddlewaretoken";
+      input.value = csrfToken;
+      form.prepend(input);
+    });
+  });
+</script>
+{% endblock %}

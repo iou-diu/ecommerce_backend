@@ -1,0 +1,103 @@
+{% extends "includes/main.html" %}
+{% load i18n static crispy_forms_tags %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <!--begin::Wizard-->
+                <div class="wizard wizard-4" id="kt_wizard" data-wizard-state="step-first"
+                     data-wizard-clickable="true">
+                    <!--begin::Wizard Nav-->
+                    <div class="wizard-nav">
+                        <div class="wizard-steps">
+                            <div class="wizard-step" data-wizard-type="step" {% if wizard.steps.step1 == 1 %}data-wizard-state="current"{% endif %}>
+                                <div class="wizard-wrapper">
+                                    <div class="wizard-number">1</div>
+                                    <div class="wizard-label">
+                                        <div class="wizard-title">Account</div>
+                                        <div class="wizard-desc">User's Account &amp; Settings</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wizard-step" data-wizard-type="step" {% if wizard.steps.step1 == 2 %}data-wizard-state="current"{% endif %}>
+                                <div class="wizard-wrapper">
+                                    <div class="wizard-number">2</div>
+                                    <div class="wizard-label">
+                                        <div class="wizard-title">Profile</div>
+                                        <div class="wizard-desc">User's Personal Information</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+{#                    <p>Step {{ wizard.steps.step1 }} of {{ wizard.steps.count }}</p>#}
+                    <div class="card card-custom card-shadowless rounded-top-0">
+                        <div class="card-body">
+                            <form enctype="multipart/form-data" action="" method="post">
+                                {% csrf_token %}
+                                {{ wizard.management_form }}
+                                {% if wizard.form.forms %}
+                                    {{ wizard.form.management_form }}
+                                    {% for form in wizard.form.forms %}
+                                        {% crispy form %}
+                                    {% endfor %}
+                                {% else %}
+                                    {% crispy wizard.form %}
+                                {% endif %}
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--end::Wizard-->
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/pages/wizard.css' %}">
+{% endblock %}
+
+{% block js %}
+    <script>
+        "use strict";
+
+        // Class definition
+        var KTProfile = function () {
+            // Elements
+            var avatar;
+            var offcanvas;
+
+            // Private functions
+            var _initAside = function () {
+                // Mobile offcanvas for mobile mode
+                offcanvas = new KTOffcanvas('kt_profile_aside', {
+                    overlay: true,
+                    baseClass: 'offcanvas-mobile',
+                    //closeBy: 'kt_user_profile_aside_close',
+                    toggleBy: 'kt_subheader_mobile_toggle'
+                });
+            }
+
+            var _initForm = function () {
+                avatar = new KTImageInput('kt_profile_avatar');
+            }
+
+            return {
+                // public functions
+                init: function () {
+                    _initAside();
+                    _initForm();
+                }
+            };
+        }();
+
+        jQuery(document).ready(function () {
+            KTProfile.init();
+        });
+
+        $('[type="file"]').attr('name', '{{ wizard.steps.step0 }}-' + $('[type="file"]').attr('name'))
+    </script>
+{% endblock %}

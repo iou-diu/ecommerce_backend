@@ -1,0 +1,11 @@
+{% extends 'includes/main.html' %}{% load django_tables2 %} {% block content %}
+
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5>Coupons</h5>
+    </div>
+    <div class="card-body">{% render_table table %}</div>
+  </div>
+</div>
+{% endblock %}

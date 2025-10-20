@@ -1,0 +1,26 @@
+# create a file .env.prod 
+
+SECRET_KEY=a1f=!k0zsl59!)i*sd94orvs_vi5_fz0c1)5mqh&we1!+ia==6
+DEBUG=True
+ALLOWED_HOSTS=.localhost,127.0.0.1,dclbackend.daffodil.computer
+DB_NAME=localdb
+DB_USER=localuser
+DB_PASSWORD=localpass445
+DB_HOST=localhost
+DB_PORT=5432
+POSTGRES_HOST=postgres
+REDIS_HOST=redis
+REDIS_PORT=6379
+EMAIL_BACKEND=django.core.mail.backends.console.EmailBackend
+EMAIL_HOST=
+EMAIL_HOST_USER=
+EMAIL_HOST_PASSWORD=
+SENDGRID_API_KEY=
+DATABASE_URLaa=sqlite:///db.sqlite3
+TYPESENSE_IP=
+TYPESENSE_PORT=
+TYPESENSE_KEY=
+store_id= 
+store_passwd= 
+success_url=
+ssl_validator_url=

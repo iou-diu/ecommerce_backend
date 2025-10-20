@@ -1,0 +1,263 @@
+{% extends 'includes/main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4 text-center">Add Product</h1>
+
+    <form method="post" enctype="multipart/form-data" id="product-form" class="needs-validation">
+        {% csrf_token %}
+        <!-- Product Details Section -->
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4>Product Details</h4>
+            </div>
+            <div class="card-body">
+                <!-- Render all other form fields except attributes -->
+                {{ form.non_field_errors }}
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        {{ form.name|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.category|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.brand|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.unit|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.min_order_quantity|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.max_order_quantity|as_crispy_field }}
+                    </div>
+                    <div class="col-12 mb-3">
+                        {{ form.description|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.meta_title|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.meta_description|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.slug|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="form-check mt-4">
+                            {{ form.is_active }}
+                            {{ form.is_active.label_tag }}
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.warranty|as_crispy_field }}
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        {{ form.tags|as_crispy_field }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variants Checkbox -->
+        <div class="form-check mb-4">
+            <input class="form-check-input" type="checkbox" id="id_has_variants" name="has_variants">
+            <label class="form-check-label" for="id_has_variants">Does this product have variants?</label>
+        </div>
+
+        <!-- Attributes Section -->
+        <div id="attributes-section" class="mb-4" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Select Attributes for Variations</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        {{ form.attributes.label_tag }}
+                        {{ form.attributes }}
+                        {{ form.attributes.errors }}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Variants Section -->
+        <div id="variants-section" class="mb-4" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Variants</h4>
+                </div>
+                <div class="card-body table-responsive">
+                    <table id="variants-table" class="table table-bordered table-striped table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Attributes</th>
+                                <th>SKU</th>
+                                <th>Price</th>
+                                <th>Retail Price</th>
+                                <th>Stock Quantity</th>
+                                <th>Is Active</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Variants will be added here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Default Variant Section -->
+        <div id="default-variant-section" class="mb-4" style="display: none;">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Product Price and Stock</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 mb-3">
+                            <label for="price">Price:</label>
+                            <input type="number" name="price" class="form-control" step="0.01" required>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="retail_price">Retail Price:</label>
+                            <input type="number" name="retail_price" class="form-control" step="0.01">
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="stock_quantity">Stock Quantity:</label>
+                            <input type="number" name="stock_quantity" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <input type="hidden" name="variants_data" id="variants-data">
+        <button type="submit" class="btn btn-primary btn-block mt-4">Save Product</button>
+    </form>
+</div>
+
+<!-- JavaScript Code -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var hasVariantsCheckbox = document.getElementById('id_has_variants');
+        var attributesSection = document.getElementById('attributes-section');
+        var variantsSection = document.getElementById('variants-section');
+        var defaultVariantSection = document.getElementById('default-variant-section');
+        var attributesCheckboxes = document.querySelectorAll('#id_attributes input[type="checkbox"]');
+        var variantsTableBody = document.querySelector('#variants-table tbody');
+
+        function toggleSections() {
+            if (hasVariantsCheckbox.checked) {
+                attributesSection.style.display = 'block';
+                variantsSection.style.display = 'block';
+                defaultVariantSection.style.display = 'none';
+                generateVariants();
+            } else {
+                attributesSection.style.display = 'none';
+                variantsSection.style.display = 'none';
+                defaultVariantSection.style.display = 'block';
+            }
+        }
+
+        hasVariantsCheckbox.addEventListener('change', function() {
+            toggleSections();
+        });
+
+        attributesCheckboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                generateVariants();
+            });
+        });
+
+        function generateVariants() {
+            // Get selected attributes
+            var selectedAttributeIds = [];
+            attributesCheckboxes.forEach(function(checkbox) {
+                if (checkbox.checked) {
+                    selectedAttributeIds.push(checkbox.value);
+                }
+            });
+
+            if (selectedAttributeIds.length === 0) {
+                // No attributes selected, clear the table
+                variantsTableBody.innerHTML = '';
+                return;
+            }
+
+            // Fetch attribute values via AJAX
+            var url = "{% url 'get_attribute_values' %}?attribute_ids=" + selectedAttributeIds.join(',');
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length === 0) {
+                        variantsTableBody.innerHTML = '';
+                        return;
+                    }
+
+                    // data is an array of {attribute: {id, name}, values: [{id, value}, ...]}
+                    var attributeValues = data.map(function(attr) {
+                        return attr.values;
+                    });
+                    var attributeNames = data.map(function(attr) {
+                        return attr.attribute.name;
+                    });
+
+                    // Generate all combinations of selected attribute values
+                    var combinations = cartesianProduct(attributeValues);
+                    renderVariants(combinations, attributeNames);
+                })
+                .catch(error => {
+                    console.error('Error fetching attribute values:', error);
+                });
+        }
+
+        function cartesianProduct(arr) {
+            return arr.reduce(function(a, b) {
+                return a.flatMap(function(d) {
+                    return b.map(function(e) {
+                        return d.concat([e]);
+                    });
+                });
+            }, [[]]);
+        }
+
+        function renderVariants(combinations, attributeNames) {
+            variantsTableBody.innerHTML = '';
+
+            if (combinations.length === 0) {
+                return;
+            }
+
+            combinations.forEach(function(combination) {
+                var tr = document.createElement('tr');
+
+                var attributeValuesText = combination.map(function(attrValue, index) {
+                    return attributeNames[index] + ': ' + attrValue.value;
+                }).join(' / ');
+
+                tr.innerHTML = `
+                    <td>BDT. {attributeValuesText}</td>
+                    <td><input type="text" name="sku" class="form-control" value="{{ form.instance.slug }}-${combination.map(attrValue => attrValue.value.toLowerCase().replace(/\\s+/g, '-')).join('-')}"></td>
+                    <td><input type="number" name="price" class="form-control" step="0.01" required></td>
+                    <td><input type="number" name="retail_price" class="form-control" step="0.01"></td>
+                    <td><input type="number" name="stock_quantity" class="form-control" required></td>
+                    <td class="text-center"><input type="checkbox" name="is_active" checked></td>
+                `;
+                tr.setAttribute('data-attribute-values', JSON.stringify(combination.map(function(attrValue) {
+                    return attrValue.id;
+                })));
+                variantsTableBody.appendChild(tr);
+            });
+        }
+
+        // Initialize sections based on the initial state of the checkbox
+        toggleSections();
+    });
+</script>
+{% endblock %}

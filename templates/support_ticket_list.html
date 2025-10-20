@@ -1,0 +1,18 @@
+{% extends 'includes/main.html' %} {% load render_table from django_tables2 %}
+{% block content %}
+<div class="container mt-4">
+  <div
+    class="d-flex justify-content-between align-items-center p-3"
+    style="background-color: #007bff; color: white"
+  >
+    <h2 class="m-0">Support Tickets</h2>
+    <a
+      href="/ecommerce/tickets/create/"
+      class="btn btn-light btn-sm d-flex align-items-center"
+    >
+      <i class="fas fa-plus-circle me-1"></i> Add New
+    </a>
+  </div>
+  <div class="table-responsive mt-3">{% render_table table %}</div>
+</div>
+{% endblock %}

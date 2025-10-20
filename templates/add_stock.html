@@ -1,0 +1,140 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h1 class="mb-4">Add Stock Lines</h1>
+        
+        <form method="post" class="form">
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <table id="stockline_formset" class="table table-bordered">
+                {{ formset.management_form }}
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for form in formset.forms %}
+                        <tr class="formset-row">
+                            <td>{{ form.product|as_crispy_field }}</td>
+                            <td>{{ form.quantity|as_crispy_field }}</td>
+                            <td>
+                                <button type="button" class="btn btn-danger delete-row">Delete</button>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <button type="button" id="add-row" class="mx-4 btn btn-primary">+ Add Line</button>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <!-- Your custom JS -->
+    <script>
+        $(document).ready(function() {
+            // Function to initialize Select2 on a given element
+            function initializeSelect2(element) {
+                $(element).find('select').djangoSelect2();
+            }
+    
+            // Function to reindex formset rows after adding or deleting a row
+            function reindexFormsetRows() {
+                $('#stockline_formset .formset-row').each(function(index) {
+                    $(this).find('input, select, textarea').each(function() {
+                        var name = $(this).attr('name').replace(/-\d+-/, '-' + index + '-');
+                        var id = 'id_' + name;
+                        $(this).attr({'name': name, 'id': id});
+                    });
+                });
+                // Update the total forms count
+                $('#id_form-TOTAL_FORMS').val($('#stockline_formset .formset-row').length);
+            }
+    
+            // Check for duplicate products
+            function hasDuplicateProducts() {
+                var selectedProducts = [];
+                var hasDuplicate = false;
+    
+                $('#stockline_formset .formset-row select').each(function() {
+                    var product = $(this).val();
+                    if (product && selectedProducts.includes(product)) {
+                        hasDuplicate = true;
+                        return false; // Exit the loop
+                    }
+                    selectedProducts.push(product);
+                });
+                return hasDuplicate;
+            }
+    
+            // Prevent form submission if duplicates exist
+            $('form').submit(function(e) {
+                if (hasDuplicateProducts()) {
+                    alert("Each product can only be added once.");
+                    e.preventDefault();
+                }
+            });
+    
+            // Initialize Select2 on existing forms
+            $('#stockline_formset .formset-row').each(function() {
+                initializeSelect2(this);
+            });
+    
+            // Add new form
+            $('#add-row').click(function() {
+                var form_idx = $('#id_form-TOTAL_FORMS').val();
+                var first_row = $('#stockline_formset .formset-row:first');
+    
+                // Remove the Select2 instance before cloning
+                first_row.find('select').each(function() {
+                    if ($(this).hasClass('select2-hidden-accessible')) {
+                        $(this).select2('destroy');  // destroy Select2 before cloning
+                    }
+                });
+    
+                // Clone the row
+                var cloned_row = first_row.clone(false);
+    
+                // Reset the form fields and update the names/IDs
+                cloned_row.find('input, select, textarea').each(function() {
+                    var name = $(this).attr('name').replace('-0-', '-' + form_idx + '-');
+                    var id = 'id_' + name;
+                    $(this).attr({'name': name, 'id': id}).val('');
+    
+                    // Remove any error messages
+                    $(this).closest('.form-group').removeClass('has-error');
+                    $(this).siblings('.help-block').remove();
+                });
+    
+                // Append the cloned row to the formset
+                cloned_row.appendTo('#stockline_formset');
+    
+                // Increment the total forms count
+                $('#id_form-TOTAL_FORMS').val(parseInt(form_idx) + 1);
+    
+                // Re-initialize Select2 on the new row after updating ID
+                initializeSelect2(cloned_row);
+            });
+    
+            // Delete a form
+            $(document).on('click', '.delete-row', function() {
+                $(this).closest('.formset-row').remove();
+    
+                // Reindex rows and reinitialize Select2 on remaining rows
+                reindexFormsetRows();
+                $('#stockline_formset .formset-row').each(function() {
+                    initializeSelect2(this);
+                });
+            });
+        });
+    </script>
+    
+        
+{% endblock %}

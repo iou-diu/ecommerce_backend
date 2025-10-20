@@ -1,0 +1,348 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.form-inline .form-group {
+    margin: 0 10px 0 10px;
+}
+
+.form-inline .form-group label {
+    margin-right: 10px;
+}
+
+.form-inline button {
+    margin-bottom: 0;
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 30px !important;
+
+    -webkit-user-select: none;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #444;
+    line-height: 10px !important;
+}
+
+.adminsidebar {
+    background-color: #424557;
+
+}
+
+.menu-nav {
+
+    background: none;
+}
+
+
+.aside-menu {
+    background: #ffffff00 !important;
+}
+
+.aside-menu .menu-nav>.menu-item>.menu-heading .menu-icon,
+.aside-menu .menu-nav>.menu-item>.menu-link .menu-icon {
+    color: #ffffff;
+}
+
+.aside-menu .menu-nav>.menu-item>.menu-heading .menu-text,
+.aside-menu .menu-nav>.menu-item>.menu-link .menu-text {
+    color: #ffffff;
+}
+
+.aside-menu .menu-nav>.menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover>.menu-heading .menu-text,
+.aside-menu .menu-nav>.menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover>.menu-link .menu-text {
+    color: #e4ff16 !important;
+}
+
+.aside-menu .menu-nav>.menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover>.menu-heading .menu-icon,
+.aside-menu .menu-nav>.menu-item:not(.menu-item-parent):not(.menu-item-open):not(.menu-item-here):not(.menu-item-active):hover>.menu-link .menu-icon {
+    color: #e4ff16;
+}
+
+.header-mobile {
+
+    background-color: #6ae99f;
+
+}
+
+.change-form select.django-select2 {
+    width: 20em;
+}
+
+
+.menu-item-open {
+    color: rgb(2, 0, 0) !important;
+    background: rgb(233, 246, 255);
+    border-right: 5px solid black;
+}
+
+
+.active_link {
+    background: #797979 !important;
+}
+
+.active_link .menu-text {
+    color: #ffffff !important;
+    font-size: 15px !important;
+}
+
+.bg-green {
+    background-color: green !important;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.program-badge {
+    font-size: 18px;
+}
+
+.select2-container--default .select2-selection--single {
+
+    height: 39px !important;
+
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.bg-teal {
+    background-color: #20c997;
+    color: white;
+}
+
+/* Background color and padding */
+.bg-blue-gray {
+    background-color: rgba(29, 119, 192, 0.05);
+    /* Soft blue-gray background with transparency */
+    padding: 1.5rem;
+    /* Increased padding for a more spacious layout */
+}
+
+/* Border radius and shadow */
+.rounded {
+    border-radius: 0.5rem;
+    /* Smooth rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Soft shadow for depth */
+}
+
+/* Hide on screens smaller than 768px (mobile) */
+@media (max-width: 767px) {
+    .topDropdown {
+        display: none !important;
+    }
+}
+
+/* Show on screens larger than or equal to 768px */
+@media (min-width: 768px) {
+    .topDropdown {
+        display: block !important;
+        margin-left: 7.5rem !important;
+        margin-top: 7px !important;
+    }
+}
+
+.topDropdown {
+    position: relative;
+    /* Ensure proper positioning */
+}
+
+.topDropdown .dropdown-menu {
+    border: 1px solid #007bff;
+    /* Add a border for better visibility */
+    border-radius: 0.25rem;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+}
+
+.topDropdown .dropdown-header {
+    font-weight: bold;
+    /* Make the header bold */
+    background-color: #e9ecef;
+    /* Light background for the header */
+    padding: 0.5rem 1rem;
+    /* Padding for the header */
+}
+
+.topDropdown .dropdown-item {
+    transition: background-color 0.2s;
+    /* Smooth background change */
+}
+
+.topDropdown .dropdown-item:hover {
+    background-color: #f1f1f1;
+    /* Highlight on hover */
+    color: #0056b3;
+    /* Change text color on hover */
+}
+
+/* Optional: Add styles for the dropdown button */
+.topDropdown .btn-info {
+    border-radius: 0.25rem;
+    /* Rounded corners for the button */
+}
+
+.topDropdown .btn-info:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+    border-color: #004085;
+    /* Darker border on hover */
+}
+
+.dropdown-toggle[aria-expanded="true"]:after {
+    transform: rotate(180deg);
+}
+
+/*for animation*/
+.dropdown-toggle:after {
+    transition: 0.7s;
+}
+
+
+.dropdown-toggle[aria-expanded="true"] .fa-chevron-down {
+    
+    transform: rotate(180deg);
+}
+
+/* For animation */
+.dropdown-toggle .fa-chevron-down {
+    transition: transform 0.3s ease;
+}
+
+.topDropdown .dropdown-toggle.nav-link:before,
+.dropdown-toggle.nav-link:after,
+.dropdown-toggle.btn:before,
+.dropdown-toggle.btn:after {
+    display: none;
+}
+
+.text-bold{
+    font-weight: bold!important;
+}
+.text-white{
+    color: #FFF!important;
+}
+
+input[readonly] {
+    pointer-events: none; /* Disable interaction */
+    background-color: #e9ecef; /* Lighter background to indicate disabled state */
+    opacity: 1; /* Ensure the text remains visible */
+}
+
+.swal2-icon {
+    margin: 0px auto!important;
+}
+.rounded{
+    border-radius: 15px;
+}
+
+
+
+.pos-container{
+    margin-top: -25px!important;
+}
+
+
+
+.sellinginfo{
+    background-color: green!important;
+    color: white;
+}
+
+.aside-menu-wrapper {
+    overflow-y: scroll !important;
+    height: 70vh!important;;
+  
+    width: 220px;
+    scroll-behavior: smooth;
+  }
+
+/* Scrollbar customization for Webkit browsers (Chrome, Safari) */
+.aside-menu-wrapper::-webkit-scrollbar {
+    width: 8px; /* Set scrollbar width */
+}
+
+.aside-menu-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Dark thumb for Apple-like style */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5); /* Slight shadow for depth */
+}
+
+.aside-menu-wrapper::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Slightly darker on hover */
+}
+
+.aside-menu-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Light track for contrast */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Styling for Firefox */
+.aside-menu-wrapper {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(206, 206, 206, 0.3) rgba(0, 0, 0, 0.1); /* Thumb and track colors */
+}
+
+
+/* Apply to all scrollable vertical elements */
+::-webkit-scrollbar {
+    width: 8px; /* Adjust width for the scrollbar */
+    height: 8px; /* Adjust height for horizontal scrollbars, if needed */
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(200, 200, 200, 0.7); /* Light gray thumb */
+    border-radius: 10px; /* Rounded corners for smooth appearance */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle inner shadow for depth */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(180, 180, 180, 0.9); /* Slightly darker gray on hover */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(240, 240, 240, 0.9); /* Very light gray track */
+    border-radius: 10px; /* Rounded corners for track */
+}
+
+/* For Firefox */
+* {
+    scrollbar-width: thin; /* Make scrollbar thin */
+    scrollbar-color: rgba(200, 200, 200, 0.7) rgba(240, 240, 240, 0.9); /* Thumb and track colors */
+}
+
+.btn-sm {
+    font-size: 10px !important;
+    height: 25px !important;
+    min-width: 100px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; /* For text alignment */
+    padding: 0 !important; /* Adjust padding to ensure proper centering */
+}
+
+.btn-sm i {
+    font-size:10px!important
+}

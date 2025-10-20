@@ -1,0 +1,17 @@
+{% extends 'includes/main.html' %} {% block content %}
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header bg-primary text-white">
+      <h5>Create Coupon</h5>
+    </div>
+    <div class="card-body">
+      <form method="post" action="{% url 'create-coupon' %}">
+        {% csrf_token %} {{ form.as_p }}
+        <div class="text-end">
+          <button type="submit" class="btn btn-primary">Create Coupon</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

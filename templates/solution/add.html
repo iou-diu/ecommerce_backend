@@ -1,0 +1,297 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+                        <h4 class="card-title fw-bold m-0 px-4">
+                            {% if object %}Update{% else %}Add{% endif %} {{ page_title }}
+                        </h4>
+                        <div class="card-toolbar">
+                            {% if list_link %}
+                                <a href="{{ list_link }}" class="btn btn-light btn-sm d-flex align-items-center">
+                                    <i class="fas fa-list me-1"></i> {{ page_title }} List
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form id="solution-form" method="post" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label>Title</label>
+                                <input type="text" name="title" class="form-control"
+                                       value="{{ object.title|default:'' }}" required>
+                            </div>
+                            <div class="mb-3">
+                                <label>Category</label>
+                                <select name="categories" class="form-control">
+                                    {% for cat in categories %}
+                                        <option value="{{ cat.id }}"
+                                                {% if object.categories.id == cat.id %}selected{% endif %}>{{ cat }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label>Overview</label>
+                                <textarea name="overview"
+                                          class="form-control">{{ object.overview|default:'' }}</textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label>Short Description</label>
+                                <textarea name="short_description"
+                                          class="form-control">{{ object.short_description|default:'' }}</textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Key Features</label>
+                                <div id="key-features"></div>
+                                <button type="button" class="btn btn-sm btn-success mt-1" onclick="addKeyFeature()">+
+                                    Add Key
+                                </button>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Technical Features</label>
+                                <div id="technical-features"></div>
+                                <button type="button" class="btn btn-sm btn-success mt-1"
+                                        onclick="addTechnicalFeature()">+ Add Feature
+                                </button>
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Thumbnail</label>
+                                {% if object.thumbnail %}
+                                    <p id="thumb-preview"><img src="{{ object.thumbnail.url }}" style="height:100px;">
+                                    </p>{% endif %}
+                                <input type="file" name="thumbnail" class="form-control" onchange="previewThumb(event)">
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Video URL</label>
+                                <input type="url" name="video_url" class="form-control"
+                                       value="{{ object.video_url|default:'' }}">
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Drag & Drop Images</label>
+                                <div id="image-drop-area" class="border border-secondary p-3"
+                                     style="min-height: 150px; background-color: #f8f9fa;">
+                                    <p>Drag and drop images here</p>
+                                    <input type="file" id="images-input" multiple hidden>
+                                </div>
+                                <div id="preview-images" class="d-flex flex-wrap mt-2"></div>
+                                {% if object.images %}
+                                    <p class="mt-2">Existing Images:</p>
+                                    <div class="d-flex flex-wrap" id="existing-images">
+                                        {% for img in object.images %}
+                                            {% if img %}
+                                                <div class="position-relative me-2 mb-2">
+                                                    <img src="{{ img|addslashes }}" class="img-thumbnail"
+                                                         style="height:100px;" onerror="this.style.display='none';">
+                                                    <input type="hidden" name="existing_images"
+                                                           value="{{ img|addslashes }}">
+                                                    <button type="button"
+                                                            class="btn btn-danger btn-sm position-absolute"
+                                                            style="top:0; right:0"
+                                                            onclick="this.parentElement.remove()">&times;
+                                                    </button>
+                                                </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+
+                            <div class="mb-3">
+                                <label>Description</label>
+                                <textarea name="description"
+                                          class="form-control">{{ object.description|default:'' }}</textarea>
+                            </div>
+
+
+                            <div class="mb-3">
+                                <label>FAQS</label>
+                                <div id="faq-features"></div>
+                                <button type="button" class="btn btn-sm btn-success mt-1"
+                                        onclick="addFaqFeature()">+ Add Feature
+                                </button>
+                            </div>
+
+                            <button type="button" class="btn btn-primary" onclick="submitForm()">{% if object %}
+                                Update{% else %}Submit{% endif %}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let selectedImages = [];
+
+        window.addEventListener('DOMContentLoaded', () => {
+            {% if object.key_features %}
+                {% for k in object.key_features %}
+                    addKeyFeature("{{ k|escapejs }}");
+                {% endfor %}
+            {% endif %}
+
+            {% if object.technical_features %}
+                {% for k, v in object.technical_features.items %}
+                    addTechnicalFeature("{{ k|escapejs }}", "{{ v|escapejs }}");
+                {% endfor %}
+            {% endif %}
+
+            {% if object.faqs %}
+                {% for k, v in object.faqs.items %}
+                    addFaqFeature("{{ k|escapejs }}", "{{ v|escapejs }}");
+                {% endfor %}
+            {% endif %}
+        });
+
+        function addKeyFeature(value = '') {
+            const container = document.getElementById('key-features');
+            const div = document.createElement('div');
+            div.classList.add('input-group', 'mb-2');
+            div.innerHTML = `
+            <input type="text" name="key_features[]" class="form-control" value="${value}" placeholder="Feature Key">
+            <button type="button" class="btn btn-danger" onclick="this.parentElement.remove()">Remove</button>
+        `;
+            container.appendChild(div);
+        }
+
+        function addTechnicalFeature(key = '', value = '') {
+            const container = document.getElementById('technical-features');
+            const div = document.createElement('div');
+            div.classList.add('input-group', 'mb-2');
+            div.innerHTML = `
+            <input type="text" name="technical_keys[]" class="form-control" value="${key}" placeholder="Feature Key">
+            <input type="text" name="technical_values[]" class="form-control" value="${value}" placeholder="Feature Value">
+            <button type="button" class="btn btn-danger" onclick="this.parentElement.remove()">Remove</button>
+        `;
+            container.appendChild(div);
+        }
+
+        function addFaqFeature(key = '', value = '') {
+            const container = document.getElementById('faq-features');
+            const div = document.createElement('div');
+            div.classList.add('input-group', 'mb-2');
+            div.innerHTML = `
+            <input type="text" name="faq_keys[]" class="form-control" value="${key}" placeholder="Faq Key">
+            <input type="text" name="faq_values[]" class="form-control" value="${value}" placeholder="Faq Value">
+            <button type="button" class="btn btn-danger" onclick="this.parentElement.remove()">Remove</button>
+        `;
+            container.appendChild(div);
+        }
+
+        function previewThumb(event) {
+            const img = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const container = document.getElementById('thumb-preview');
+                if (container) container.innerHTML = `<img src="${e.target.result}" style="height:100px;">`;
+            };
+            reader.readAsDataURL(img);
+        }
+
+        function updateImagePreview() {
+            const preview = document.getElementById('preview-images');
+            preview.innerHTML = '';
+            selectedImages.forEach((file, index) => {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const wrapper = document.createElement('div');
+                    wrapper.classList.add('position-relative', 'me-2', 'mb-2');
+
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.style.height = '100px';
+                    img.classList.add('img-thumbnail');
+
+                    const removeBtn = document.createElement('button');
+                    removeBtn.innerHTML = '&times;';
+                    removeBtn.classList.add('btn', 'btn-danger', 'btn-sm', 'position-absolute');
+                    removeBtn.style.top = '0';
+                    removeBtn.style.right = '0';
+                    removeBtn.onclick = () => {
+                        selectedImages.splice(index, 1);
+                        updateImagePreview();
+                    };
+
+                    wrapper.appendChild(img);
+                    wrapper.appendChild(removeBtn);
+                    preview.appendChild(wrapper);
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+        function handleFiles(files) {
+            for (let file of files) {
+                selectedImages.push(file);
+            }
+            updateImagePreview();
+        }
+
+        document.getElementById('image-drop-area').addEventListener('click', function () {
+            document.getElementById('images-input').click();
+        });
+
+        document.getElementById('image-drop-area').addEventListener('dragover', function (e) {
+            e.preventDefault();
+            this.classList.add('bg-light');
+        });
+
+        document.getElementById('image-drop-area').addEventListener('dragleave', function () {
+            this.classList.remove('bg-light');
+        });
+
+        document.getElementById('image-drop-area').addEventListener('drop', function (e) {
+            e.preventDefault();
+            this.classList.remove('bg-light');
+            handleFiles(e.dataTransfer.files);
+        });
+
+        document.getElementById('images-input').addEventListener('change', function (e) {
+            handleFiles(e.target.files);
+        });
+
+        function submitForm() {
+            const form = document.getElementById('solution-form');
+            const formData = new FormData(form);
+
+            selectedImages.forEach((file) => {
+                formData.append('images', file);
+            });
+
+            // Add currently visible existing image inputs
+            document.querySelectorAll('#existing-images input[name="existing_images"]').forEach(input => {
+                formData.append('existing_images', input.value);
+            });
+
+            fetch(window.location.href, {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    } else {
+                        return response.text();
+                    }
+                })
+                .then(html => {
+                    if (html) {
+                        document.body.innerHTML = html;
+                    }
+                })
+                .catch(error => {
+                    console.error('Submission error:', error);
+                });
+        }
+    </script>
+{% endblock %}

@@ -1,0 +1,176 @@
+{% extends 'includes/main.html' %}
+
+{% block content %}
+
+  <!-- Include Alpine.js -->
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+  
+  <div class="container-fluid mt-1" x-data="searchApp()" x-init="init()">
+
+
+    <h3 class="mx-4 mb-4">DCL E-Commerce Dynamic Search</h3>
+    <!-- Search input -->
+    <div class="search-container mb-4 mx-4">
+      <input type="text" placeholder="Search..." x-model="query" @input.debounce.500ms="search" class="form-control form-control-lg">
+    </div>
+    <!-- Main container -->
+    <div class="row mx-4">
+      <!-- Left column: filters -->
+      <div class="col-2">
+        <!-- Category select dropdown -->
+      <div class="category-select mb-4 mx-4">
+        <label for="category-select">Select Category:</label>
+        <select id="category-select" x-model="selectedCategory" @change="search" class="form-control">
+          <option value="">All Categories</option>
+          {% for category in categories %}
+            <option value="{{ category.name }}">{{ category.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+        <h3>Filters</h3>
+        <template x-for="(values, attrName) in facets" :key="attrName">
+          <div class="mb-3 px-2">
+            <h5 x-text="formatAttributeName(attrName)"></h5>
+            <template x-for="item in values" :key="item.value">
+              <div class="custom-control custom-checkbox mx-2">
+                <input type="checkbox"
+                       :id="attrName + ':' + item.value"
+                       :value="attrName + ':' + item.value"
+                       x-model="selectedFilters"
+                       @change="search"
+                       class="custom-control-input">
+                <label class="custom-control-label"
+                       :for="attrName + ':' + item.value"
+                       x-text="item.value + ' (' + item.count + ')'"></label>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+      <!-- Right column: search results -->
+      <div class="col-10">
+        <!-- Display total count -->
+        <h4 class="total-count" x-show="totalCount >= 0">
+          Total Products Found: <span x-text="totalCount"></span>
+        </h4>
+        <div class="row">
+          <template x-for="result in results" :key="result.id">
+            <div class="col-md-6 mb-4">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title" x-text="result.name"></h5>
+                  <p class="card-text" x-html="result.description"></p>
+                  <p><strong>Price:</strong> $<span x-text="result.price"></span></p>
+                  <p><strong>Brand:</strong> <span x-text="result.brand"></span></p>
+                  <p><strong>Category:</strong> <span x-text="result.category"></span></p>
+                  <!-- Display attributes -->
+                  <div class="attributes" x-show="result.attributes && result.attributes.length > 0">
+                    <strong>Attributes:</strong>
+                    <ul>
+                      <template x-for="attr in result.attributes" :key="attr.name + '-' + attr.value">
+                        <li><span x-text="formatAttributeName(attr.name) + ': ' + attr.value"></span></li>
+                      </template>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alpine.js Script -->
+  </div>
+<!-- Serialize categories from Django to JavaScript -->
+
+  <script>
+    
+    function searchApp() {
+      return {
+       
+        query: '',
+        selectedFilters: [],
+        selectedCategory: 'Processor',
+        results: [],
+        facets: {}, // Initialize with empty facets to hold all filters
+        totalCount: 0,
+        page: 1, // Added page for pagination if needed
+        init() {
+          this.search();
+        },
+        async search() {
+          const params = new URLSearchParams();
+          params.append('q', this.query || '*');
+          params.append('query_by', 'name,description,category,attributes,tags');
+          params.append('facet_by', 'attributes_flat');
+          params.append('per_page', '250');
+          params.append('page', this.page);
+
+          // Append selected filters
+          this.selectedFilters.forEach(filter => {
+            params.append('selected_filters[]', filter);
+          });
+
+          if(this.selectedCategory){
+            params.append('category','category:'+this.selectedCategory)
+          }
+
+          const url = `/api/v1/product_search/?${params.toString()}`;
+
+          try {
+            const response = await fetch(url);
+            const data = await response.json();
+            this.results = data.hits.map(hit => hit.document);
+            this.totalCount = data.found;
+
+            // Process facets
+            const updatedFacets = {};
+            if (data.facet_counts) {
+              data.facet_counts.forEach(facet => {
+                if (facet.field_name === 'attributes_flat') {
+                  facet.counts.forEach(count => {
+                    const [attrName, attrValue] = count.value.split(':');
+                    if (!updatedFacets[attrName]) {
+                      updatedFacets[attrName] = [];
+                    }
+                    updatedFacets[attrName].push({ value: attrValue, count: count.count });
+                  });
+                }
+              });
+            }
+
+            // Retain old filters and add zero count for unmatched attributes
+            Object.keys(this.facets).forEach(attrName => {
+              if (!updatedFacets[attrName]) {
+                updatedFacets[attrName] = this.facets[attrName].map(attr => ({ ...attr, count: 0 }));
+              } else {
+                const existingValues = updatedFacets[attrName].map(attr => attr.value);
+                this.facets[attrName].forEach(attr => {
+                  if (!existingValues.includes(attr.value)) {
+                    updatedFacets[attrName].push({ ...attr, count: 0 });
+                  }
+                });
+              }
+            });
+
+            this.facets = updatedFacets; // Update facets with preserved and counted values
+          } catch (error) {
+            console.error('Error fetching search results:', error);
+          }
+        },
+        formatAttributeName(name) {
+          return name.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        }
+      }
+    }
+  </script>
+
+  <!-- Include Bootstrap JS and dependencies (Popper.js and jQuery) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" defer></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" defer></script>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+                        <h4 class="card-title fw-bold m-0 px-4">
+                            {% if object %}Update{% else %}Add{% endif %} {{ page_title }}
+                        </h4>
+                        <div class="card-toolbar">
+                            {% if list_link %}
+                                <a href="{{ list_link }}" class="btn btn-light btn-sm d-flex align-items-center">
+                                    <i class="fas fa-list me-1"></i> {{ page_title }} List
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        {% include 'includes/form.html' %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+        $(document).ready(function () {
+            // Initialize datepickers with Bootstrap 4 datepicker
+            $('#id_end_date, #id_str_date, #id_date').datepicker({
+                format: "yyyy-mm-dd",
+                autoclose: true,
+                todayHighlight: true
+            });
+
+            // Hide or show questions based on the question type
+            $('.situational_qs').hide();
+            toggleQuestionType();
+
+            $('#id_question_type').change(function () {
+                toggleQuestionType();
+            });
+
+            function toggleQuestionType() {
+                if ($('#id_question_type').val() === 'situational') {
+                    $('.situational_qs').fadeIn();
+                    $('.mcq_qs').hide();
+                } else {
+                    $('.mcq_qs').fadeIn();
+                    $('.situational_qs').hide();
+                }
+            }
+        });
+    </script>
+{% endblock %}

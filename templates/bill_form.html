@@ -1,0 +1,58 @@
+
+{% extends 'includes/main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-md-9 mx-auto">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                    <h3 class="card-title m-0">Add New Bill</h3>
+                    
+                    <div class="card-toolbar">
+                        {% if list_link %}
+                            <a href="{{ list_link }}" class="btn btn-light">
+                                <i class="fas fa-list"></i> {{ page_title }} List
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="card-body">
+                    {% if messages %}
+                        <div class="messages">
+                            {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% include 'includes/form.html' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const paymentCheckbox = document.getElementById('id_enable_payment');
+        const paymentAmountRow = document.getElementById('payment_amount_row');
+
+        // Initially hide the payment amount field
+        if (!paymentCheckbox.checked) {
+            paymentAmountRow.style.display = 'none';
+        }
+
+        // Toggle payment field visibility when the checkbox is clicked
+        paymentCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                paymentAmountRow.style.display = 'block';
+            } else {
+                paymentAmountRow.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+{% endblock %}

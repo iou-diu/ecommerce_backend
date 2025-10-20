@@ -1,0 +1,521 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center text-primary mb-4">Manage Categories</h1>
+
+        <!-- Tab Navigation -->
+        <ul class="nav nav-tabs" id="categoryTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="menu-tab" data-toggle="tab" href="#menu-categories" role="tab">
+                    Menu Categories
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="collections-tab" data-toggle="tab" href="#unique-collections" role="tab">
+                    Unique Collections
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="inspiration-tab" data-toggle="tab" href="#inspiration-collections" role="tab">
+                    Inspiration Collections
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="inspiration-tab" data-toggle="tab" href="#home-banner" role="tab">
+                    Home Banner
+                </a>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4" id="categoryTabsContent">
+            <!-- Menu Categories Tab -->
+            <div class="tab-pane fade show active" id="menu-categories" role="tabpanel">
+                <div class="row">
+                    <!-- Current Menu Categories -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Current Menu Categories</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul id="menuCategoriesList" class="list-group">
+                                    {% for category in menu_categories %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center"
+                                            data-id="{{ category.id }}" data-name="{{ category.name }}">
+                                            <span>{{ category.name }}</span>
+                                            <button type="button" onclick="removeCategory('{{ category.id }}', 'menu')"
+                                                    class="btn btn-sm btn-danger">
+                                                Remove
+                                            </button>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add New Category -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Add Category to Menu</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="menuCategorySelect">Select a Category</label>
+                                    <select id="menuCategorySelect" class="form-control">
+                                        <option value="">-- Select a Category --</option>
+                                        {% for category in categories %}
+                                            <option value="{{ category.id }}">{{ category.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <button onclick="addCategory('menu')" class="btn btn-success btn-block">
+                                    Add to Menu
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Save Changes -->
+                    <div class="col-12 text-center mt-4">
+                        <button onclick="saveChanges('menu')" class="btn btn-primary" style="width: 200px;">
+                            Save Menu Changes
+                        </button>
+                        <div id="menuFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Unique Collections Tab -->
+            <div class="tab-pane fade" id="unique-collections" role="tabpanel">
+                <div class="row">
+                    <!-- Current Collections -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Current Collections</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul id="uniqueCollectionsList" class="list-group">
+                                    {% for category in unique_collections %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center"
+                                            data-id="{{ category.id }}" data-name="{{ category.name }}">
+                                            <span>{{ category.name }}</span>
+                                            <button type="button" onclick="removeCategory('{{ category.id }}', 'collection')"
+                                                    class="btn btn-sm btn-danger">
+                                                Remove
+                                            </button>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add New Collection -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Add to Collections</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="collectionCategorySelect">Select a Category</label>
+                                    <select id="collectionCategorySelect" class="form-control">
+                                        <option value="">-- Select a Category --</option>
+                                        {% for category in categories %}
+                                            <option value="{{ category.id }}">{{ category.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <button onclick="addCategory('collection')" class="btn btn-success btn-block">
+                                    Add to Collections
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Save Changes -->
+                    <div class="col-12 text-center mt-4">
+                        <button onclick="saveChanges('collection')" class="btn btn-primary" style="width: 200px;">
+                            Save Collection Changes
+                        </button>
+                        <div id="collectionFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inspiration Collections Tab -->
+            <div class="tab-pane fade" id="inspiration-collections" role="tabpanel">
+                <div class="row">
+                    <!-- Current Inspiration Collections -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Current Inspiration Collections</h5>
+                            </div>
+                            <div class="card-body">
+                                <ul id="inspirationCollectionsList" class="list-group">
+                                    {% for category in inspiration_collections %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center"
+                                            data-id="{{ category.id }}" data-name="{{ category.name }}">
+                                            <span>{{ category.name }}</span>
+                                            <button type="button" onclick="removeCategory('{{ category.id }}', 'inspiration')"
+                                                    class="btn btn-sm btn-danger">
+                                                Remove
+                                            </button>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add New Inspiration -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Add to Inspiration</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                    <label for="inspirationCategorySelect">Select a Category</label>
+                                    <select id="inspirationCategorySelect" class="form-control">
+                                        <option value="">-- Select a Category --</option>
+                                        {% for category in categories %}
+                                            <option value="{{ category.id }}">{{ category.name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                                <button onclick="addCategory('inspiration')" class="btn btn-success btn-block">
+                                    Add to Inspiration
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Save Changes -->
+                    <div class="col-12 text-center mt-4">
+                        <button onclick="saveChanges('inspiration')" class="btn btn-primary" style="width: 200px;">
+                            Save Inspiration Changes
+                        </button>
+                        <div id="inspirationFeedback" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Home banner Tab -->
+            <div class="tab-pane fade" id="home-banner" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <div class="card">
+                            <div class="card-header bg-primary text-white">
+                                <h5 class="mb-0">Home Banner Settings</h5>
+                            </div>
+                            <div class="card-body">
+                                <form id="homeBannerForm">
+                                    <div class="form-group mb-4">
+                                        <label for="bannerTitle">Banner Title</label>
+                                        <input type="text" 
+                                               class="form-control" 
+                                               id="bannerTitle" 
+                                               name="title" 
+                                               value="{{ banner_settings.value.title|default:'' }}"
+                                               placeholder="Enter banner title">
+                                    </div>
+                                    
+                                    <div class="form-group mb-4">
+                                        <label for="bannerGallery">Select Gallery</label>
+                                        <select class="form-control" id="bannerGallery" name="gallery_id">
+                                            <option value="">-- Select Gallery --</option>
+                                            {% for gallery in hotspot_list %}
+                                                <option value="{{ gallery.id }}" 
+                                                        {% if banner_settings.value.gallery_id == gallery.id|stringformat:"s" %}selected{% endif %}>
+                                                    {{ gallery.title }}
+                                                </option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+            
+                                    <div class="text-center">
+                                        <button type="button" onclick="saveBannerSettings()" class="btn btn-primary" style="width: 200px;">
+                                            Save Banner Settings
+                                        </button>
+                                    </div>
+                                    <div id="bannerFeedback" class="mt-3"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include Select2 CSS and JS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+        // Initialize Select2 for all dropdowns
+        $('#menuCategorySelect, #collectionCategorySelect, #inspirationCategorySelect').select2({
+            placeholder: "Select a category",
+            allowClear: true,
+            width: '100%'
+        });
+         $('#bannerGallery').select2({
+            placeholder: "Select a gallery",
+            allowClear: true,
+            width: '100%'
+        });
+    
+        // Initialize the categories arrays with existing items
+            window.categories = {
+                menu: Array.from($('#menuCategoriesList li')).map(li => ({
+                    id: $(li).data('id').toString(),
+                    name: $(li).find('span').text().trim()
+                })),
+                collection: Array.from($('#uniqueCollectionsList li')).map(li => ({
+                    id: $(li).data('id').toString(),
+                    name: $(li).find('span').text().trim()
+                })),
+                inspiration: Array.from($('#inspirationCollectionsList li')).map(li => ({
+                    id: $(li).data('id').toString(),
+                    name: $(li).find('span').text().trim()
+                }))
+            };
+        
+            // Initial update of dropdowns
+            updateDropdowns();
+        });
+    
+        function updateDropdowns() {
+            // Store current selections
+            const menuSelectedVal = $('#menuCategorySelect').val();
+            const collectionSelectedVal = $('#collectionCategorySelect').val();
+            const inspirationSelectedVal = $('#inspirationCategorySelect').val();
+        
+            // Get all options from the initial render
+            const allCategories = [];
+            $('#menuCategorySelect option').each(function() {
+                if ($(this).val()) {  // Skip empty value option
+                    allCategories.push({
+                        id: $(this).val(),
+                        name: $(this).text()
+                    });
+                }
+            });
+        
+            // Update Menu Categories dropdown
+            $('#menuCategorySelect').empty().append('<option value="">-- Select a Category --</option>');
+            $('#collectionCategorySelect').empty().append('<option value="">-- Select a Category --</option>');
+            $('#inspirationCategorySelect').empty().append('<option value="">-- Select a Category --</option>');
+        
+            // Add available categories to each dropdown
+            allCategories.forEach(category => {
+                // For menu dropdown
+                if (!categories.menu.some(cat => cat.id === category.id)) {
+                    $('#menuCategorySelect').append(`
+                        <option value="${category.id}">${category.name}</option>
+                    `);
+                }
+                
+                // For collection dropdown
+                if (!categories.collection.some(cat => cat.id === category.id)) {
+                    $('#collectionCategorySelect').append(`
+                        <option value="${category.id}">${category.name}</option>
+                    `);
+                }
+                
+                // For inspiration dropdown
+                if (!categories.inspiration.some(cat => cat.id === category.id)) {
+                    $('#inspirationCategorySelect').append(`
+                        <option value="${category.id}">${category.name}</option>
+                    `);
+                }
+            });
+        
+            // Restore selections if still valid
+            $('#menuCategorySelect').val(menuSelectedVal).trigger('change');
+            $('#collectionCategorySelect').val(collectionSelectedVal).trigger('change');
+            $('#inspirationCategorySelect').val(inspirationSelectedVal).trigger('change');
+        }
+    
+        function addCategory(type) {
+            let selectId, listId;
+            
+            // Determine correct select and list IDs based on type
+            switch(type) {
+                case 'menu':
+                    selectId = 'menuCategorySelect';
+                    listId = 'menuCategoriesList';
+                    break;
+                case 'collection':
+                    selectId = 'collectionCategorySelect';
+                    listId = 'uniqueCollectionsList';
+                    break;
+                case 'inspiration':
+                    selectId = 'inspirationCategorySelect';
+                    listId = 'inspirationCollectionsList';
+                    break;
+            }
+            
+            const select = $(`#${selectId}`);
+            const selectedId = select.val();
+            
+            if (!selectedId) {
+                alert('Please select a category');
+                return;
+            }
+        
+            const selectedName = select.find('option:selected').text();
+        
+            // Check if already exists
+            if (categories[type].some(cat => cat.id === selectedId)) {
+                alert('This category is already added');
+                return;
+            }
+        
+            // Add to visual list
+            const newItem = `
+                <li class="list-group-item d-flex justify-content-between align-items-center" 
+                    data-id="${selectedId}" data-name="${selectedName}">
+                    <span>${selectedName}</span>
+                    <button type="button" onclick="removeCategory('${selectedId}', '${type}')" 
+                            class="btn btn-sm btn-danger">
+                        Remove
+                    </button>
+                </li>
+            `;
+            $(`#${listId}`).append(newItem);
+        
+            // Add to data array
+            categories[type].push({
+                id: selectedId,
+                name: selectedName
+            });
+        
+            // Reset select and update dropdowns
+            select.val(null).trigger('change');
+            updateDropdowns();
+        }
+    
+        function removeCategory(categoryId, type) {
+            let listId;
+            
+            // Determine correct list ID based on type
+            switch(type) {
+                case 'menu':
+                    listId = 'menuCategoriesList';
+                    break;
+                case 'collection':
+                    listId = 'uniqueCollectionsList';
+                    break;
+                case 'inspiration':
+                    listId = 'inspirationCollectionsList';
+                    break;
+            }
+            
+            // Remove from visual list
+            $(`#${listId} li[data-id="${categoryId}"]`).remove();
+            
+            // Remove from data array
+            categories[type] = categories[type].filter(cat => cat.id !== categoryId.toString());
+            
+            // Update dropdowns
+            updateDropdowns();
+        }
+    
+         async function saveChanges(type) {
+                const feedbackId = `${type}Feedback`;
+                const feedback = $(`#${feedbackId}`);
+                feedback.html('');
+            
+                try {
+                    const keyName = type === 'menu' ? 'menu_categories' : 
+                                   type === 'collection' ? 'unique_collection' : 
+                                   'inspiration_collection';
+                                   
+                    const data = {
+                        'category_ids': categories[type].map(cat => cat.id),
+                        'key_name': keyName
+                    };
+            
+                    const response = await fetch("{% url 'save_menu_categories' %}", {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRFToken': "{{ csrf_token }}",
+                        },
+                        body: JSON.stringify(data)
+                    });
+            
+                    const result = await response.json();
+                    
+                    feedback.html(`
+                        <div class="alert alert-${result.success ? 'success' : 'danger'}">
+                            ${result.message}
+                        </div>
+                    `);
+            
+                    if (result.success) {
+                        // Optionally refresh the page or update the UI
+                        // location.reload();
+                    }
+                } catch (error) {
+                    feedback.html(`
+                        <div class="alert alert-danger">
+                            Error saving changes: ${error.message}
+                        </div>
+                    `);
+                }
+            }
+            
+        async function saveBannerSettings() {
+        const feedback = $('#bannerFeedback');
+        feedback.html('');
+
+        const data = {
+            title: $('#bannerTitle').val(),
+            gallery_id: $('#bannerGallery').val(),
+            key_name: 'home_banner_settings'
+        };
+
+        try {
+            const response = await fetch("{% url 'save_banner_settings' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': "{{ csrf_token }}",
+                },
+                body: JSON.stringify(data)
+            });
+    
+            const result = await response.json();
+            
+            feedback.html(`
+                <div class="alert alert-${result.success ? 'success' : 'danger'}">
+                    ${result.message}
+                </div>
+            `);
+    
+            if (result.success) {
+                // Optionally refresh the page
+                // location.reload();
+            }
+        } catch (error) {
+            feedback.html(`
+                <div class="alert alert-danger">
+                    Error saving banner settings: ${error.message}
+                </div>
+            `);
+        }
+    }
+
+
+    </script>
+{% endblock %}

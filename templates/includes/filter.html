@@ -1,0 +1,81 @@
+
+{% load crispy_forms_tags %}
+<div class="card shadow-sm">
+    <div class="card-header bg-light py-3 d-flex justify-content-between align-items-center">
+        <button type="button" id="toggleButton" class="btn btn-primary btn-sm d-flex align-items-center gap-2" onclick="toggleFilter()">
+            <i class="fas fa-filter"></i>
+            <span>Show Filter</span>
+        </button>
+        
+        <button type="button" id="clearButton" class="btn btn-light btn-sm d-flex align-items-center gap-2" onclick="clearFilters()">
+            <i class="fas fa-eraser"></i>
+            <span>Clear Filters</span>
+        </button>
+    </div>
+ 
+    <div id="filterSection" class="card-body filter-section">
+        <div class="row">
+            <div class="col">
+                {% crispy filter.form %}
+            </div>
+        </div>
+    </div>
+ </div>
+ 
+ <style>
+ .filter-section {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+ }
+ 
+ .filter-hidden {
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+ }
+ 
+ .filter-visible {
+    padding: 1.5rem;
+    max-height: 1000px;
+    opacity: 1;
+ }
+ 
+ </style>
+ 
+ <script>
+ document.addEventListener("DOMContentLoaded", function() {
+    const filterSection = document.getElementById("filterSection");
+    const toggleButton = document.getElementById("toggleButton");
+    const buttonText = toggleButton.querySelector("span");
+    const isFilterVisible = localStorage.getItem("isFilterVisible") !== "false";
+    
+    filterSection.classList.toggle("filter-hidden", !isFilterVisible);
+    filterSection.classList.toggle("filter-visible", isFilterVisible);
+    buttonText.textContent = isFilterVisible ? "Hide Filter" : "Show Filter";
+ });
+ 
+ function toggleFilter() {
+    const filterSection = document.getElementById("filterSection");
+    const toggleButton = document.getElementById("toggleButton");
+    const buttonText = toggleButton.querySelector("span");
+    const isVisible = filterSection.classList.contains("filter-visible");
+ 
+    filterSection.classList.toggle("filter-hidden");
+    filterSection.classList.toggle("filter-visible"); 
+    buttonText.textContent = isVisible ? "Show Filter" : "Hide Filter";
+    localStorage.setItem("isFilterVisible", !isVisible);
+ }
+ 
+ function clearFilters() {
+    const form = document.querySelector('form');
+    const inputs = form.querySelectorAll('input, select');
+    inputs.forEach(input => {
+        if (input.type === 'checkbox' || input.type === 'radio') {
+            input.checked = false;
+        } else {
+            input.value = '';
+        }
+    });
+    form.submit();
+ }
+ </script>

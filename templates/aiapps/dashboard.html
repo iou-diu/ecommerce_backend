@@ -1,0 +1,243 @@
+{% extends 'includes/main.html' %} {% load static %} {% block content %}
+<div class="container-fluid py-4">
+  <div class="row mb-4">
+    <div class="col">
+      <h1 class="display-4 text-center text-primary">
+        AI-Driven Sales Dashboard
+      </h1>
+      <p class="lead text-center text-muted">
+        Gain insights into your sales performance, trends, and forecasts with
+        data-driven analytics.
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <!-- Monthly Sales Trends -->
+    <div class="col-md-6">
+      <div class="card shadow mb-4">
+        <div class="card-header bg-primary text-white">
+          <i class="fas fa-chart-line"></i> Monthly Sales Trends
+        </div>
+        <div class="card-body">
+          <canvas id="monthlySalesChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top 10 Most Selling Products -->
+    <div class="col-md-6">
+      <div class="card shadow mb-4">
+        <div class="card-header bg-success text-white">
+          <i class="fas fa-boxes"></i> Top 10 Most Selling Products
+        </div>
+        <div class="card-body">
+          <canvas id="topProductsChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sales Forecast -->
+    <div class="col-md-6">
+      <div class="card shadow mb-4">
+        <div class="card-header bg-info text-white">
+          <i class="fas fa-calendar-alt"></i> Sales Forecast
+        </div>
+        <div class="card-body">
+          <canvas id="salesForecastChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Demand Classification -->
+    <div class="col-md-6">
+      <div class="card shadow mb-4">
+        <div class="card-header bg-warning text-white">
+          <i class="fas fa-chart-pie"></i> Demand Classification
+        </div>
+        <div class="card-body">
+          <canvas id="demandChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category-Wise Sales Forecast -->
+    <div class="col-md-12">
+      <div class="card shadow mb-4">
+        <div class="card-header bg-dark text-white d-flex align-items-center">
+          <i class="fas fa-layer-group mr-2"></i> Category-Wise Sales Forecast
+          <div class="ml-auto">
+            <label for="categorySelector" class="text-white mr-2"
+              >Select Category:</label
+            >
+            <select id="categorySelector" class="form-select">
+              {% for category in category_forecasts.keys %}
+              <option value="{{ category }}">{{ category }}</option>
+              {% endfor %}
+            </select>
+          </div>
+        </div>
+        <div class="card-body">
+          <canvas id="categoryForecastChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %} {% block js %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Monthly Sales Trends
+  const monthlySalesData = {{ monthly_sales_data|safe }};
+  console.log("nmsdjhfsdjhfgbjfb", monthlySalesData.data)
+  const monthlySalesCtx = document.getElementById('monthlySalesChart').getContext('2d');
+  new Chart(monthlySalesCtx, {
+      type: 'line',
+      data: {
+          labels: monthlySalesData.labels,
+          datasets: [{
+              label: 'Total Sales',
+              data: monthlySalesData.data,
+              borderColor: 'rgba(54, 162, 235, 1)',
+              backgroundColor: 'rgba(54, 162, 235, 0.1)',
+              fill: true,
+              tension: 0.4
+          }]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+  });
+
+  // Top 10 Most Selling Products
+  const topProductsData = {{ top_products_data|safe }};
+  const topProductsCtx = document.getElementById('topProductsChart').getContext('2d');
+  new Chart(topProductsCtx, {
+      type: 'bar',
+      data: {
+          labels: topProductsData.labels,
+          datasets: [{
+              label: 'Sales (Taka)',
+              data: topProductsData.data,
+              backgroundColor: 'rgba(75, 192, 192, 0.6)',
+              borderColor: 'rgba(75, 192, 192, 1)',
+              borderWidth: 1
+          }]
+      },
+      options: { indexAxis: 'y', scales: { x: { beginAtZero: true } } }
+  });
+
+  // Sales Forecast
+  const salesForecastData = {{ sales_forecast_data|safe }};
+
+  const salesForecastCtx = document.getElementById('salesForecastChart').getContext('2d');
+  console.log("ssscvcc",salesForecastCtx)
+  new Chart(salesForecastCtx, {
+      type: 'line',
+      data: {
+          labels: salesForecastData.labels,
+          datasets: [{
+              label: 'Predicted Sales',
+              data: salesForecastData.predicted,
+              borderColor: 'blue',
+              fill: false,
+              tension: 0.4
+          }, {
+              label: 'Upper Bound',
+              data: salesForecastData.upper,
+              borderColor: 'rgba(0, 123, 255, 0.3)',
+              borderDash: [5, 5],
+              fill: false,
+              tension: 0.4
+          }, {
+              label: 'Lower Bound',
+              data: salesForecastData.lower,
+              borderColor: 'rgba(0, 123, 255, 0.3)',
+              borderDash: [5, 5],
+              fill: false,
+              tension: 0.4
+          }]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+  });
+
+  // Demand Classification
+  const demandData = {{ demand_data|safe }};
+  const demandCtx = document.getElementById('demandChart').getContext('2d');
+  new Chart(demandCtx, {
+      type: 'pie',
+      data: {
+          labels: demandData.labels,
+          datasets: [{
+              label: 'Demand Level',
+              data: demandData.data,
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.7)',
+                  'rgba(54, 162, 235, 0.7)',
+                  'rgba(255, 206, 86, 0.7)',
+                  'rgba(75, 192, 192, 0.7)'
+              ]
+          }]
+      }
+  });
+
+  // Category-Wise Sales Forecast
+  const categoryData = {{ category_forecasts|safe }};
+  const categoryForecastCtx = document.getElementById('categoryForecastChart').getContext('2d');
+  const categoryForecastChart = new Chart(categoryForecastCtx, {
+      type: 'line',
+      data: {
+          labels: [],
+          datasets: [
+              {
+                  label: 'Predicted Sales',
+                  data: [],
+                  borderColor: 'blue',
+                  fill: false,
+                  tension: 0.4
+              },
+              {
+                  label: 'Upper Bound',
+                  data: [],
+                  borderColor: 'rgba(0, 123, 255, 0.3)',
+                  borderDash: [5, 5],
+                  fill: false,
+                  tension: 0.4
+              },
+              {
+                  label: 'Lower Bound',
+                  data: [],
+                  borderColor: 'rgba(0, 123, 255, 0.3)',
+                  borderDash: [5, 5],
+                  fill: false,
+                  tension: 0.4
+              },
+              {
+                  label: 'Historical Sales',
+                  data: [],
+                  borderColor: 'black',
+                  borderDash: [2, 2],
+                  fill: false
+              }
+          ]
+      },
+      options: { scales: { y: { beginAtZero: true } } }
+  });
+
+  // Function to update category-wise forecast chart based on selected category
+  function updateCategoryChart(category) {
+      const data = categoryData[category];
+      categoryForecastChart.data.labels = data.dates;
+      categoryForecastChart.data.datasets[0].data = data.yhat;
+      categoryForecastChart.data.datasets[1].data = data.yhat_upper;
+      categoryForecastChart.data.datasets[2].data = data.yhat_lower;
+      categoryForecastChart.data.datasets[3].data = data.historical_sales;
+      categoryForecastChart.update();
+  }
+
+  // Initialize the category chart with the first category and add event listener
+  document.getElementById('categorySelector').addEventListener('change', function() {
+      updateCategoryChart(this.value);
+  });
+  document.getElementById('categorySelector').selectedIndex = 0;
+  updateCategoryChart(document.getElementById('categorySelector').value);
+</script>
+{% endblock %}

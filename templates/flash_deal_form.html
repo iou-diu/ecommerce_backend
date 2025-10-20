@@ -1,0 +1,269 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Include Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container  bg-light p-5 shadow-sm rounded mb-5 mx-5" x-data="flashDealForm()" x-init="init()">
+    <h3 class="mb-4 text-primary d-flex justify-content-between align-items-center">
+        <span>
+            {% if flash_deal_id == 'create' %} 
+                Create 
+            {% else %} 
+                Edit 
+            {% endif %} 
+            Flash Deal
+        </span>
+        <a href="{% url 'flash_deals' %}" class="btn btn-primary">
+            <i class="fa fa-list"></i> List
+        </a>
+    </h3>
+    
+    
+    
+   
+    <!-- Flash Deal Form -->
+    <!-- Note: Added 'enctype' attribute for file uploads -->
+    <form @submit.prevent="submitForm()" enctype="multipart/form-data">
+       
+        {% csrf_token %}
+        
+
+        <!-- Flash Deal Details -->
+        <div class="row g-2 mb-4 py-4 bg-white p-4 rounded">
+            <div class="col-lg-6">
+                <label for="flashTitle" class="form-label">Title</label>
+                <input type="text" class="form-control" id="flashTitle" x-model="flashDeal.title" placeholder="Enter flash deal title">
+            </div>
+            <div class="col-lg-3">
+                <label for="startDate" class="form-label">Start Date</label>
+                <input type="datetime-local" class="form-control" id="startDate" x-model="flashDeal.startDate">
+            </div>
+            <div class="col-lg-3">
+                <label for="endDate" class="form-label">End Date</label>
+                <input type="datetime-local" class="form-control" id="endDate" x-model="flashDeal.endDate">
+            </div>
+            <div class="col-lg-12">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" x-model="flashDeal.description" rows="3"></textarea>
+            </div>
+            <!-- Banner Image Upload -->
+            <div class="col-lg-12">
+                
+                <label for="bannerImage" class="form-label">Banner Image</label>
+                <input type="file" class="form-control" id="bannerImage" @change="handleFileUpload($event)">
+            </div>
+            <div class="col-md-4 my-4">
+                <img src="{{banner_image}}" alt="" width="250px">
+            </div>
+            <div class="col-md-12"></div>
+            <div class="col-md-2">                
+                <label for="is_active" class="form-label">Active Status</label>
+                <input type="checkbox" id="is_active" x-model="flashDeal.is_active" name="is_active">
+            </div>
+            
+            
+        </div>
+        
+
+        <!-- Add Variant Button -->
+        <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#variantModal">
+            <i class="bi bi-plus-circle"></i> Add Variant
+        </button>
+
+        <!-- Variants Table -->
+        <div class="table-responsive rounded">
+            <table class="table table-striped align-middle ">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Variant Name</th>
+                        <th>Price</th>
+                        <th>Retail Price</th>
+                        <th>Offer Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template x-for="(variant, index) in flashDeal.variants" :key="index">
+                        <tr>
+                            <td x-text="variant.name"></td>
+                            <td x-text="variant.price.toFixed(2)"></td>
+                            <td x-text="variant.retailPrice.toFixed(2)"></td>
+                            <td>
+                                <input type="number" class="form-control" x-model.number="variant.offerPrice" step="0.01">
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-sm btn-danger" @click="removeVariant(index)">
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-4">
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-check-circle"></i> Save Flash Deal
+            </button>
+        </div>
+    </form>
+
+    <!-- Variant Selection Modal -->
+    <div class="modal fade" id="variantModal" tabindex="-1" aria-labelledby="variantModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Select a Variant</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Search Input -->
+                    <input type="text" class="form-control mb-3" placeholder="Search Variants..."
+                        x-model="searchTerm" @input.debounce.500="fetchVariants">
+
+                    <!-- Variant List -->
+                    <ul class="list-group">
+                        <template x-for="variant in filteredVariants()" :key="variant.id">
+                            <li class="list-group-item d-flex justify-content-between align-items-center"
+                                @click="addVariant(variant)" data-bs-dismiss="modal" type="button">
+                                <span x-text="variant.name"></span>
+                                <span class="badge bg-primary text-white">
+                                    ৳ <span x-text="parseFloat(variant.price).toFixed(2)"></span>
+                                </span>
+                            </li>
+                        </template>
+                        <li class="list-group-item text-center text-muted" x-show="filteredVariants().length === 0">
+                            No variants found.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<!-- Include Alpine.js, Bootstrap JS, SweetAlert2, and Bootstrap Icons -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<script>
+
+function flashDealForm() {
+    return {
+        flashDeal: null,
+        searchTerm: '',
+        availableVariants: [],
+        bannerImageFile: null,
+
+        init() {
+            let existingFlashDeal = "{{ flash_deal_json|escapejs }}";
+            if (existingFlashDeal && existingFlashDeal !== 'null') {
+                this.flashDeal = JSON.parse(existingFlashDeal);
+
+                // Parse price and retailPrice to numbers
+                this.flashDeal.variants.forEach(variant => {
+                    variant.price = parseFloat(variant.price);
+                    variant.retailPrice = parseFloat(variant.retailPrice);
+                });
+            } else {
+                this.flashDeal = {
+                    title: '',
+                    description: '',
+                    startDate: '',
+                    endDate: '',
+                    variants: [],
+                    is_active: 'true'
+                };
+            }
+            this.fetchVariants();
+        },
+        handleFileUpload(event) {
+            this.bannerImageFile = event.target.files[0];
+        },
+        fetchVariants() {
+            fetch(`/ecommerce/variants/search/?search=${this.searchTerm}`)
+                .then(response => response.json())
+                .then(data => {
+                    this.availableVariants = data.results;
+                })
+                .catch(error => console.error('Error fetching variants:', error));
+        },
+        filteredVariants() {
+            return this.availableVariants.filter(variant => {
+                return !this.flashDeal.variants.some(v => v.id === variant.id);
+            });
+        },
+        addVariant(variant) {
+            this.flashDeal.variants.push({
+                id: variant.id,
+                name: variant.name,
+                price: parseFloat(variant.price),
+                retailPrice: parseFloat(variant.retail_price),
+                offerPrice: 0.0,
+            });
+        },
+        removeVariant(index) {
+            this.flashDeal.variants.splice(index, 1);
+        },
+        calculateFinalPrice(variant) {
+            return variant.offerPrice > 0 ? variant.offerPrice : variant.price;
+        },
+        submitForm() {
+            var flashDealId = "{{ flash_deal_id|default:'create' }}";
+            let url = flashDealId === 'create' 
+                    ? '/ecommerce/flash-deals/create/' 
+                    : `/ecommerce/flash-deals/edit/${flashDealId}/`;
+
+            const csrfToken = document.querySelector('input[name="csrfmiddlewaretoken"]').value;
+            const formData = new FormData();
+
+            // Append flash deal data
+            formData.append('title', this.flashDeal.title);
+            formData.append('description', this.flashDeal.description);
+            formData.append('startDate', this.flashDeal.startDate);
+            formData.append('endDate', this.flashDeal.endDate);
+            formData.append('is_active', this.flashDeal.is_active ? 'true' : 'false');
+            formData.append('variants', JSON.stringify(this.flashDeal.variants));
+
+            // Append banner image if selected
+            if (this.bannerImageFile) {
+                formData.append('banner_image', this.bannerImageFile);
+            }
+
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'X-CSRFToken': csrfToken,
+                },
+                body: formData,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    Swal.fire({
+                        title: 'Flash deal saved successfully!',
+                        icon: 'success',
+                    }).then(() => {
+                        // window.location.href = '/ecommerce/flash-deals/';
+                    });
+                })
+                .catch(error => {
+                    console.error('Error saving flash deal:', error);
+                    Swal.fire({
+                        title: 'Failed to save flash deal',
+                        icon: 'error',
+                    });
+                });
+        },
+    };
+}
+</script>
+{% endblock %}

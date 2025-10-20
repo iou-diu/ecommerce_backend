@@ -1,0 +1,204 @@
+{% load static %}
+{% load menu_tags %}
+<div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+    <!--begin::Brand-->
+    <div class="brand  flex-column-auto" id="kt_brand">
+        <!--begin::Logo-->
+     <img alt="Logo" width="100px" src="https://studio.skill.jobs/media/django-summernote/2024-10-01/dd976b4a-3038-42f5-8531-cb3b14ef927a.jpg"/>
+
+    </div>
+    <!--end::Brand-->
+
+    <!--begin::Aside Menu-->
+    <div class="aside-menu-wrapper flex-column-fluid adminsidebar" id="kt_aside_menu_wrapper">
+        <!--begin::Menu Container-->
+        <div id="kt_aside_menu" class="aside-menu my-4 scroll ps ps--active-y" data-menu-vertical="1"
+        data-menu-scroll="1" data-menu-dropdown-timeout="500" style="height: 293px; overflow: hidden;">
+            <!--begin::Menu Nav-->
+            
+            <ul class="menu-nav">
+                <li class="menu-item {% if request.resolver_match.url_name == 'home' %}active_link{% endif %}" aria-haspopup="true">
+                    <a href="{% url 'home' %}" class="menu-link">
+                        <i class="menu-icon flaticon2-architecture-and-city"></i>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
+                {% with admin_group=user.groups.all %}
+                {% with staff_group=user.groups.all %}
+                
+                {% if "Admin" in admin_group|stringformat:"s" or "Staff" in staff_group|stringformat:"s" %}
+                           
+              
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_list:'notes_list,fileresult_list,graderesult_list,routine_list,notice_list' %}menu-item-open{% endif %}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon fas fa-school"></i> <!-- Updated Icon for Portal -->
+                        <span class="menu-text">Portal</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                
+                            <li class="menu-item {% if request.resolver_match.url_name == 'notes_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'notes_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-book"></i> <!-- Updated Icon for Notes -->
+                                    <span class="menu-text">Notes</span>
+                                </a>
+                            </li>
+                
+                            <li class="menu-item {% if request.resolver_match.url_name == 'fileresult_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'fileresult_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-file-alt"></i> <!-- Updated Icon for File Results -->
+                                    <span class="menu-text">Results (File)</span>
+                                </a>
+                            </li>
+                
+                            <li class="menu-item {% if request.resolver_match.url_name == 'graderesult_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'graderesult_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-graduation-cap"></i> <!-- Updated Icon for Grade Results -->
+                                    <span class="menu-text">Results (Grade)</span>
+                                </a>
+                            </li>
+                
+                            <li class="menu-item {% if request.resolver_match.url_name == 'routine_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'routine_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-calendar-alt"></i> <!-- Updated Icon for Routine -->
+                                    <span class="menu-text">Routine</span>
+                                </a>
+                            </li>
+                
+                            <li class="menu-item {% if request.resolver_match.url_name == 'notice_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'notice_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-bullhorn"></i> <!-- Updated Icon for Notices -->
+                                    <span class="menu-text">Notice</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_list:'accounthead_list,account_list,transaction_list,transactionline_list,bill_list,payment_list' %}menu-item-open{% endif %}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-coins"></i> <!-- Icon for Accounting -->
+                        <span class="menu-text">Fees</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                
+                            <li class="d-none menu-item {% if request.resolver_match.url_name == 'accounthead_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'accounthead_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-list"></i> <!-- Icon for Account Heads -->
+                                    <span class="menu-text">Account Heads</span>
+                                </a>
+                            </li>
+                
+                            <li class="d-none menu-item {% if request.resolver_match.url_name == 'account_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'account_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-file-invoice"></i> <!-- Icon for Account List -->
+                                    <span class="menu-text">Account List</span>
+                                </a>
+                            </li>
+                
+                            <li class="d-none menu-item {% if request.resolver_match.url_name == 'transaction_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'transaction_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-exchange-alt"></i> <!-- Icon for Transaction List -->
+                                    <span class="menu-text">Transaction List</span>
+                                </a>
+                            </li>
+                
+                            <li class="d-none menu-item {% if request.resolver_match.url_name == 'transactionline_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'transactionline_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-stream"></i> <!-- Icon for Transaction Lines -->
+                                    <span class="menu-text">Transaction Lines</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'bill_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'bill_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-file-invoice"></i> <!-- Icon for Transaction Lines -->
+                                    <span class="menu-text">Collection</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'payment_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'payment_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-credit-card"></i> <!-- Icon for Transaction Lines -->
+                                    <span class="menu-text">Payments</span>
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </li>
+                
+                
+       
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name|in_list:'program_list,batch_list,semester_list,cgpascheme_list,feedetail_list,waiver_list' %}menu-item-open{% endif %}" aria-haspopup="true" data-menu-toggle="hover">
+                    <a href="javascript:;" class="menu-link menu-toggle">
+                        <i class="menu-icon flaticon-cogwheel"></i>
+                        <span class="menu-text">Configuration</span>
+                        <i class="menu-arrow"></i>
+                    </a>
+                    <div class="menu-submenu">
+                        <i class="menu-arrow"></i>
+                        <ul class="menu-subnav">
+                            
+                            <li class="menu-item {% if request.resolver_match.url_name == 'program_list' %}active_link{% endif %}"  aria-haspopup="true">
+                                <a href="{% url 'program_list' %}" class="menu-link">
+                                    <i class="menu-icon flaticon-layer"></i>
+                                    <span class="menu-text">Program</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'batch_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'batch_list' %}" class="menu-link">
+                                    <i class="menu-icon flaticon-layer"></i>
+                                    <span class="menu-text">Batch</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'semester_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'semester_list' %}" class="menu-link">
+                                    <i class="menu-icon flaticon-layer"></i>
+                                    <span class="menu-text">Semester</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'cgpascheme_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'cgpascheme_list' %}" class="menu-link">
+                                    <i class="menu-icon flaticon-layer"></i>
+                                    <span class="menu-text">CGPA Scheme</span>
+                                </a>
+                            </li>
+                            <li class="menu-item {% if request.resolver_match.url_name == 'feedetail_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'feedetail_list' %}" class="menu-link">
+                                    <i class="menu-icon flaticon-layer"></i>
+                                    <span class="menu-text">Fees Structure</span>
+                                </a>
+                            </li>
+
+                            
+                            <li class="menu-item {% if request.resolver_match.url_name == 'waiver_list' %}active_link{% endif %}" aria-haspopup="true">
+                                <a href="{% url 'waiver_list' %}" class="menu-link">
+                                    <i class="menu-icon flaticon-layer"></i>
+                                    <span class="menu-text">Waiver</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                {% endif %}
+                {% endwith %}
+                {% endwith %}
+
+                <!--  menu Starts Here -->
+                
+
+
+
+            </ul>
+            <!--end::Menu Nav-->
+        </div>
+        <!--end::Menu Container-->
+    </div>
+    <!--end::Aside Menu-->
+</div>

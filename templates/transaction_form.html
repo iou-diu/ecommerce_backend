@@ -1,0 +1,79 @@
+{% extends 'includes/main.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="col-md-10 mx-auto">
+    <h2 class="text-center mb-2">Create Transaction</h2>
+    <form method="post" id="transaction-form">
+        {% csrf_token %}
+        {{ transaction_form|crispy }}
+        
+        <div class="card mb-4">
+            <div class="card-header">Transaction Lines</div>
+            <div class="card-body" id="lines-container">
+                {{ formset.management_form }}
+                {% for form in formset %}
+                    <div class="form-row align-items-center line-item" data-form-index="{{ forloop.counter0 }}">
+                        {{ form|crispy }}
+                        <button type="button" class="btn btn-sm btn-danger delete-line">Delete</button>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-secondary" id="add-line">Add Line</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Save Transaction
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% block js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const addLineButton = document.getElementById('add-line');
+        const linesContainer = document.getElementById('lines-container');
+        let formCount = document.querySelectorAll('.line-item').length;
+
+        function updateManagementForm() {
+            const managementForm = document.querySelector('form').querySelector('input[name="form-TOTAL_FORMS"]');
+            managementForm.value = document.querySelectorAll('.line-item').length;
+        }
+
+        function initializeSelect2ForNewForms() {
+            // Reinitialize select2 for all account selects
+            $('.account-select').select2({
+                data: window.accountOptions
+            });
+        }
+
+        addLineButton.addEventListener('click', function() {
+            formCount++;
+            const newFormHtml = document.querySelector('.line-item').innerHTML
+                .replace(/__prefix__/g, formCount);
+            const newFormDiv = document.createElement('div');
+            newFormDiv.classList.add('form-row', 'align-items-center', 'line-item');
+            newFormDiv.setAttribute('data-form-index', formCount);
+            newFormDiv.innerHTML = newFormHtml;
+            linesContainer.appendChild(newFormDiv);
+            updateManagementForm();
+            initializeSelect2ForNewForms(); // Initialize select2 for new forms
+        });
+
+        linesContainer.addEventListener('click', function(event) {
+            if (event.target.classList.contains('delete-line')) {
+                event.target.closest('.line-item').remove();
+                updateManagementForm();
+            }
+        });
+
+        // Initialize select2 on page load
+        $(document).ready(function() {
+            $('.select2').select2();
+            initializeSelect2ForNewForms(); // Initialize select2 for existing forms
+        });
+    });
+</script>
+{% endblock %}
+{% endblock %}

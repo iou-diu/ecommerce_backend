@@ -1,0 +1,152 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3 shadow-sm">
+                    <h4 class="card-title m-0 fw-bold">
+                        <i class="fa fa-list-ul text-white" aria-hidden="true"></i> Set Attributes for <b class="text-light">{{ product.name }}</b>
+                    </h4>
+                    <div class="card-toolbar">
+                        {% if list_link %}
+                            <a href="{{ list_link }}" class="btn btn-light btn-sm d-flex align-items-center">
+                                <i class="fas fa-list me-1"></i> View Products
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-7">
+                            {% include 'includes/form.html' %}
+                        </div>
+                        <div class="col-md-5">
+                            <h3>Existing Attributes</h3>
+
+                            <div style="max-height: 400px; overflow-y: auto;">
+
+                                <!-- Table for displaying existing attributes and their values -->
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Attribute</th>
+                                            <th>Values</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for product_attribute in product_attributes %}
+                                        <tr>
+                                            <td>{{ product_attribute.attribute.name }}</td>
+                                            <td>
+                                                {% for x in product_attribute.values.all %}
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <input type="checkbox" class="value-checkbox mr-2" data-attribute-id="{{ product_attribute.attribute.id }}" data-value-id="{{ x.id }}">
+                                                        <span class="badge badge-pill badge-primary my-2">{{ x.value }}</span>
+                                                    </div>
+                                                {% endfor %}
+                                            </td>
+                                        </tr>
+                                        {% empty %}
+                                        <tr>
+                                            <td colspan="2">No attributes added for this product.</td>
+                                        </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Bulk delete button -->
+                            <button id="delete-selected-values" class="btn btn-sm btn-danger mt-3" style="display: none;">Delete Selected Values</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Confirmation Modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Confirm Deletion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete the selected attribute values?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-sm btn-danger" id="confirmDelete">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        let selectedAttributes = {};
+
+        // Show bulk delete button on checkbox selection
+        $('.value-checkbox').change(function() {
+            selectedAttributes = {};
+
+            // Collect selected values by attribute_id
+            $('.value-checkbox:checked').each(function() {
+                let attributeId = $(this).data('attribute-id');
+                let valueId = $(this).data('value-id');
+
+                if (!selectedAttributes[attributeId]) {
+                    selectedAttributes[attributeId] = [];
+                }
+                selectedAttributes[attributeId].push(valueId);
+            });
+
+            // Show or hide the delete button based on selections
+            $('#delete-selected-values').toggle(Object.keys(selectedAttributes).length > 0);
+        });
+
+        // Open modal on bulk delete button click
+        $('#delete-selected-values').click(function() {
+            $('#deleteConfirmationModal').modal('show');
+        });
+
+        // Confirm deletion in modal
+        $('#confirmDelete').click(function() {
+            if (Object.keys(selectedAttributes).length === 0) return;
+
+            $.ajax({
+                url: `/ecommerce/product-attributes-dynamic/delete-values/{{ product.id }}/`,
+                type: 'POST',
+                data: JSON.stringify({ attributes: selectedAttributes }),
+                contentType: 'application/json',
+                beforeSend: function() {
+                    $('#deleteConfirmationModal').modal('hide');
+                    $('#delete-selected-values').prop('disabled', true).text('Deleting...');
+                },
+                success: function(response) {
+                    if (response.success) {
+                        location.reload();
+                    } else {
+                        alert("Failed to delete the selected values.");
+                    }
+                },
+                error: function() {
+                    alert("Error occurred while deleting the selected values.");
+                },
+                complete: function() {
+                    $('#delete-selected-values').prop('disabled', false).text('Delete Selected Values');
+                }
+            });
+        });
+    });
+</script>
+
+{% endblock %}

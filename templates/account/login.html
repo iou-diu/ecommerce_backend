@@ -1,0 +1,20 @@
+{% extends 'includes/single_main.html' %}
+{% load static account socialaccount %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    
+    <!--begin::Login Sign in form-->
+    <div class="login-signin">
+        <div class="mb-2">
+            <img src="https://daffodil.family/dfamily/images/familylogo/dcl.png" class="img img-responsive mb-3" alt="dcl" width="140px;">
+           
+            <h3>Sign In To DCL Admin</h3>
+        </div>
+        <form action="" method="post">
+            {% include 'includes/form.html' %}
+        </form>
+    </div>
+    <!--end::Login Sign in form-->
+{% endblock %}

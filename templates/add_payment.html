@@ -1,0 +1,51 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10">
+            <div class="card shadow-lg border-0">
+                <!-- Card Header -->
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-4">
+                 
+                </div>
+
+                <!-- Card Body -->
+                <div class="card-body">
+                    <!-- Payment Summary -->
+                    <div class="mb-4">
+                        <h5 class="fw-bold text-muted">Payment Details for Purchase Order #{{ purchase_order.id }}</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total Amount:</span>
+                                <span class="fw-bold text-primary">{{ purchase_order.final_total_cost|floatformat:2 }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Total Paid:</span>
+                                <span class="fw-bold text-success">{{ purchase_order.get_amount_paid|floatformat:2 }}</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between">
+                                <span>Remaining Due:</span>
+                                <span class="fw-bold text-danger">{{ due_amount|floatformat:2 }}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Form Section -->
+                    <h5 class="fw-bold text-muted mb-3">Enter Payment Details</h5>
+                   
+                      
+                        <div class="row g-3">
+                            {% include 'includes/form.html' %}
+                        </div>
+                   
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,315 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container-fluid py-4">
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center p-3">
+                        <h4 class="card-title fw-bold m-0 px-4">
+                            Purchase & Sale Report
+                        </h4>
+                        <div class="card-toolbar">
+                            <button class="btn btn-light btn-sm d-flex align-items-center" onclick="window.print()">
+                                <i class="fas fa-print me-1"></i> Print Report
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <!-- Filters Section -->
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Location</label>
+                                <select class="form-select" id="locationFilter">
+                                    <option value="">All locations</option>
+                                    {% for location in locations %}
+                                        <option value="{{ location.id }}"
+                                                {% if selected_location == location.id %}selected{% endif %}>
+                                            {{ location.name }}
+                                        </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <!-- Update the date filter div -->
+                            <div class="col-md-6 position-relative">
+                                <label class="form-label fw-bold">Date Range</label>
+                                <select class="form-select" id="dateFilter">
+                                    <option value="today" {% if date_filter == 'today' %}selected{% endif %}>Today
+                                    </option>
+                                    <option value="yesterday" {% if date_filter == 'yesterday' %}selected{% endif %}>
+                                        Yesterday
+                                    </option>
+                                    <option value="last_7_days"
+                                            {% if date_filter == 'last_7_days' %}selected{% endif %}>Last 7 Days
+                                    </option>
+                                    <option value="last_30_days"
+                                            {% if date_filter == 'last_30_days' %}selected{% endif %}>Last 30 Days
+                                    </option>
+                                    <option value="this_month" {% if date_filter == 'this_month' %}selected{% endif %}>
+                                        This Month
+                                    </option>
+                                    <option value="last_month" {% if date_filter == 'last_month' %}selected{% endif %}>
+                                        Last Month
+                                    </option>
+                                    <option value="this_year" {% if date_filter == 'this_year' %}selected{% endif %}>
+                                        This Year
+                                    </option>
+                                    <option value="last_year" {% if date_filter == 'last_year' %}selected{% endif %}>
+                                        Last Year
+                                    </option>
+                                    <option value="current_financial_year"
+                                            {% if date_filter == 'current_financial_year' %}selected{% endif %}>Current
+                                        Financial Year
+                                    </option>
+                                    <option value="custom" {% if date_filter == 'custom' %}selected{% endif %}>
+                                        {% if date_filter == 'custom' and custom_start_date and custom_end_date %}
+                                            {{ custom_start_date }} - {{ custom_end_date }}
+                                        {% else %}
+                                            Pick Date Range
+                                        {% endif %}
+                                    </option>
+                                </select>
+
+                                <!-- Custom date picker popup -->
+                                <div id="datePickerPopup"
+                                     class="position-absolute top-100 start-0 mt-1 bg-white border rounded shadow p-3"
+                                     style="z-index: 1000; display: none; width: 300px;">
+                                    <div class="mb-3">
+                                        <label class="form-label">Start Date</label>
+                                        <input type="date" id="startDate" class="form-control"
+                                               value="{{ custom_start_date|default:'' }}">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label">End Date</label>
+                                        <input type="date" id="endDate" class="form-control"
+                                               value="{{ custom_end_date|default:'' }}">
+                                    </div>
+                                    <div class="d-flex justify-content-end gap-2">
+                                        <button class="btn btn-sm btn-light" id="cancelDateRange">Cancel</button>
+                                        <button class="btn btn-sm btn-primary" id="applyDateRange">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Date Range Display -->
+                        <div class="alert alert-light border mb-4">
+                            <i class="fas fa-calendar-alt me-2"></i>
+                            Report Period: <strong>{{ start_date|date:"M d, Y" }}
+                            - {{ end_date|date:"M d, Y" }}</strong>
+                        </div>
+
+                        <!-- Metrics Cards -->
+                        <div class="row g-4 mb-4">
+                            <!-- Purchase Card -->
+                            <div class="col-md-6">
+                                <div class="card shadow-sm border-0 h-100">
+                                    <div class="card-header bg-light d-flex align-items-center">
+                                        <i class="fas fa-shopping-cart text-primary me-2"></i>
+                                        <h5 class="card-title m-0">Purchases</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <td>Total Purchase</td>
+                                                    <td class="text-end fw-bold">
+                                                        ৳ {{ purchase_metrics.total_purchase|floatformat:2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Including Tax</td>
+                                                    <td class="text-end">
+                                                        ৳ {{ purchase_metrics.purchase_including_tax|floatformat:2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Returns</td>
+                                                    <td class="text-end text-warning">
+                                                        ৳ {{ purchase_metrics.total_purchase_return|floatformat:2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Due Amount</td>
+                                                    <td class="text-end text-danger">
+                                                        ৳ {{ purchase_metrics.purchase_due|floatformat:2 }}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sales Card -->
+                            <div class="col-md-6">
+                                <div class="card shadow-sm border-0 h-100">
+                                    <div class="card-header bg-light d-flex align-items-center">
+                                        <i class="fas fa-chart-line text-success me-2"></i>
+                                        <h5 class="card-title m-0">Sales</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <td>Total Sales</td>
+                                                    <td class="text-end fw-bold">
+                                                        ৳ {{ sale_metrics.total_sale|floatformat:2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Including Tax</td>
+                                                    <td class="text-end">
+                                                        ৳ {{ sale_metrics.sale_including_tax|floatformat:2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total Returns</td>
+                                                    <td class="text-end text-warning">
+                                                        ৳ {{ sale_metrics.total_sale_return|floatformat:2 }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Due Amount</td>
+                                                    <td class="text-end text-danger">
+                                                        ৳ {{ sale_metrics.sale_due|floatformat:2 }}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Summary Card -->
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-light d-flex align-items-center">
+                                <i class="fas fa-calculator me-2"></i>
+                                <h5 class="card-title m-0">Overall Summary</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <div class="alert alert-light border">
+                                            <div class="text-muted mb-1">Sale - Purchase</div>
+                                            <h4 class="m-0 {% if overall.sale_minus_purchase >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                                ৳ {{ overall.sale_minus_purchase|floatformat:2 }}
+                                            </h4>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="alert alert-light border">
+                                            <div class="text-muted mb-1">Total Due Amount</div>
+                                            <h4 class="m-0 text-danger">৳ {{ overall.due_amount|floatformat:2 }}</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block js %}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const dateFilter = document.getElementById('dateFilter');
+            const datePickerPopup = document.getElementById('datePickerPopup');
+            const startDate = document.getElementById('startDate');
+            const endDate = document.getElementById('endDate');
+            const applyBtn = document.getElementById('applyDateRange');
+            const cancelBtn = document.getElementById('cancelDateRange');
+
+            // Show/hide date picker popup
+            dateFilter.addEventListener('change', function () {
+                if (this.value === 'custom') {
+                    datePickerPopup.style.display = 'block';
+                } else {
+                    datePickerPopup.style.display = 'none';
+                    updateFilters();
+                }
+            });
+
+            // Close popup when clicking outside
+            document.addEventListener('click', function (e) {
+                if (!datePickerPopup.contains(e.target) &&
+                    !dateFilter.contains(e.target) &&
+                    datePickerPopup.style.display === 'block') {
+                    datePickerPopup.style.display = 'none';
+                }
+            });
+
+            // Apply date range
+            applyBtn.addEventListener('click', function () {
+                if (startDate.value && endDate.value) {
+                    const startDateVal = new Date(startDate.value);
+                    const endDateVal = new Date(endDate.value);
+
+                    if (startDateVal > endDateVal) {
+                        alert('Start date cannot be after end date');
+                        return;
+                    }
+
+                    datePickerPopup.style.display = 'none';
+                    updateFilters();
+                } else {
+                    alert('Please select both start and end dates');
+                }
+            });
+
+            // Cancel button
+            cancelBtn.addEventListener('click', function () {
+                datePickerPopup.style.display = 'none';
+                if (!startDate.value || !endDate.value) {
+                    dateFilter.value = 'current_financial_year';
+                }
+            });
+
+            // Update filters and reload page
+            function updateFilters() {
+                let url = new URL(window.location.href);
+                let params = new URLSearchParams(url.search);
+
+                // Update date filter
+                params.set('date_filter', dateFilter.value);
+
+                // Handle custom date range
+                if (dateFilter.value === 'custom') {
+                    if (startDate.value && endDate.value) {
+                        params.set('start_date', startDate.value);
+                        params.set('end_date', endDate.value);
+                    }
+                } else {
+                    params.delete('start_date');
+                    params.delete('end_date');
+                }
+
+                // Handle location
+                let location = document.getElementById('locationFilter').value;
+                if (location) {
+                    params.set('location', location);
+                } else {
+                    params.delete('location');
+                }
+
+                window.location.href = `${url.pathname}?${params.toString()}`;
+            }
+
+            // Handle location filter change
+            document.getElementById('locationFilter').addEventListener('change', function () {
+                dateFilter.value !== 'custom' && updateFilters();
+            });
+        });
+    </script>
+{% endblock %}
+{% block css %}
+    <!-- Add these styles to your CSS -->
+    <style>
+        .form-select option {
+            padding: 8px;
+        }
+
+        #datePickerPopup {
+            background: white;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+    </style>
+{% endblock %}

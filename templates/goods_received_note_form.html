@@ -1,0 +1,52 @@
+{% extends 'includes/main.html' %} {% load crispy_forms_tags %} {% block content
+%}
+<div class="container-fluid py-4">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card shadow-sm border-0">
+        <div
+          class="card-header bg-primary text-white d-flex justify-content-between align-items-center"
+        >
+          <h3 class="card-title m-0">Create Purchase Order</h3>
+          <div class="card-toolbar">
+            <a
+              href="{% url 'requisition_detail' requisition.id %}"
+              class="btn btn-light"
+            >
+              <i class="fas fa-arrow-left"></i> Back to Requisition
+            </a>
+          </div>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            {% csrf_token %} {{ form|crispy }} {{ formset.management_form }}
+
+            <table class="table table-bordered">
+              <thead class="thead-light">
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity Ordered</th>
+                  <th>Price per Unit</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for form in formset %}
+                <tr class="formset_row">
+                  <td>{{ form.variant|as_crispy_field }}</td>
+                  <td>{{ form.quantity_ordered|as_crispy_field }}</td>
+                  <td>{{ form.price_per_unit|as_crispy_field }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+
+            <button type="submit" class="btn btn-primary mt-3">
+              Submit Purchase Order
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

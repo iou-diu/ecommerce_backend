@@ -1,0 +1,87 @@
+{% extends 'includes/main.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <h2 class="display-6 mb-4">Group Permissions Management</h2>
+
+            <!-- Group Selection Form -->
+             <form method="get" action="" class="mb-3 ">
+                <label for="id_group" class="form-label me-2">Select Group:</label>
+                {{ form.group }}
+                <button type="submit" class="btn btn-sm btn-primary ms-2">Load Permissions</button>
+            </form>
+        </div>
+
+        <div class="col-md-12 ">
+            {% if group_permissions %}
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <input type="hidden" name="group" value="{{ form.group.value }}">
+
+                 
+
+                    <!-- Responsive Table -->
+                    <div class="table-responsive shadow-sm rounded bg-white">
+                        <table class="table table-bordered table-hover align-middle">
+                            <thead class="bg-primary text-white text-center">
+                                <tr>
+                                    <th style="min-width: 150px;">Application</th>
+                                    <th style="min-width: 150px;">Model</th>
+                                    <th style="min-width: 100px;">Create</th>
+                                    <th style="min-width: 100px;">Read</th>
+                                    <th style="min-width: 100px;">Update</th>
+                                    <th style="min-width: 100px;">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for app_label, models in grouped_permissions.items %}
+                                    {% for model_name, actions in models.items %}
+                                        <tr class="app-row" data-app="{{ app_label|capfirst }}" data-model="{{ model_name|capfirst }}">
+                                            {% if forloop.first %}
+                                                <td rowspan="{{ models|length }}" class="fw-bold align-middle">{{ app_label|capfirst }}</td>
+                                            {% endif %}
+                                            <td class="align-middle">{{ model_name|capfirst }}</td>
+                                            <td class="text-center">
+                                                {% if actions.create %}
+                                                    <input type="checkbox" name="permissions" value="{{ actions.create.id }}"
+                                                        {% if actions.create in group_permissions %}checked{% endif %}>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-center">
+                                                {% if actions.view %}
+                                                    <input type="checkbox" name="permissions" value="{{ actions.view.id }}"
+                                                        {% if actions.view in group_permissions %}checked{% endif %}>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-center">
+                                                {% if actions.change %}
+                                                    <input type="checkbox" name="permissions" value="{{ actions.change.id }}"
+                                                        {% if actions.change in group_permissions %}checked{% endif %}>
+                                                {% endif %}
+                                            </td>
+                                            <td class="text-center">
+                                                {% if actions.delete %}
+                                                    <input type="checkbox" name="permissions" value="{{ actions.delete.id }}"
+                                                        {% if actions.delete in group_permissions %}checked{% endif %}>
+                                                {% endif %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex justify-content-center mt-4">
+                        <button type="submit" class="btn btn-primary">Save Permissions</button>
+                    </div>
+                </form>
+            {% else %}
+                <p class="text-center text-muted mt-4">Select a group to load permissions.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

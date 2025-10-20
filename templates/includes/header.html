@@ -1,0 +1,63 @@
+{% load static %}
+
+<div id="kt_header" class="header header-fixed">
+    <!--begin::Container-->
+    <div class="container-fluid d-flex flex-row-reverse align-items-stretch justify-content-between">
+        
+        <!--begin::Topbar-->
+        <div class="topbar">
+            <!--begin::User-->
+            <div class="topbar-item">
+                <div class="btn btn-icon w-auto btn-clean d-flex align-items-center btn-lg px-2"
+                     id="kt_quick_user_toggle">
+                    <span class="text-muted font-weight-bold font-size-base mr-1">Hi,</span>
+                    <span class="text-success font-weight-bolder font-size-base mr-3">{% if request.user.name %}
+                        {{ request.user.name }}{% else %}{{ request.user.username }}{% endif %}</span>
+                    <span class="symbol symbol-35 symbol-light-success">
+                        <span class="font-size-h5 font-weight-bold"><i class="fa fa-user-circle"></i></span>
+                    </span>
+                </div>
+            </div>
+            <!--end::User-->
+        </div>
+        <!--begin::Dropdown Menu-->
+        <div class="topDropdown dropdown">
+            <button
+                class="btn btn-success dropdown-toggle "
+                type="button"
+                id="brandMenuDropdown"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+            >
+                <i class="fa fa-2x fa-plus-circle" aria-hidden="true"></i>
+                <i class="fas fa-chevron-down ml-2" aria-hidden="true"></i> <!-- Down arrow icon -->
+            </button>
+            <div class="dropdown-menu mt-4" aria-labelledby="brandMenuDropdown">
+                <a class="dropdown-item" href="{% url 'product_add' %}">
+                    <i class="menu-icon fas fa-list mr-4"></i> Add New Product
+                </a>
+                <a class="dropdown-item" href="{% url 'brand_add' %}">
+                    <i class="menu-icon fas fa-industry mr-4"></i> Add New Brand
+                </a>
+                <a class="dropdown-item" href="{% url 'category_add' %}">
+                    <i class="menu-icon fas fa-tags mr-4"></i> Add New Category
+                </a>
+            </div>
+            <a href="{% url 'pos_form' %}" class="mx-5 btn btn-danger py-3">
+                <i class="fa fa-2x fa-shopping-cart"></i> POS 
+            </a>
+            
+            
+
+        </div>
+        
+        
+        
+  
+        
+        <!--end::Dropdown Menu-->
+        <!--end::Topbar-->
+    </div>
+    <!--end::Container-->
+</div>

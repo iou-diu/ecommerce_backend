@@ -1,0 +1,84 @@
+{% extends "includes/main.html" %}
+
+{% block content %}
+<div class="container mt-4">
+  <div class="row">
+    <!-- Main Content Column -->
+    <div class="col-md-8">
+      <h3 class="mb-4">
+        Support Ticket {{ ticket.ticket_id }} - {{ ticket.name }}
+      </h3>
+      <div class="card mb-4">
+        <div class="card-body">
+          <p><strong>Status:</strong> {{ ticket.status|title }}</p>
+          <p><strong>Description:</strong> {{ ticket.description }}</p>
+          <p><strong>Priority:</strong> {{ ticket.priority|title }}</p>
+        </div>
+      </div>
+
+      <!-- Messages Section -->
+      <h5 class="mb-3">Messages</h5>
+      <div class="card mb-4">
+        <div class="card-body">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="border-bottom mb-3 pb-2">
+                <p>
+                  <strong>{{ message.sender.get_full_name|default:message.sender.username|default:message.sender.email }}:</strong> {{ message.message }}
+                </p>
+                <small class="text-muted">{{ message.created_at }}</small>
+              </div>
+            {% endfor %}
+          {% else %}
+            <p>No messages yet.</p>
+          {% endif %}
+        </div>
+      </div>
+
+<!-- Add Message Form -->
+<h5 class="mb-3">Add Message</h5>
+<form method="post" class="mb-4">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="id_message">Message:</label>
+        <textarea name="message" id="id_message" class="form-control" rows="4" placeholder="Type your message here...">{{ message_form.message.value|default:'' }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Send Message</button>
+</form>
+
+
+    </div>
+
+    <!-- Action Buttons Column -->
+    <div class="col-md-4">
+      <h5 class="mb-3">Actions</h5>
+      {% if request.user.is_staff or request.user.is_superuser %}
+        <form method="post" action="{% url 'support_ticket_assign' ticket.ticket_id %}" class="mb-2">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="assigned_to">Assign to:</label>
+            <select name="assigned_to" id="assigned_to" class="form-control">
+              <option value="" disabled selected>Select a user</option>
+              {% for user in user_list %}
+                <option value="{{ user.id }}" {% if user.id == ticket.assigned_to.id %}selected{% endif %}>
+                  {{ user.get_full_name|default:user.username|default:user.email }}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+          <button type="submit" class="btn btn-warning btn-block mt-2">Assign</button>
+        </form>
+      {% endif %}
+
+      {% if ticket.status != 'closed' %}
+        <form method="post" action="{% url 'support_ticket_close' ticket.ticket_id %}">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-danger btn-block mt-2">Close Ticket</button>
+        </form>
+      {% else %}
+        <p>This ticket is closed.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

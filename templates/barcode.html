@@ -1,0 +1,59 @@
+{% extends 'includes/main.html' %} {% load static %} {% block content %}
+<div class="container bg-light p-5 shadow-sm rounded mb-5">
+  <h1 class="mb-4 text-primary">Product Barcode</h1>
+
+  <!-- Barcode Section -->
+  {% if barcode_image %}
+  <div class="mb-3">
+    <img
+      src="{{ barcode_image }}"
+      alt="Barcode for product"
+      class="img-fluid"
+    />
+    <p class="mt-2">
+      Product: {{ stock_entry.variant.product.name }}, ID: {{ stock_entry.id }},
+      Qty: {{ stock_entry.quantity }}
+    </p>
+  </div>
+  {% endif %}
+
+  <!-- Product Details (below the barcode) -->
+  <div class="mb-3">
+    <p><strong>Stock Entry Date:</strong> {{ stock_entry.timestamp }}</p>
+  </div>
+
+  <!-- Button to generate barcode (hidden when printing) -->
+  <a
+    href="{% url 'generate_barcode' stock_entry.id %}"
+    class="btn btn-primary mb-4 no-print"
+  >
+    <i class="bi bi-upc"></i> Generate Barcode
+  </a>
+
+  <!-- Button to Print (hidden when printing) -->
+  <button onclick="window.print()" class="btn btn-secondary no-print">
+    <i class="bi bi-printer"></i> Print
+  </button>
+</div>
+{% endblock %} {% block css %}
+<style>
+  /* Hide elements with the "no-print" class when printing */
+  @media print {
+    .no-print {
+      display: none;
+    }
+  }
+
+  /* Customize the printed page layout */
+  @media print {
+    body {
+      padding: 20px;
+    }
+
+    /* Adjust barcode and details to be printed at the top */
+    .container {
+      page-break-inside: avoid;
+    }
+  }
+</style>
+{% endblock %}

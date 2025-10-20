@@ -1,0 +1,489 @@
+{% extends 'includes/main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid bg-light p-5 shadow-sm rounded mb-5 mx-5" x-data="purchaseOrderForm('{{ purchase_order_id|default:'' }}')" x-init="init()">
+    <h3 class="mb-4 text-primary">Purchase Order: Requisition ID # <span x-text="selectedRequisition"></span></h3>
+
+    <div class="row g-2 mb-6 py-4 bg-white">
+
+        <!-- Supplier Display -->
+        <div class="col-lg-2 col-md-3 col-sm-6">
+            <label class="form-label text-bold text-bold">Supplier</label>
+            <p x-text="getSupplierName(selectedSupplier)"></p>
+        </div>
+
+        <!-- Purchase Date -->
+        <div class="col-lg-2 col-md-3 col-sm-6">
+            <label class="form-label text-bold">Purchase Date</label>
+            <p x-text="expected_delivery_date"></p>
+        </div>
+
+        <!-- Purchase Status -->
+        <div class="col-lg-2 col-md-3 col-sm-6">
+            <label class="form-label text-bold">Status</label>
+            <p x-text="purchaseStatus"></p>
+        </div>
+
+        <!-- Payment Term (Days and Months) -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <label class="form-label text-bold">Payment Term</label>
+            <p>
+                <span x-text="paymentDays"></span> /
+                <span x-text="paymentMonths"></span>
+            </p>
+        </div>
+
+        <!-- Attached Document -->
+        <div class="col-lg-3 col-md-5 col-sm-6">
+            <label class="form-label text-bold">Attached Document</label>
+            <p x-text="attachedDocumentName"></p>
+        </div>
+
+    </div>
+
+    <!-- Purchase Order Table -->
+    <div class="table-responsive">
+        <table class="table table-striped align-middle">
+            <thead class="table-dark">
+               
+                <tr>
+                    <!-- Table Headings -->
+                    <th width="10%">Product Name</th>
+                    <th>Current Stock</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Discount (%)</th>
+                    <th>Tax (%)</th>
+                    <th>Sub Total</th>
+                    <th>Tax Amount</th>
+                    <th>Net Cost</th>
+                    <th>Line Total</th>
+                 
+                </tr>
+            </thead>
+            <tbody>
+                <template x-for="(row, index) in rows" :key="index">
+                    <tr>
+                        <td>
+                            <span class="d-inline-block" x-text="row.productName"></span><br>
+                            <small class="text-bold">
+                                <span class="d-inline-block" x-text="row.productSKU"></span>
+                            </small>
+                        </td>
+                        <td>
+                            <span class="d-inline-block" x-text="row.stock_quantity"></span>
+                        </td>
+                        <td>
+                            <span x-text="row.quantity"></span>
+                        </td>
+                        <td>
+                            <span x-text="row.price"></span>
+                        </td>
+                        <td>
+                            <span x-text="row.discount"></span>
+                        </td>
+                        <td>
+              
+                       
+                            <span x-text="row.selectedTax.name"></span> <br>(<span x-text="row.selectedTax.value"></span>
+                            
+                            <span x-show="row.selectedTax.tax_type=='percentage'">%</span>
+                            <span x-show="row.selectedTax.tax_type=='flat'">Flat</span>)
+                        </td>
+                        <td>
+                            <span x-text="calculateSubTotal(row).toFixed(2)"></span>
+                        </td>
+                        <td>
+                            <span x-text="calculateTaxAmount(row).toFixed(2)"></span>
+                        </td>
+                        <td>
+                            <span x-text="calculateNetCost(row).toFixed(2)"></span>
+                        </td>
+                        <td>
+                            <span x-text="calculateLineTotal(row).toFixed(2)"></span>
+                        </td>
+                      
+                    </tr>
+                </template>
+            </tbody>
+            <tfoot>
+                <tr class="bg-white text-bold">
+                    <td colspan="2" class="text-end">Total Line</td>
+                    <td colspan="1">
+                        Total Quantity: <span x-text="calculateTotalQuantity()"></span>
+                    </td>
+                    <td colspan="1">
+                        Total Unit Cost: <span x-text="calculateTotalPriceWithoutDiscountTax()"></span>
+                    </td>
+                    <td colspan="5"></td>
+                    <td >
+                        Total Cost
+                         <input type="text" class="form-control form-control-sm text-bold" :value="calculateTotalCost().toFixed(2)" readonly>
+                     </td>
+                     <td colspan="4"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <!-- Shipping Info & Purchase Tax -->
+    <div class="col bg-white py-4">
+        <h5>Shipping Info & Purchase Tax (If Any)</h5>
+        <div class="row align-items-center mb-3 px-1">
+            <div class="col-md-2">
+                <label class="form-label text-bold fw-bold">Purchase Tax</label>
+            </div>
+            <div class="col-md-2">
+                <p x-show="selectedPurchaseTaxObject"
+                    x-text="selectedPurchaseTaxObject ? `${selectedPurchaseTaxObject.name} (${selectedPurchaseTaxObject.type === 'percentage' ? selectedPurchaseTaxObject.value + '%' : 'Flat ' + selectedPurchaseTaxObject.value})` : 'No tax selected'">
+                </p>
+            </div>
+        </div>
+
+        <!-- Shipping Information and Shipping Cost -->
+        <div class="row px-1">
+            <div class="col-md-2 mb-3">
+                <label class="form-label text-bold">Shipping Info</label>
+                <p x-text="shippingInfo"></p>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label class="form-label text-bold">Shipping Cost:</label>
+                <p x-text="shippingCost"></p>
+            </div>
+        </div>
+
+        <!-- Global Discount -->
+        <h5 class="my-2">Global Discount</h5>
+        <div class="row px-1">
+            <div class="col-md-2 mb-3">
+                <label class="form-label text-bold">Discount Type</label>
+                <p x-text="globalDiscountType"></p>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label class="form-label text-bold">Discount Value</label>
+                <p x-text="globalDiscountValue"></p>
+            </div>
+        </div>
+
+        <!-- Additional Costs -->
+        <h5 class="my-2">Additional Costs</h5>
+        <div class="row px-1">
+            <div class="col-md-2 mb-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Cost Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template x-for="(additionalCost, index) in additionalCosts" :key="index">
+                            <tr>
+                                <td x-text="additionalCost.key"></td>
+                                <td x-text="parseFloat(additionalCost.value).toFixed(2)"></td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+
+    </div>
+
+    <!-- Summary Table -->
+    <div class="row border-top">
+        <div class="col-md-5"></div>
+        <div class="mt-4 p-3 col-md-7">
+            <table class="table table-bordered bg-white rounded">
+                <tr>
+                    <td><strong>Purchase Tax Cost:
+                        <span x-show="selectedPurchaseTaxObject"
+                            x-text="selectedPurchaseTaxObject ? `${selectedPurchaseTaxObject.name} (${selectedPurchaseTaxObject.type === 'percentage' ? selectedPurchaseTaxObject.value + '%' : 'Flat ' + selectedPurchaseTaxObject.value})` : 'No tax selected'">
+                        </span>
+                    </strong></td>
+                    <td class="text-end">
+                        <span x-show="finalPurchaseTaxValue > 0" x-text="finalPurchaseTaxValue.toFixed(2)"></span>
+                        <div x-show="finalPurchaseTaxValue === 0" class="text-muted">
+                            No purchase tax added.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Shipping Cost: <span x-text='shippingInfo'></span></strong></td>
+                    <td class="text-end">
+                        <span x-text="shippingCost" x-show="shippingCost > 0"></span>
+                        <div x-show="shippingCost === 0" class="text-muted">
+                            No shipping cost added.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Additional Cost:</strong></td>
+                    <td class="text-end">
+                        <table class="table table-sm table-striped table-bordered mb-0" x-show="additionalCosts.length > 0">
+                            <thead>
+                                <tr>
+                                    <th>Cost Description</th>
+                                    <th class="text-end">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template x-for="aCost in additionalCosts" :key="aCost.key">
+                                    <tr>
+                                        <td><span x-text="aCost.key"></span></td>
+                                        <td class="text-end"><span x-text="parseFloat(aCost.value).toFixed(2)"></span></td>
+                                    </tr>
+                                </template>
+                                <tr>
+                                    <td><strong>Total:</strong></td>
+                                    <td class="text-end"><strong><span x-text="calculateAdditionalCosts().toFixed(2)"></span></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div x-show="additionalCosts.length === 0" class="text-muted">
+                            No additional costs added.
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Global Discount: <span x-text="`(${globalDiscountType === 'percentage' ? globalDiscountValue + '%' : 'Flat ' + globalDiscountValue})`"></span></td>
+                    <td>
+                        <span class="text-danger" x-show="finalGlobalDiscount > 0" x-text="`- ${finalGlobalDiscount}`"></span>
+                        <div x-show="finalGlobalDiscount === 0" class="text-muted">
+                            No global discount added.
+                        </div>
+                    </td>
+                </tr>
+                <tr class="border-top">
+                    <td><h4 class="text-success"><strong>Total Cost:</strong></h4></td>
+                    <td class="text-end">
+                        <h4 class="text-success"><span x-text="calculateFinalCost().toFixed(2)"></span></h4>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block js %}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3/dist/cdn.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function purchaseOrderForm(purchaseOrderId) {  // Accept purchaseOrderId as a parameter
+        return {
+            purchaseOrderId: purchaseOrderId || null,
+            isEditing: purchaseOrderId != null,
+            rows: [],
+            products: [],
+            searchTerm: '',
+            requisitions: [],
+            requisitionSearchTerm: '',
+            purchaseTaxValue: '',
+            purchaseTaxType: 'percentage',
+            finalPurchaseTaxValue: 0,
+            shippingInfo: '',
+            shippingCost: 0,
+            additionalCosts: [],
+            taxes: [],
+            selectedPurchaseTaxObject: null,
+            globalDiscountType: 'percentage',
+            globalDiscountValue: 0,
+            finalGlobalDiscount: 0,
+            suppliers: [],
+            selectedSupplier: '',
+            purchaseDate: '',
+            expected_delivery_date: '',
+            purchaseStatus: null,
+            paymentDays: 0,
+            paymentMonths: 'days',
+            attachedDocument: null,
+            attachedDocumentName: '',
+            selectedRequisition: null,
+
+            init() {
+                // Fetch taxes and suppliers first
+                Promise.all([this.fetchTaxes(), this.fetchSuppliers()])
+                    .then(() => {
+                        if (this.isEditing) {
+                            // Fetch existing purchase order data
+                            fetch(`/api/v1/po/${this.purchaseOrderId}/`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    this.loadPurchaseOrderData(data);
+                                })
+                                .catch(error => {
+                                    console.error('Error fetching purchase order:', error);
+                                });
+                        }
+                    });
+            },
+
+            getSupplierName(supplierId) {
+                const supplier = this.suppliers.find(s => s.id === supplierId);
+                return supplier ? supplier.name : '';
+            },
+
+            fetchTaxes() {
+                return fetch('/api/v1/tax/?limit=10000')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.taxes = data.results.filter(tax => tax.is_active)
+                            .map(tax => ({
+                                id: tax.id,
+                                name: tax.name,
+                                type: tax.tax_type,
+                                value: parseFloat(tax.value)
+                            }));
+                    })
+                    .catch(error => console.error('Error fetching taxes:', error));
+            },
+
+            fetchSuppliers() {
+                return fetch('/api/v1/supplier/?limit=10000')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.suppliers = data.results;
+                    })
+                    .catch(error => console.error('Error fetching suppliers:', error));
+            },
+
+            calculateSubTotal(row) {
+                return row.quantity * row.price;
+            },
+
+            calculateDiscountAmount(row) {
+                return (this.calculateSubTotal(row) * row.discount) / 100;
+            },
+
+            calculateNetCost(row) {
+                return this.calculateSubTotal(row) - this.calculateDiscountAmount(row);
+            },
+
+            calculateTaxAmount(row) {
+                if (!row.selectedTax) {
+                    return 0;
+                }
+                const selectedTax = this.taxes.find(tax => tax.name === row.selectedTax.name);
+
+                if (selectedTax) {
+                    if (selectedTax.type === 'percentage') {
+                        return (this.calculateNetCost(row) * selectedTax.value) / 100;
+                    } else if (selectedTax.type === 'flat') {
+                        return selectedTax.value;
+                    }
+                }
+                return 0;
+            },
+
+            calculateLineTotal(row) {
+                return this.calculateNetCost(row) + this.calculateTaxAmount(row);
+            },
+
+            calculateTotalCost() {
+                return this.rows.reduce((total, row) => total + this.calculateLineTotal(row), 0);
+            },
+
+            calculateTotalQuantity() {
+                return this.rows.reduce((total, row) => total + (row.quantity || 1), 0);
+            },
+
+            calculateTotalPriceWithoutDiscountTax() {
+                return this.rows.reduce((total, row) => total + (parseFloat(row.price) || 0), 0);
+            },
+
+            loadPurchaseOrderData(data) {
+                // Map main fields
+                this.selectedRequisition = data.requisition;
+                this.selectedSupplier = data.supplier;
+                this.expected_delivery_date = data.expected_delivery_date;
+                this.purchaseStatus = data.status;
+                this.globalDiscountType = data.global_discount_type;
+                this.globalDiscountValue = data.global_discount_value;
+                this.shippingInfo = data.shipping_info;
+                this.shippingCost = parseFloat(data.shipping_cost);
+                this.purchaseTaxValue = data.purchase_tax_name;
+                this.paymentMonths = data.paymentMonths;
+                this.paymentDays = data.paymentDays;
+                this.attachedDocumentName = data.attached_document_name || 'No document attached';
+
+                // Find the selected purchase tax object
+                this.selectedPurchaseTaxObject = this.taxes.find(tax => tax.name === data.purchase_tax_name);
+
+                // Map additional costs
+                this.additionalCosts = (data.po_additional_costs || []).map(cost => ({
+                    key: cost.key,
+                    value: parseFloat(cost.value)
+                }));
+
+                // Map items to rows
+                this.rows = data.po_items.map(item => {
+                    const taxName = item.tax_model ? item.tax_model : '';
+                    const sellingtaxName = item.selling_tax_model ? item.selling_tax_model : '';
+
+                    return {
+                        productSKU: item.variant.sku,
+                        quantity: item.quantity_ordered,
+                        price: parseFloat(item.price_per_unit),
+                        discount: parseFloat(item.discount),
+                        productName: item.variant.product.name,
+                        stock_quantity: item.variant.stock_quantity,
+                        selectedTax: taxName,
+                        selectedSellingTax: sellingtaxName,
+                        profitMargin: parseFloat(item.profit_margin_percentage) || 0,
+                        sellingPrice: parseFloat(item.expected_selling_price) || 0,
+                    };
+                });
+
+                // Calculate final purchase tax value and global discount
+                this.calculateFinalCost();
+            },
+
+            calculateAdditionalCosts() {
+                return this.additionalCosts.reduce((total, cost) => total + parseFloat(cost.value || 0), 0);
+            },
+
+            calculateFinalCost() {
+                let subtotal = this.rows.reduce((total, row) => total + this.calculateLineTotal(row), 0);
+
+                // Apply purchase tax
+                let purchaseTax = 0;
+                const selectedPurchaseTaxValue = this.taxes.find(tax => tax.name === this.purchaseTaxValue);
+                this.selectedPurchaseTaxObject = selectedPurchaseTaxValue;
+
+                if (selectedPurchaseTaxValue) {
+                    if (selectedPurchaseTaxValue.type === 'percentage') {
+                        purchaseTax = (subtotal * selectedPurchaseTaxValue.value) / 100;
+                    } else if (selectedPurchaseTaxValue.type === 'flat') {
+                        purchaseTax = selectedPurchaseTaxValue.value;
+                    }
+                }
+
+                this.finalPurchaseTaxValue = purchaseTax;
+
+                // Calculate total with tax, shipping, and additional costs
+                let totalCost = subtotal + purchaseTax + parseFloat(this.shippingCost || 0) + this.calculateAdditionalCosts();
+
+                let globalDiscount = 0;
+                if (this.globalDiscountType === 'percentage') {
+                    globalDiscount = (totalCost * this.globalDiscountValue) / 100;
+                } else if (this.globalDiscountType === 'flat') {
+                    globalDiscount = parseFloat(this.globalDiscountValue || 0);
+                }
+                this.finalGlobalDiscount = globalDiscount;
+
+                // Subtract the global discount from the total cost
+                totalCost -= globalDiscount;
+
+                return totalCost;
+            }
+        };
+    }
+</script>
+{% endblock %}

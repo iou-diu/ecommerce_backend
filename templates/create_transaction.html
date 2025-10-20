@@ -1,0 +1,187 @@
+{% extends 'includes/main.html' %}
+{% block css %} 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+{% csrf_token %}
+{% endblock %}
+
+{% block content %}
+<div class="col-md-10 mx-auto ">
+    <h2 class="text-center mb-2">Create Transaction and Lines</h2>
+    <form id="transaction-form">
+        <div class="card mb-4">
+            <div class="card-header">Transaction Details</div>
+            <div class="card-body">
+                <div class="form-group">
+                    <label for="head">Head</label>
+                    <select id="head" class="form-control select2" required>
+                        <option value="">Select Head</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" class="form-control" required></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">Transaction Lines</div>
+            <div class="card-body" id="lines-container">
+                <!-- Initial Line Item -->
+                <div class="form-row align-items-center line-item">
+                    <div class="col-md-4">
+                        <select class="form-control select2 account-select" required>
+                            <option value="">Select Account</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" name="transaction_type" required>
+                            <option value="">Select Type</option>
+                            <option value="debit">Debit</option>
+                            <option value="credit">Credit</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" step="0.01" class="form-control" name="amount" placeholder="Amount" required>
+                    </div>
+                    <div class="col-md-1 text-right">
+                        <button type="button" class="btn btn-sm btn-danger delete-line">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-secondary" id="add-line">Add Line</button>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-save"></i> Save Transaction
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+    $(document).ready(function() {
+        const csrfToken = $('[name=csrfmiddlewaretoken]').val();
+
+        // Initialize Select2
+        $('.select2').select2();
+
+        async function fetchSelectOptions() {
+            try {
+                const [headsResponse, accountsResponse] = await Promise.all([
+                    axios.get('http://localhost:8000/accounting/account-heads/'),
+                    axios.get('http://localhost:8000/accounting/accounts/')
+                ]);
+
+                // Populate Head select
+                const headSelect = $('#head');
+                headsResponse.data.forEach(head => {
+                    headSelect.append(`<option value="${head.id}">${head.name} (${head.head_type})</option>`);
+                });
+                headSelect.select2();
+
+                // Cache accounts options for reuse
+                window.accountOptions = accountsResponse.data.map(account => ({
+                    id: account.id,
+                    text: `${account.name} (${account.account_type})`
+                }));
+                
+                // Populate initial line item accounts
+                $('.account-select').each(function() {
+                    const accountSelect = $(this);
+                    accountSelect.append(window.accountOptions.map(opt => 
+                        `<option value="${opt.id}">${opt.text}</option>`
+                    ).join(''));
+                    accountSelect.select2();
+                });
+
+            } catch (error) {
+                console.error('There was an error fetching select options!', error);
+            }
+        }
+
+        function addLine() {
+            const newLine = `
+                <div class="form-row align-items-center line-item">
+                    <div class="col-md-4">
+                        <select class="form-control select2 account-select" required>
+                            <option value="">Select Account</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <select class="form-control" name="transaction_type" required>
+                            <option value="">Select Type</option>
+                            <option value="debit">Debit</option>
+                            <option value="credit">Credit</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number" step="0.01" class="form-control" name="amount" placeholder="Amount" required>
+                    </div>
+                    <div class="col-md-1 text-right">
+                        <button type="button" class="btn btn-sm btn-danger delete-line">Delete</button>
+                    </div>
+                </div>
+            `;
+            $('#lines-container').append(newLine);
+            // Reinitialize Select2 for the new line
+            $('.account-select').each(function() {
+                const accountSelect = $(this);
+                accountSelect.append(window.accountOptions.map(opt => 
+                    `<option value="${opt.id}">${opt.text}</option>`
+                ).join(''));
+                accountSelect.select2();
+            });
+        }
+
+        function removeLine() {
+            $(this).closest('.line-item').remove();
+        }
+
+        $('#add-line').on('click', addLine);
+        $('#lines-container').on('click', '.delete-line', removeLine);
+
+        $('#transaction-form').on('submit', async function(event) {
+            event.preventDefault();
+
+            const transaction = {
+                head: $('#head').val(),
+                description: $('#description').val(),
+                lines: []
+            };
+
+            $('#lines-container .line-item').each(function() {
+                const line = {
+                    account: $(this).find('.account-select').val(),
+                    transaction_type: $(this).find('[name="transaction_type"]').val(),
+                    amount: $(this).find('[name="amount"]').val()
+                };
+                transaction.lines.push(line);
+            });
+
+            try {
+                await axios.post('/accounting/transactions/', transaction, {
+                    headers: {
+                        'X-CSRFToken': csrfToken
+                    }
+                });
+                alert('Transaction saved successfully!');
+                $('#transaction-form')[0].reset();
+                $('#lines-container').empty();
+                addLine(); // Add a new empty line after reset
+            } catch (error) {
+                console.error('There was an error saving the transaction!', error);
+                alert('Error saving transaction. Please check the console for details.');
+            }
+        });
+
+        fetchSelectOptions();
+    });
+</script>
+{% endblock %}

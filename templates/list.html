@@ -1,0 +1,101 @@
+{% extends 'includes/main.html' %}
+{% load render_table from django_tables2 %}
+
+{% block content %}
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" id="modalBody"></div>
+    </div>
+</div>
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center shadow-sm p-3">
+                    <div class="d-flex align-items-center">
+                        <h4 class="fw-bold m-0 me-2">{{ page_title }} List</h4>
+                        <span class="badge bg-secondary text-black mx-2">{{ table.page.paginator.count }}</span>
+                    </div>
+                    <div class="card-toolbar d-flex align-items-center">
+                        {% if show_selection %}
+                            <button onclick="showSelected()" class="btn btn-outline-light btn-sm me-2">
+                                <i class="fas fa-check-circle me-1"></i> Show Selected
+                            </button>
+                        {% endif %}
+                        
+                        {% if add_link %}
+                            <a href="{{ add_link }}" class="btn btn-light btn-sm d-flex align-items-center">
+                                <i class="fas fa-plus-circle me-1"></i> Add New
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                    <div id="selection" class="alert alert-info d-none"></div>
+
+                    {% if filter %}
+                        {% include 'includes/filter.html' %}
+                    {% endif %}
+                  
+
+                    <div class="table-responsive mt-4">
+                        {% render_table table %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let rows = new Set();
+
+    function singlerow(x) {
+        if (x.checked) {
+            rows.add(x.value);
+        } else {
+            rows.delete(x.value);
+        }
+    }
+
+    function showSelected() {
+        let selectionElement = document.getElementById('selection');
+        let selectedRows = Array.from(rows.values());
+        if (selectedRows.length > 0) {
+            selectionElement.innerText = "Selected rows: " + selectedRows.join(", ");
+            selectionElement.classList.remove('d-none');
+        } else {
+            selectionElement.classList.add('d-none');
+        }
+    }
+
+    function copyToClipboard(colorCode) {
+        // Create a temporary input element to hold the color code
+        const tempInput = document.createElement('input');
+        tempInput.value = colorCode;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand('copy');
+        document.body.removeChild(tempInput);
+    
+        // Optionally, show a notification or alert to the user
+        alert('Color code ' + colorCode + ' copied to clipboard!');
+    }
+
+
+    function loadModal(url) {
+        $.ajax({
+            url: url,
+            type: 'GET',
+            success: function(data) {
+                $('#modalBody').html(data); // Inject the modal content
+                $('#modal').modal('show'); // Show the modal
+            },
+            error: function() {
+                alert('Failed to load expense details. Please try again.');
+            }
+        });
+    }
+</script>
+{% endblock %}
