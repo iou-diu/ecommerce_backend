@@ -424,26 +424,26 @@ class ProductForm(forms.ModelForm):
             'is_active', 'warranty', 'tags', 'is_saleable'
         )
         exclude = ['slug']
-        # widgets = {
-        #     'description': SummernoteWidget(),
-        #     'category': CategoryWidget(attrs={
-        #         'data-minimum-input-length': 0,
-        #         'class': 'form-control select2-widget'
-        #     }),
-        #     'key_features': SummernoteWidget(),
-        #     'category': CategoryWidget(attrs={
-        #         'data-minimum-input-length': 0,
-        #         'class': 'form-control select2-widget'
-        #     }),
-        #     'brand': BrandWidget(attrs={
-        #         'data-minimum-input-length': 0,
-        #         'class': 'form-control select2-widget'
-        #     }),
-        #     'tags': TagMultipleSelect2Widget(attrs={
-        #         'data-minimum-input-length': 0,
-        #         'class': 'form-control select2-widget'
-        #     }),
-        # }
+        widgets = {
+            'description': SummernoteWidget(),
+            # 'category': CategoryWidget(attrs={
+            #     'data-minimum-input-length': 0,
+            #     'class': 'form-control select2-widget'
+            # }),
+            # 'key_features': SummernoteWidget(),
+            # 'category': CategoryWidget(attrs={
+            #     'data-minimum-input-length': 0,
+            #     'class': 'form-control select2-widget'
+            # }),
+            'brand': BrandWidget(attrs={
+                'data-minimum-input-length': 0,
+                'class': 'form-control select2-widget'
+            }),
+            'tags': TagMultipleSelect2Widget(attrs={
+                'data-minimum-input-length': 0,
+                'class': 'form-control select2-widget'
+            }),
+        }
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
