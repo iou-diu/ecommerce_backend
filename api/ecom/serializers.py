@@ -159,7 +159,8 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ['id', 'name', 'is_saleable', 'price_details', 'category', 'category_name', 'brand', 'brand_name', 'unit',
+        fields = ['id', 'name', 'is_saleable', 'price_details', 'category', 'category_name', 'brand', 'brand_name',
+                  'unit',
                   'min_order_quantity', 'max_order_quantity', 'description', 'meta_title', 'meta_description', 'slug',
                   'is_active', 'created_at', 'updated_at', 'warranty', 'is_variant', 'default_variant', 'images']
 
@@ -351,18 +352,20 @@ class ShippingMethodSerializer(serializers.ModelSerializer):
 
 
 from apps.ecom.models import Wishlist
+from api.ecom.new_cart_api import ProductVariantSerializer
 
 
 class WishlistSerializer(serializers.ModelSerializer):
+    variant = ProductVariantSerializer(read_only=True)
+
     class Meta:
         model = Wishlist
-        fields = ['id', 'variant', 'added_at']
-        
+        fields = ['id', 'variant', 'variant', 'added_at']
+
     def extra_kwargs(self):
         return {
             'variant': {'required': True}
         }
-
 
 
 from apps.ecom.models import Review

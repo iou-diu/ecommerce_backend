@@ -3,7 +3,7 @@
 from django_select2.forms import ModelSelect2Widget, ModelSelect2MultipleWidget
 
 from apps.lookup import CustomSelect2Mixin, CustomSelect2MultipleMixin
-from .models import  Attribute, AttributeValue, Category,Brand,Tag
+from .models import Attribute, AttributeValue, Category, Brand, Tag, ProductVariant
 
 
 class AttributeWidget(CustomSelect2Mixin):
@@ -36,3 +36,7 @@ class TagMultipleSelect2Widget(CustomSelect2MultipleMixin):
     model = Tag
     queryset = Tag.objects.all().order_by('name')
     search_fields = ['name__icontains', ]
+
+class ProductVariantWidget(CustomSelect2Mixin):
+    model = ProductVariant
+    search_fields = ['sku__icontains', 'product__name__icontains']

@@ -6,7 +6,7 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from django.forms.widgets import DateTimeInput
 
 from apps.ecom.mixins import AttributeValueWidget, AttributeWidget, CategoryWidget, BrandWidget, \
-    TagMultipleSelect2Widget
+    TagMultipleSelect2Widget, ProductVariantWidget
 from apps.lookup import CustomSelect2Mixin
 from .models import AttributeValue, Coupon, Order, Product, ProductAttribute, ProductImage, ProductVariant, Attribute, \
     StockEntry, SupportTicket, SupportTicketMessage, Tag, Category, Tax, ProductFAQ
@@ -1011,6 +1011,9 @@ class StockEntryForm(forms.ModelForm):
     class Meta:
         model = StockEntry
         fields = ['variant', 'quantity', 'change_type', 'adjustment_direction', 'notes']
+        widgets = {
+            'variant': ProductVariantWidget(attrs={'class': 'form-control select2-widget'}),
+        }
 
     def clean(self):
         cleaned_data = super().clean()
@@ -1042,6 +1045,12 @@ class StockEntryForm(forms.ModelForm):
 
 
 class StockEntryFilterForm(forms.Form):
+    variant = forms.ModelChoiceField(
+        queryset=ProductVariant.objects.all(),
+        required=False,
+        widget=ProductVariantWidget(attrs={'class': 'form-control select2-widget'})
+    )
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
