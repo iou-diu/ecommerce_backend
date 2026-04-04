@@ -356,7 +356,7 @@ from apps.ecom.models import Wishlist
 class WishlistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wishlist
-        fields = ['id', 'user', 'variant', 'added_at']
+        fields = ['id', 'variant', 'added_at']
         
     def extra_kwargs(self):
         return {
