@@ -19,7 +19,6 @@ from api.ecom.views import OrderViewSet
 from api.ecom.views import CouponViewSet
 from api.ecom.views import ShippingMethodViewSet
 from api.ecom.views import WishlistViewSet
-from api.ecom.views import WishlistItemViewSet
 from api.ecom.views import ReviewViewSet
 from api.ecom.views import ReviewReplyViewSet
 from api.ecom.views import ReviewImageViewSet
@@ -75,7 +74,6 @@ router.register(r'payment', PaymentViewSet, basename='payment')
 router.register(r'coupon', CouponViewSet, basename='coupon')
 # router.register(r'shippingmethod', ShippingMethodViewSet, basename='shippingmethod')
 router.register(r'wishlist', WishlistViewSet, basename='wishlist')
-router.register(r'wishlistitem', WishlistItemViewSet, basename='wishlistitem')
 router.register(r'review', ReviewViewSet, basename='review')
 router.register(r'review_reply', ReviewReplyViewSet, basename='review_reply')
 router.register(r'reviewimage', ReviewImageViewSet, basename='reviewimage')

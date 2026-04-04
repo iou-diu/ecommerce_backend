@@ -355,16 +355,13 @@ from apps.ecom.models import Wishlist
 class WishlistSerializer(serializers.ModelSerializer):
     class Meta:
         model = Wishlist
-        fields = ['id', 'user', 'created_at']
+        fields = ['id', 'user', 'variant', 'added_at']
+        
+    def extra_kwargs(self):
+        return {
+            'variant': {'required': True}
+        }
 
-
-from apps.ecom.models import WishlistItem
-
-
-class WishlistItemSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = WishlistItem
-        fields = ['id', 'wishlist', 'variant', 'added_at']
 
 
 from apps.ecom.models import Review

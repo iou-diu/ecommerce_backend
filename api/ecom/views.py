@@ -23,7 +23,7 @@ from apps.user.models import CustomUser, CustomerUser
 from apps.ecom.models import (
     Address, BusinessSetting, CustomerProfile, FlashDeal, ProductVariant, SliderImage, Category,
     Brand, Attribute, AttributeValue, Tag, Product, Cart, Order,
-    Payment, Coupon, ShippingMethod, Transaction, Wishlist, WishlistItem, Review,
+    Payment, Coupon, ShippingMethod, Transaction, Wishlist, Review,
     ReviewImage, ProductFAQ, Tax, OrderLine, CartItem, ReviewReply
 )
 from .serializers import (
@@ -32,7 +32,7 @@ from .serializers import (
     AttributeSerializer, AttributeValueSerializer, TagSerializer,
     ProductSerializer, CartSerializer, OrderSerializer, PaymentSerializer,
     CouponSerializer, ShippingMethodSerializer, TransactionSerializer, WishlistSerializer,
-    WishlistItemSerializer, ReviewSerializer, ReviewImageSerializer,
+    ReviewSerializer, ReviewImageSerializer,
     ProductFAQSerializer, TaxSerializer, ProductSearchSerializer,
     ProductDetailSerializer, ReviewReplySerializer
 )
@@ -363,22 +363,18 @@ class WishlistViewSet(viewsets.ModelViewSet):
     serializer_class = WishlistSerializer
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['id', 'user', 'created_at']
-    search_fields = ['name', 'description']
+    filterset_fields = ['id', 'user', 'variant', 'added_at']
+    search_fields = ['variant__sku', 'user__email']
 
-    def retrieve(self, request, *args, **kwargs):
-        instance = self.get_object()
-        serializer = self.get_serializer(instance)
-        return Response(serializer.data)
+    def get_queryset(self):
+        user = self.request.user
+        if user.is_staff:
+            return Wishlist.objects.all()
+        # For regular users, return only their wishlists
+        return Wishlist.objects.filter(user=user)   
 
-
-class WishlistItemViewSet(viewsets.ModelViewSet):
-    queryset = WishlistItem.objects.all().order_by('-id')
-    serializer_class = WishlistItemSerializer
-    permission_classes = [IsAuthenticated]
-    filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['id', 'wishlist', 'variant', 'added_at']
-    search_fields = ['name', 'description']
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
 
     def retrieve(self, request, *args, **kwargs):
         instance = self.get_object()

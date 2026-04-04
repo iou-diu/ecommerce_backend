@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import (
     Address, BusinessSetting, Category, Brand, Attribute, AttributeValue, Coupon, CustomerProfile, FlashDeal, Order,
     OrderLine, Payment, ShippingMethod, SliderImage, SupportTicket, SupportTicketMessage, Tag,
-    Product, ProductImage, ProductAttribute, ProductVariant, StockEntry, Cart, CartItem, Transaction
+    Product, ProductImage, ProductAttribute, ProductVariant, StockEntry, Cart, CartItem, Transaction, Wishlist
 )
 
 admin.site.register(ProductAttribute)
@@ -169,3 +169,4 @@ admin.site.register(Payment)
 
 admin.site.register(BusinessSetting)
 admin.site.register(FlashDeal)
+admin.site.register(Wishlist)

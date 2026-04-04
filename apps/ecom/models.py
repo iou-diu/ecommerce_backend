@@ -545,23 +545,17 @@ class ShippingMethod(models.Model):
         return self.name
 
 
-# Wishlist model for user wishlists
+# Wishlist model
 class Wishlist(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='wishlists')  # Associated user
-    created_at = models.DateTimeField(auto_now_add=True)  # Creation timestamp
-
-    def __str__(self):
-        return f"Wishlist {self.id} for user {self.user}"
-
-
-# WishlistItem model for items in a wishlist
-class WishlistItem(models.Model):
-    wishlist = models.ForeignKey(Wishlist, on_delete=models.CASCADE, related_name='items')  # Associated wishlist
-    variant = models.ForeignKey(ProductVariant, on_delete=models.CASCADE)  # Variant added to the wishlist
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, related_name='wishlist_items', null=True, blank=True)  # Associated user
+    variant = models.ForeignKey(ProductVariant, on_delete=models.CASCADE, null=True, blank=True)  # Variant added to the wishlist
     added_at = models.DateTimeField(auto_now_add=True)  # Timestamp when item was added
 
+    class Meta:
+        unique_together = ('user', 'variant')
+
     def __str__(self):
-        return f"Wishlist item {self.variant.sku} in wishlist {self.wishlist.id}"
+        return f"{self.user.email} - {self.variant.sku}"
 
 
 # Review model for product reviews
