@@ -361,6 +361,7 @@ class ShippingMethodViewSet(viewsets.ReadOnlyModelViewSet):
 class WishlistViewSet(viewsets.ModelViewSet):
     queryset = Wishlist.objects.all().order_by('-id')
     serializer_class = WishlistSerializer
+    authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
     filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ['id', 'user', 'variant', 'added_at']

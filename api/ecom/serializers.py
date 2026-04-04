@@ -27,11 +27,12 @@ from django.core.exceptions import ObjectDoesNotExist
 class CustomerProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomerProfile
-        fields = ['first_name', 'last_name', 'phone']
+        fields = ['first_name', 'last_name', 'phone', 'photo']
         extra_kwargs = {
             'first_name': {'required': False},
             'last_name': {'required': False},
-            'phone': {'required': False}
+            'phone': {'required': False},
+            'photo': {'required': False}
         }
 
 
