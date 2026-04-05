@@ -246,9 +246,9 @@ class PaymentHandlerView(View):
         order_id = request.GET.get('order_verify') or request.POST.get('order_verify')
 
         if not order_id:
-            frontend_url = f"https://oval.goedu.ac/order_verify?{urlencode({'order_verify': order_id})}"
+            frontend_url = f"https://oval.goedu.ac/order-verify?{urlencode({'order_verify': order_id})}"
             return HttpResponseRedirect(frontend_url)
 
         # Redirect to the frontend with the order_id
-        frontend_url = f"https://oval.goedu.ac/order_verify?{urlencode({'order_verify': order_id})}"
+        frontend_url = f"https://oval.goedu.ac/order-verify?{urlencode({'order_verify': order_id})}"
         return HttpResponseRedirect(frontend_url)
