@@ -1,0 +1,78 @@
+{
+  "account_heads": [
+    {"name": "Bank Accounts", "head_type": "asset"},
+    {"name": "Cash in Hand", "head_type": "asset"},
+    {"name": "Inventory", "head_type": "asset"},
+    {"name": "Accounts Receivable", "head_type": "asset"},
+    {"name": "Fixed Assets", "head_type": "asset"},
+    {"name": "Accounts Payable", "head_type": "liability"},
+    {"name": "Tax Payable (VAT)", "head_type": "liability"},
+    {"name": "Short-term Loans", "head_type": "liability"},
+    {"name": "Salary Payable", "head_type": "liability"},
+    {"name": "Owner's Equity", "head_type": "equity"},
+    {"name": "Retained Earnings", "head_type": "equity"},
+    {"name": "Sales Revenue", "head_type": "revenue"},
+    {"name": "Service Income", "head_type": "revenue"},
+    {"name": "Interest Income", "head_type": "revenue"},
+    {"name": "Administrative Expense", "head_type": "expense"},
+    {"name": "Salary Expense", "head_type": "expense"},
+    {"name": "Utility Expense", "head_type": "expense"},
+    {"name": "Marketing Expense", "head_type": "expense"},
+    {"name": "Cost of Goods Sold (COGS)", "head_type": "expense"}
+  ],
+  "expense_categories": [
+    {
+      "name": "Administrative Expenses",
+      "parent": null,
+      "subcategories": [
+        "Office Rent",
+        "Electricity Bill",
+        "Internet Bill",
+        "Office Supplies",
+        "Cleaning & Maintenance"
+      ]
+    },
+    {
+      "name": "Staff & Personnel",
+      "parent": null,
+      "subcategories": [
+        "Employee Salaries",
+        "Contractor Fees",
+        "Staff Training",
+        "Bonus & Incentives",
+        "Staff Welfare"
+      ]
+    },
+    {
+      "name": "Marketing & Advertising",
+      "parent": null,
+      "subcategories": [
+        "Digital Ads (FB/Google)",
+        "Social Media Ads",
+        "Print Media",
+        "Event Sponsorships",
+        "Promotional Items"
+      ]
+    },
+    {
+      "name": "Operations & Logistics",
+      "parent": null,
+      "subcategories": [
+        "Travel & Transport",
+        "Fuel & Vehicle Maintenance",
+        "Packaging Materials",
+        "Shipping/Courier Charges"
+      ]
+    },
+    {
+      "name": "Technology & Software",
+      "parent": null,
+      "subcategories": [
+        "Cloud Hosting (AWS/DigitalOcean)",
+        "SaaS Tools (Slack/Zoom)",
+        "Domain & Hosting Renewal",
+        "IT Support Services"
+      ]
+    }
+  ]
+}
