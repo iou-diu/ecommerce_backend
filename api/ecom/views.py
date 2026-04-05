@@ -87,7 +87,7 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = CategorySerializer
     permission_classes = [AllowAny]
     filter_backends = [DjangoFilterBackend, SearchFilter]
-    filterset_fields = ['parent', 'is_featured', 'is_active']  # Filter by parent and active status
+    filterset_fields = ['parent', 'is_featured', 'is_active', 'main_menu', 'footer_menu']  # Filter by parent and active status
     search_fields = ['name', 'description', 'meta_title', 'meta_description']  # Enable search on important fields
 
     def get_queryset(self):

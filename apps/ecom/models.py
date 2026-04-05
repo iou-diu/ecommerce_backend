@@ -65,6 +65,9 @@ class Category(models.Model):
     for_solution = models.BooleanField(default=False)
     for_product = models.BooleanField(default=True)  # If the category is for products
 
+    main_menu = models.BooleanField(default=False)
+    footer_menu = models.BooleanField(default=False)
+
     def __str__(self):
         return self.name
 
