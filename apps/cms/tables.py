@@ -1,6 +1,6 @@
 import django_tables2 as tables
 from apps.helpers import CustomTable
-from apps.cms.models import Catalog, CorporateLead, NewsLetter
+from apps.cms.models import Catalog, CorporateLead, NewsLetter, ContactForm
 
 class CatalogTable(CustomTable):
     edit_url = 'catalog_update'
@@ -37,5 +37,17 @@ class NewsLetterTable(CustomTable):
         template_name = 'django_tables2/bootstrap4.html'
         fields = ['counter', 'email', 'created_at', 'action']
         empty_text = 'No newsletter subscribers available'
+        orderable = True
+        exclude = ('selected',)
+
+
+class ContactFormTable(CustomTable):
+    delete_url = 'contact_delete'
+
+    class Meta:
+        model = ContactForm
+        template_name = 'django_tables2/bootstrap4.html'
+        fields = ['counter', 'name', 'email', 'phone', 'subject', 'message', 'created_at', 'action']
+        empty_text = 'No contact form submissions available'
         orderable = True
         exclude = ('selected',)

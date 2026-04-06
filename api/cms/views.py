@@ -133,12 +133,12 @@ class PublicSolutionViewSet(viewsets.ReadOnlyModelViewSet):
 from rest_framework import mixins
 
 class ContactFormViewSet(mixins.CreateModelMixin,
-                         mixins.ListModelMixin,
                          viewsets.GenericViewSet):
     queryset = ContactForm.objects.all().order_by('-created_at')
     serializer_class = ContactFormSerializer
     permission_classes = [AllowAny]
     authentication_classes = []  # Public API
+    http_method_names = ['post']
 
 
 class CatalogViewSet(viewsets.ModelViewSet):
@@ -180,5 +180,4 @@ class NewsLetterViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
     serializer_class = NewsLetterSerializer
     permission_classes = [AllowAny]
     authentication_classes = []  # Public API
-    permissions_classes = []
     http_method_names = ['post']

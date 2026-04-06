@@ -10,10 +10,11 @@ from django_filters.views import FilterView
 from apps.cms.models import HomeSlider, ContactForm, Catalog, CorporateLead, CorporateLeadActivity, NewsLetter
 from apps.cms.forms import (
     HomeSliderForm, CatalogForm, CatalogFilterForm, 
-    CorporateLeadForm, CorporateLeadFilterForm, CorporateLeadActivityForm
+    CorporateLeadForm, CorporateLeadFilterForm, CorporateLeadActivityForm,
+    ContactFormFilterForm
 )
-from apps.cms.tables import CatalogTable, CorporateLeadTable, NewsLetterTable
-from apps.cms.filters import CatalogFilter, CorporateLeadFilter, NewsLetterFilter
+from apps.cms.tables import CatalogTable, CorporateLeadTable, NewsLetterTable, ContactFormTable
+from apps.cms.filters import CatalogFilter, CorporateLeadFilter, NewsLetterFilter, ContactFormFilter
 from apps.helpers import PageHeaderMixin, CustomSingleTableMixin, MessageMixin, DeleteMessageMixin, PermissionRequiredMixin
 from apps.ecom.models import Product
 from django.db.models import Q
@@ -42,47 +43,22 @@ class HomeSliderDeleteView(DeleteView):
     success_url = reverse_lazy('home_slider')
 
 
-class ContactFormListView(ListView):
+class ContactFormListView(PermissionRequiredMixin, LoginRequiredMixin, PageHeaderMixin, CustomSingleTableMixin, FilterView):
     model = ContactForm
-    template_name = 'contacts-data.html'
-    context_object_name = 'contacts'
-    paginate_by = 20
+    table_class = ContactFormTable
+    template_name = 'list.html'
+    filterset_class = ContactFormFilter
+    page_title = 'Contact Form Submissions'
+    permission_required = 'cms.view_contactform'
+    delete_url = 'contact_delete'
 
 
-def contact_form_ajax(request):
-    draw = int(request.GET.get('draw', 1))
-    start = int(request.GET.get('start', 0))
-    length = int(request.GET.get('length', 10))
-    search_value = request.GET.get('search[value]', '')
-
-    queryset = ContactForm.objects.all()
-    if search_value:
-        queryset = queryset.filter(
-            name__icontains=search_value
-        )
-
-    total = queryset.count()
-    paginator = Paginator(queryset, length)
-    page_number = start // length + 1
-    page = paginator.get_page(page_number)
-
-    data = []
-    for contact in page.object_list:
-        data.append([
-            contact.name,
-            contact.email,
-            contact.phone,
-            contact.subject,
-            contact.message,
-            contact.created_at.strftime('%Y-%m-%d %H:%M:%S')
-        ])
-
-    return JsonResponse({
-        'draw': draw,
-        'recordsTotal': total,
-        'recordsFiltered': total,
-        'data': data
-    })
+class ContactFormDeleteView(PermissionRequiredMixin, LoginRequiredMixin, PageHeaderMixin, DeleteMessageMixin, DeleteView):
+    model = ContactForm
+    template_name = 'delete.html'
+    success_url = reverse_lazy('contact_list')
+    page_title = 'Delete Contact Submission'
+    permission_required = 'cms.delete_contactform'
 
 
 class CatalogListView(PermissionRequiredMixin, LoginRequiredMixin, PageHeaderMixin, CustomSingleTableMixin, FilterView):

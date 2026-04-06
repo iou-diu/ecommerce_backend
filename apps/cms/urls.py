@@ -7,7 +7,7 @@ urlpatterns = [
     path('home-slider/update/<int:pk>/', views.HomeSliderUpdateView.as_view(), name='home_slider_update'),
     path('home-slider/delete/<int:pk>/', views.HomeSliderDeleteView.as_view(), name='home_slider_delete'),
     path('contacts/', views.ContactFormListView.as_view(), name='contact_list'),
-    path('contacts/ajax/', views.contact_form_ajax, name='contact_list_ajax'),
+    path('contacts/delete/<int:pk>/', views.ContactFormDeleteView.as_view(), name='contact_delete'),
 
     # Catalog URLs
     path('catalog/', views.CatalogListView.as_view(), name='catalog_list'),
