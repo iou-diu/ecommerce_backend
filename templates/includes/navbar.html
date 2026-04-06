@@ -616,7 +616,7 @@
 
                 <!-- User Management -->
 
-                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name == 'home_slider' or request.resolver_match.url_name == 'hotspot_list' %} menu-item-open {% endif %}"
+                <li class="menu-item menu-item-submenu {% if request.resolver_match.url_name == 'home_slider' or request.resolver_match.url_name == 'hotspot_list' or request.resolver_match.url_name == 'newsletter_list' %} menu-item-open {% endif %}"
                     aria-haspopup="true"
                     data-menu-toggle="hover">
                     <a href="javascript:;" class="menu-link menu-toggle">
@@ -640,6 +640,14 @@
                                 <a href="{% url 'hotspot_list' %}" class="menu-link">
                                     <i class="menu-icon fas fa-bullseye"></i>
                                     <span class="menu-text">Hotspot</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item {% if request.resolver_match.url_name == 'newsletter_list' %}active_link{% endif %}"
+                                aria-haspopup="true">
+                                <a href="{% url 'newsletter_list' %}" class="menu-link">
+                                    <i class="menu-icon fas fa-envelope"></i>
+                                    <span class="menu-text">Newsletter</span>
                                 </a>
                             </li>
 

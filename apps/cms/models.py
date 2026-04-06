@@ -214,3 +214,16 @@ class CorporateLeadActivity(models.Model):
 
     def __str__(self):
         return f"{self.get_activity_type_display()} - {self.lead.company_name}"
+
+
+class NewsLetter(models.Model):
+    email = models.EmailField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_at']
+        verbose_name = 'NewsLetter'
+        verbose_name_plural = 'NewsLetters'
+
+    def __str__(self):
+        return self.email

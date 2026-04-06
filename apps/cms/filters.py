@@ -1,6 +1,6 @@
 import django_filters
-from apps.cms.models import Catalog, CorporateLead
-from apps.cms.forms import CatalogFilterForm, CorporateLeadFilterForm
+from apps.cms.models import Catalog, CorporateLead, NewsLetter
+from apps.cms.forms import CatalogFilterForm, CorporateLeadFilterForm, NewsLetterFilterForm
 
 class CatalogFilter(django_filters.FilterSet):
     title = django_filters.CharFilter(field_name='title', lookup_expr='icontains')
@@ -16,3 +16,10 @@ class CorporateLeadFilter(django_filters.FilterSet):
         model = CorporateLead
         fields = ['company_name', 'status']
         form = CorporateLeadFilterForm
+        
+class NewsLetterFilter(django_filters.FilterSet):
+    email = django_filters.CharFilter(field_name='email', lookup_expr='icontains')
+    class Meta:
+        model = NewsLetter
+        fields = ['email']
+        form = NewsLetterFilterForm

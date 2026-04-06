@@ -20,4 +20,8 @@ urlpatterns = [
     path('leads/', views.CorporateLeadListView.as_view(), name='corporate_lead_list'),
     path('leads/detail/<int:pk>/', views.CorporateLeadDetailView.as_view(), name='corporate_lead_detail'),
     path('leads/delete/<int:pk>/', views.CorporateLeadDeleteView.as_view(), name='corporate_lead_delete'),
+    
+    # NewsLetter URLs
+    path('newsletter/', views.NewsLetterListView.as_view(), name='newsletter_list'),
+    path('newsletter/delete/<int:pk>/', views.NewsLetterDeleteView.as_view(), name='newsletter_delete'),
 ]

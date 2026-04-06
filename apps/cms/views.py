@@ -7,13 +7,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib import messages
 from django_filters.views import FilterView
 
-from apps.cms.models import HomeSlider, ContactForm, Catalog, CorporateLead, CorporateLeadActivity
+from apps.cms.models import HomeSlider, ContactForm, Catalog, CorporateLead, CorporateLeadActivity, NewsLetter
 from apps.cms.forms import (
     HomeSliderForm, CatalogForm, CatalogFilterForm, 
     CorporateLeadForm, CorporateLeadFilterForm, CorporateLeadActivityForm
 )
-from apps.cms.tables import CatalogTable, CorporateLeadTable
-from apps.cms.filters import CatalogFilter, CorporateLeadFilter
+from apps.cms.tables import CatalogTable, CorporateLeadTable, NewsLetterTable
+from apps.cms.filters import CatalogFilter, CorporateLeadFilter, NewsLetterFilter
 from apps.helpers import PageHeaderMixin, CustomSingleTableMixin, MessageMixin, DeleteMessageMixin, PermissionRequiredMixin
 from apps.ecom.models import Product
 from django.db.models import Q
@@ -231,3 +231,21 @@ class CorporateLeadDeleteView(PermissionRequiredMixin, LoginRequiredMixin, PageH
     success_url = reverse_lazy('corporate_lead_list')
     page_title = 'Delete Lead'
     permission_required = 'cms.delete_corporatelead'
+
+
+class NewsLetterListView(PermissionRequiredMixin, LoginRequiredMixin, PageHeaderMixin, CustomSingleTableMixin, FilterView):
+    model = NewsLetter
+    table_class = NewsLetterTable
+    template_name = 'list.html'
+    filterset_class = NewsLetterFilter
+    page_title = 'Newsletter Subscribers'
+    permission_required = 'cms.view_newsletter'
+    delete_url = 'newsletter_delete'
+
+
+class NewsLetterDeleteView(PermissionRequiredMixin, LoginRequiredMixin, PageHeaderMixin, DeleteMessageMixin, DeleteView):
+    model = NewsLetter
+    template_name = 'delete.html'
+    success_url = reverse_lazy('newsletter_list')
+    page_title = 'Delete Subscriber'
+    permission_required = 'cms.delete_newsletter'

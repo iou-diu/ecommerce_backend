@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from apps.cms.models import HomeSlider, Gallery, Brochure, NewsPress, ContactForm, Catalog, CorporateLead
+from apps.cms.models import HomeSlider, Gallery, Brochure, NewsPress, ContactForm, Catalog, CorporateLead, NewsLetter
 from apps.solutions.models import Solution
 from api.ecom.serializers import ProductSerializer
 
@@ -79,4 +79,10 @@ class CorporateLeadSerializer(serializers.ModelSerializer):
         model = CorporateLead
         fields = '__all__'
         read_only_fields = ['created_at', 'status']
-        
+
+
+class NewsLetterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NewsLetter
+        fields = ['id', 'email', 'created_at']
+        read_only_fields = ['id', 'created_at']

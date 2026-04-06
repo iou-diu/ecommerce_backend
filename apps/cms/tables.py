@@ -1,6 +1,6 @@
 import django_tables2 as tables
 from apps.helpers import CustomTable
-from apps.cms.models import Catalog, CorporateLead
+from apps.cms.models import Catalog, CorporateLead, NewsLetter
 
 class CatalogTable(CustomTable):
     edit_url = 'catalog_update'
@@ -25,5 +25,17 @@ class CorporateLeadTable(CustomTable):
         template_name = 'django_tables2/bootstrap4.html'
         fields = ['counter', 'company_name', 'contact_person', 'phone', 'email', 'project_type', 'status', 'created_at', 'action']
         empty_text = 'No corporate leads available'
+        orderable = True
+        exclude = ('selected',)
+
+
+class NewsLetterTable(CustomTable):
+    delete_url = 'newsletter_delete'
+
+    class Meta:
+        model = NewsLetter
+        template_name = 'django_tables2/bootstrap4.html'
+        fields = ['counter', 'email', 'created_at', 'action']
+        empty_text = 'No newsletter subscribers available'
         orderable = True
         exclude = ('selected',)

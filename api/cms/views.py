@@ -4,13 +4,13 @@ from rest_framework.filters import SearchFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authentication import SessionAuthentication
-from apps.cms.models import HomeSlider, Gallery, Brochure, NewsPress, ContactForm, Catalog, CorporateLead
+from apps.cms.models import HomeSlider, Gallery, Brochure, NewsPress, ContactForm, Catalog, CorporateLead, NewsLetter
 from apps.solutions.models import Solution
 from .serializers import (
     HomeSliderSerializer, GallerySerializer, BrochureSerializer, 
     NewsPressSerializer, NewsPressListSerializer, SolutionDetailSerializer, 
     SolutionListSerializer, ContactFormSerializer, CatalogListSerializer, 
-    CatalogDetailSerializer, CorporateLeadSerializer
+    CatalogDetailSerializer, CorporateLeadSerializer, NewsLetterSerializer
 )
 
 
@@ -172,4 +172,13 @@ class CorporateLeadViewSet(mixins.CreateModelMixin,
     permission_classes = [AllowAny]
     authentication_classes = []  # Public API
 
+    http_method_names = ['post']
+
+
+class NewsLetterViewSet(mixins.CreateModelMixin, viewsets.GenericViewSet):
+    queryset = NewsLetter.objects.all()
+    serializer_class = NewsLetterSerializer
+    permission_classes = [AllowAny]
+    authentication_classes = []  # Public API
+    permissions_classes = []
     http_method_names = ['post']

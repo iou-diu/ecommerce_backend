@@ -2,7 +2,7 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 
 from api.business_setting.views import BusinessSettingViewSet
-from api.cms.views import HomeSliderViewSet, GalleryViewSet, BrochureViewSet, NewsPressViewSet, PublicSolutionViewSet, ContactFormViewSet, CatalogViewSet, CorporateLeadViewSet
+from api.cms.views import HomeSliderViewSet, GalleryViewSet, BrochureViewSet, NewsPressViewSet, PublicSolutionViewSet, ContactFormViewSet, CatalogViewSet, CorporateLeadViewSet, NewsLetterViewSet
 from api.ecom.cat_menu import MenuCategoryView
 from api.ecom.hotspot import HotspotViewSet
 from api.ecom.new_cart_api import MyCartViewSet
@@ -105,6 +105,7 @@ router.register(r'solutions', PublicSolutionViewSet, basename='solutions')
 router.register(r'contact-form', ContactFormViewSet, basename='contact-form')
 router.register(r'catalogs', CatalogViewSet, basename='catalogs')
 router.register(r'corporate-leads', CorporateLeadViewSet, basename='corporate-leads')
+router.register(r'newsletter', NewsLetterViewSet, basename='newsletter')
 
 api_related_urlpatterns = [
     path('menu-categories/', MenuCategoryView.as_view(), name='menu_categories'),

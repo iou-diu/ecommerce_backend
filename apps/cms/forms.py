@@ -196,3 +196,15 @@ class CorporateLeadFilterForm(forms.Form):
                        css_class='form-group col-md-4 mb-0'),
             ),
         )
+class NewsLetterFilterForm(forms.Form):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_method = 'get'
+        self.helper.layout = Layout(
+            Row(
+                Column('email', css_class='form-group col-md-8 mb-0'),
+                Column(HTML("""<button class='btn btn-lg btn-primary mt-6'>Filter</button>"""),
+                       css_class='form-group col-md-4 mb-0'),
+            ),
+        )
